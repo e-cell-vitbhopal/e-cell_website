@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/e-cell_website/static/css/main.4a8ac9e3.css",
+    "main.css": "/e-cell_website/static/css/main.994814bc.css",
     "main.js": "/e-cell_website/static/js/main.83986a3c.js",
     "static/media/Bhakti Parashar.png": "/e-cell_website/static/media/Bhakti Parashar.bcfa64f91207e96f89d7.png",
     "static/media/team2.png": "/e-cell_website/static/media/team2.4044a39ff6bbc29697e2.png",
@@ -12,11 +12,11 @@
     "static/media/pattern.svg": "/e-cell_website/static/media/pattern.c11040aa4cba9679f097a4cfd97e3d11.svg",
     "index.html": "/e-cell_website/index.html",
     "static/media/background-light.svg": "/e-cell_website/static/media/background-light.611052b6e8deee8a0707ced0de7d05e7.svg",
-    "main.4a8ac9e3.css.map": "/e-cell_website/static/css/main.4a8ac9e3.css.map",
+    "main.994814bc.css.map": "/e-cell_website/static/css/main.994814bc.css.map",
     "main.83986a3c.js.map": "/e-cell_website/static/js/main.83986a3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a8ac9e3.css",
+    "static/css/main.994814bc.css",
     "static/js/main.83986a3c.js"
   ]
 }
