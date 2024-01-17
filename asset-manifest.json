@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/e-cell_website/static/css/main.a42277ca.css",
-    "main.js": "/e-cell_website/static/js/main.5a56087e.js",
+    "main.js": "/e-cell_website/static/js/main.3b1570f7.js",
     "static/media/Bhakti Parashar.png": "/e-cell_website/static/media/Bhakti Parashar.bcfa64f91207e96f89d7.png",
     "static/media/team2.png": "/e-cell_website/static/media/team2.4044a39ff6bbc29697e2.png",
     "static/media/Shrinath Mishra President.jpg": "/e-cell_website/static/media/Shrinath Mishra President.fd490bb3479a84798bfb.jpg",
@@ -13,10 +13,10 @@
     "index.html": "/e-cell_website/index.html",
     "static/media/background-light.svg": "/e-cell_website/static/media/background-light.411bac1a9bf342351b8c47c1db0d0fa5.svg",
     "main.a42277ca.css.map": "/e-cell_website/static/css/main.a42277ca.css.map",
-    "main.5a56087e.js.map": "/e-cell_website/static/js/main.5a56087e.js.map"
+    "main.3b1570f7.js.map": "/e-cell_website/static/js/main.3b1570f7.js.map"
   },
   "entrypoints": [
     "static/css/main.a42277ca.css",
-    "static/js/main.5a56087e.js"
+    "static/js/main.3b1570f7.js"
   ]
 }
