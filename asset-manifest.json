@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/e-cell_website/static/css/main.68bf4858.css",
-    "main.js": "/e-cell_website/static/js/main.711f30f8.js",
-    "static/media/Bhakti Parashar.png": "/e-cell_website/static/media/Bhakti Parashar.bcfa64f91207e96f89d7.png",
-    "static/media/team2.png": "/e-cell_website/static/media/team2.4044a39ff6bbc29697e2.png",
-    "static/media/Shrinath Mishra President.jpg": "/e-cell_website/static/media/Shrinath Mishra President.fd490bb3479a84798bfb.jpg",
-    "static/media/footer-image.png": "/e-cell_website/static/media/footer-image.c75e9e42eb8fad6c20e6.png",
-    "static/media/anant_dubey.png": "/e-cell_website/static/media/anant_dubey.079812f53c6ff3b5b3c7.png",
-    "static/media/ecell-logo-dark.png": "/e-cell_website/static/media/ecell-logo-dark.7485553736759fd6ade8.png",
-    "static/media/Maragatharajan.jfif": "/e-cell_website/static/media/Maragatharajan.1ed4cf3b25dc610ecd99.jfif",
-    "index.html": "/e-cell_website/index.html",
-    "static/media/background-light.svg": "/e-cell_website/static/media/background-light.411bac1a9bf342351b8c47c1db0d0fa5.svg",
-    "main.68bf4858.css.map": "/e-cell_website/static/css/main.68bf4858.css.map",
-    "main.711f30f8.js.map": "/e-cell_website/static/js/main.711f30f8.js.map"
+    "main.css": "/static/css/main.68bf4858.css",
+    "main.js": "/static/js/main.10b520ab.js",
+    "static/media/Bhakti Parashar.png": "/static/media/Bhakti Parashar.bcfa64f91207e96f89d7.png",
+    "static/media/team2.png": "/static/media/team2.4044a39ff6bbc29697e2.png",
+    "static/media/Shrinath Mishra President.jpg": "/static/media/Shrinath Mishra President.fd490bb3479a84798bfb.jpg",
+    "static/media/footer-image.png": "/static/media/footer-image.c75e9e42eb8fad6c20e6.png",
+    "static/media/anant_dubey.png": "/static/media/anant_dubey.079812f53c6ff3b5b3c7.png",
+    "static/media/ecell-logo-dark.png": "/static/media/ecell-logo-dark.7485553736759fd6ade8.png",
+    "static/media/Maragatharajan.jfif": "/static/media/Maragatharajan.1ed4cf3b25dc610ecd99.jfif",
+    "index.html": "/index.html",
+    "static/media/background-light.svg": "/static/media/background-light.411bac1a9bf342351b8c47c1db0d0fa5.svg",
+    "main.68bf4858.css.map": "/static/css/main.68bf4858.css.map",
+    "main.10b520ab.js.map": "/static/js/main.10b520ab.js.map"
   },
   "entrypoints": [
     "static/css/main.68bf4858.css",
-    "static/js/main.711f30f8.js"
+    "static/js/main.10b520ab.js"
   ]
 }
