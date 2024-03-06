@@ -15,14 +15,14 @@ export default function Team() {
         <img src={TeamImage} alt='teamImage'/>
         <div className='background-circle'></div>
       </div>
-      <div className='team-leads flex'>
+      <div id='Contacts' className='team-leads flex'>
         <h2>Meet the <span className='pink-text'>/</span>team<span className='pink-text'>/</span></h2>
         <div className='row'>
           <div className='col-lg-4'>
-            <LeadCards img={BhaktiParashar} name="Dr. Bhakti Parashar" position="Faculty Coordinator"/>
+            <LeadCards img={BhaktiParashar} href={'https://mail.google.com/mail/?view=cm&fs=1&to=bhakti.parashar@vitbhopal.ac.in'} name="Dr. Bhakti Parashar" position="Faculty Coordinator"/>
           </div>
           <div className='col-lg-4'>
-            <LeadCards img={Maragatharajan} name="Dr. M Maragatharajan" position="Faculty Coordinator"/>
+            <LeadCards img={Maragatharajan} href={'https://mail.google.com/mail/?view=cm&fs=1&to=maragatharajan@vitbhopal.ac.in'} name="Dr. M Maragatharajan" position="Faculty Coordinator"/>
           </div>
           <div className='col-lg-4'>
             <LeadCards img={Shrinath} name="Shrinath Mishra" position="President"/>

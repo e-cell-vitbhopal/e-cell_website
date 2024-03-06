@@ -12,9 +12,11 @@ export default function LeadCards(props) {
         <p className='name'>{props.name}</p>
         <p className='position'>{props.position}</p>
       </div>
+      <a href={props.href} target="_blank">
       <IconContext.Provider value={{ className: "social-icon", size: '10%' }}>
         <IoMdMail />
       </IconContext.Provider>
+      </a>
     </div>
   )
 }

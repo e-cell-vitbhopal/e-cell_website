@@ -16,9 +16,9 @@ export default function Footer() {
         <p>© Ecell VIT Bhopal</p>
         <div className='social-media-container'>
         <IconContext.Provider value={{ className: "footer-social-icon", size: '30px' }}>
-          <FaInstagram />
-          <FaLinkedin />
-          <FaXTwitter />
+         <a className='footer_links' href='https://www.instagram.com/ecell_vit.bhopal/' target="_blank"> <FaInstagram /></a>
+         <a className='footer_links' href='https://www.linkedin.com/company/e-cell-vit-bhopal/mycompany/' target="_blank"> <FaLinkedin /></a>
+         <a className='footer_links' href='https://twitter.com/ecell_vitb' target="_blank"> <FaXTwitter /></a>
         </IconContext.Provider>
         </div>
       </div>

@@ -95,7 +95,7 @@ export default function Dashboard() {
             <Lottie animationData={animationData} />
             {/* <img src={Hexagon} alt='pattern'/> */}
           </div>
-          <div class="col-lg-7 description flex"> 
+          <div id='About' class="col-lg-7 description flex"> 
 
             <h3>What We Do?</h3>
             <p>

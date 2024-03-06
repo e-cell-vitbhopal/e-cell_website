@@ -26,6 +26,10 @@
   transform: scale(1.1);
 }
 
+.footer_links{
+  text-decoration: none;
+}
+
 /* Mobile Devices (up to 767px) */
 @media only screen and (max-width: 767px) {
   .footer-container{

@@ -11,7 +11,7 @@ export default function Events() {
   };
 
   return (
-    <div className='events-container flex'>
+    <div id='Events' className='events-container flex'>
       <h2><span className='pink-text'>/</span> Events <span className='pink-text'>/</span></h2>   
       <div className='event-cards flex' onMouseEnter={handleTogglePause} onMouseLeave={handleTogglePause}>
         <Marquee className={`event-cards marquee ${isPaused ? 'paused' : ''}`}>
