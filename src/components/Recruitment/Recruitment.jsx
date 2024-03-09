@@ -29,9 +29,9 @@ function Recruitment() {
         </div>
   
         <div className='rec-team-container'>
-          <RecTeamCard name="Social"/>
-          <RecTeamCard name="Technical"/>
-          <RecTeamCard name="Corporate"/>
+          <RecTeamCard name="Social" link="https://docs.google.com/forms/d/e/1FAIpQLSfPiAlEM1TYwFVs751uZCDDTAF49ro-vg1B0BNTFr1zGz533w/viewform?usp=sf_link"/>
+          <RecTeamCard name="Technical" link="https://forms.gle/azn66gsf2qjvUFoP7"/>
+          <RecTeamCard name="Corporate" link="https://docs.google.com/forms/d/e/1FAIpQLScyBJW6d-M-z3suHecGVDt_QeE72Y2u_Qp6BxW-yE6gCiCt5Q/viewform"/>
         </div>
       </div>
 
