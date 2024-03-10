@@ -7,7 +7,7 @@ function RecTeamCard(props) {
   })
 
   return (
-    <div className='teams-card flex' onClick={handleClick}>
+    <div className='teams-card flex rec-team-card' onClick={handleClick}>
       <h3>{props.name}</h3>
       <h3>Team</h3>
     </div>

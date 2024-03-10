@@ -8,7 +8,7 @@ function Recruitment() {
     <div className='recruitment'>
       <div className='recruitment-head'>
         <img className='logo' src={Logo} alt='ecell' />
-        <button style={{width: '6vw'}} className='join-button'>Back</button>
+        <button style={{width: '10vh'}} className='join-button'>Back</button>
       </div>
       <div className='recruitment-content'>
         <div className='rec-con-heading'>
@@ -36,6 +36,8 @@ function Recruitment() {
           <RecTeamCard name="Social" link="https://docs.google.com/forms/d/e/1FAIpQLSfPiAlEM1TYwFVs751uZCDDTAF49ro-vg1B0BNTFr1zGz533w/viewform?usp=sf_link"/>
           <RecTeamCard name="Technical" link="https://forms.gle/azn66gsf2qjvUFoP7"/>
           <RecTeamCard name="Corporate" link="https://docs.google.com/forms/d/e/1FAIpQLScyBJW6d-M-z3suHecGVDt_QeE72Y2u_Qp6BxW-yE6gCiCt5Q/viewform"/>
+          <RecTeamCard name="Content" link="https://forms.gle/4CFGj6vscgbn3zLXA"/>
+          <RecTeamCard name="Operations" link="https://docs.google.com/forms/d/e/1FAIpQLSeN98oUoZx6SCqlewgM_H4xREKO0C0n4FPaap1T6-hFbGlkiw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"/>
         </div>
       </div>
 
