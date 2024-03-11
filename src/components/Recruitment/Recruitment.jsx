@@ -38,6 +38,8 @@ function Recruitment() {
           <RecTeamCard name="Corporate" link="https://docs.google.com/forms/d/e/1FAIpQLScyBJW6d-M-z3suHecGVDt_QeE72Y2u_Qp6BxW-yE6gCiCt5Q/viewform"/>
           <RecTeamCard name="Content" link="https://forms.gle/4CFGj6vscgbn3zLXA"/>
           <RecTeamCard name="Operations" link="https://docs.google.com/forms/d/e/1FAIpQLSeN98oUoZx6SCqlewgM_H4xREKO0C0n4FPaap1T6-hFbGlkiw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"/>
+          <RecTeamCard name="Events" link="https://forms.gle/rSFBhFvta7eGpw558"/>
+          <RecTeamCard name="Finance" link="https://forms.gle/rymjRtLVV27qxm8R9"/>
         </div>
       </div>
 
