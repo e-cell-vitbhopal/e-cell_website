@@ -20,7 +20,7 @@ export default function Navbar() {
           <div className='navbar-items_a'><a className='Navbar_links'  href='#Events'>Events</a></div>
           <div className='navbar-items_a'><a className='Navbar_links'  href='#Contacts'>Contact</a></div>
         </div>
-        <button className='join-button'>Join now</button>
+        <a href='https://www.ecellvitbhopal.in/recruitment'><button className='join-button'>Join now</button></a>
       </div>
     </div>
   );
