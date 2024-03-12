@@ -15,10 +15,10 @@ export default function Navbar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <div className='navbar-items flex'>
-          <div className='navbar-items_a'><a className='Navbar_links'  href='#'>Home</a></div>
-          <div className='navbar-items_a'><a className='Navbar_links'  href='#About'>About-Us</a></div>
-          <div className='navbar-items_a'><a className='Navbar_links'  href='#Events'>Events</a></div>
-          <div className='navbar-items_a'><a className='Navbar_links'  href='#Contacts'>Contact</a></div>
+          <div className='navbar-items_a'><a className='Navbar_links' href='#'>Home</a></div>
+          <div className='navbar-items_a'><a className='Navbar_links' href='#About'>About-Us</a></div>
+          <div className='navbar-items_a'><a className='Navbar_links' href='#Events'>Events</a></div>
+          <div className='navbar-items_a'><a className='Navbar_links' href='#Contacts'>Contact</a></div>
         </div>
         <a href='https://www.ecellvitbhopal.in/recruitment'><button className='join-button'>Join now</button></a>
       </div>
