@@ -1,9 +1,51 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import './recruitment.css';
 import Logo from '../../images/ecell-logo-dark.png';
 import RecTeamCard from './RecTeamCard';
+import BackgroundLight from '../../images/background-light.svg';
+
 
 function Recruitment() {
+  const winWidth = window.innerWidth;
+
+  const moveVariants = {
+    animationOne: {
+      x: [-0.1 * winWidth, 0.3 * winWidth],
+      y: [-100, 200],
+      transition: {
+        x: {
+          repeatType: "mirror",
+          repeat: Infinity,
+          duration: 5,
+        },
+        y: {
+          repeatType: "mirror",
+          repeat: Infinity,
+          duration: 4,
+        }
+      }
+    },
+    animationTwo: {
+      x: [-0.2 * winWidth, 0.1 * winWidth],
+      y: [-200, 100],
+      transition: {
+        x: {
+          repeatType: "mirror",
+          repeat: Infinity,
+          duration: 6,
+        },
+        y: {
+          repeatType: "mirror",
+          repeat: Infinity,
+          duration: 3,
+        }
+      }
+    }
+  }
+
+
   return (
     <div className='recruitment'>
       <div className='recruitment-head'>
@@ -15,6 +57,8 @@ function Recruitment() {
           <p className='club-name'>Entrepreneurship Cell, VIT Bhopal University</p>
           <p className='recruitment-heading'>Unleash Your Entrepreneurial Spirit: </p>
           <p className='recruitment-heading'>Join E-Cell Now! </p>
+          <motion.img variants={moveVariants} animate="animationOne" className="background-light bl-1" src={BackgroundLight} alt="" />
+          <motion.img variants={moveVariants} animate="animationTwo" className="background-light bl-2" src={BackgroundLight} alt="" />
         </div>
         
         <div className='rec-con-body'>

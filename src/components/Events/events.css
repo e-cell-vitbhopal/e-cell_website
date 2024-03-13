@@ -46,15 +46,15 @@
   position: absolute;
   background: linear-gradient(270deg, #3A64FA 47.4%, #F963BC 92.87%);
   border-radius: 50%;
-  filter: blur(70px);
+  filter: blur(100px);
   top: -2vw;
   left: -2vw;
   transition: all 0.2s ease;
 }
 
 .events-card:hover .event-card-background-light{
-  top: 60%; 
-  left: 60%;
+  top: 50%; 
+  left: 50%;
 }
 
 .events-card:hover h3{

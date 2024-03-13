@@ -10,6 +10,7 @@ function RecTeamCard(props) {
     <div className='teams-card flex rec-team-card' onClick={handleClick}>
       <h3>{props.name}</h3>
       <h3>Team</h3>
+      <div className='background-light event-card-background-light'></div>
     </div>
   )
 }
