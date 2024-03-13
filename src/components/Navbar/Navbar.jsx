@@ -1,10 +1,14 @@
 import React from 'react';
 import './navbar.css';
+import { useNavigate } from 'react-router-dom';
+
 import Logo from '../../images/ecell-logo-dark.png';
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IconContext } from 'react-icons/lib';
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <div className='navbar navbar-expand-lg flex'>
       <img className='logo' src={Logo} alt='ecell' />
@@ -20,7 +24,7 @@ export default function Navbar() {
           <div className='navbar-items_a'><a className='Navbar_links' href='#Events'>Events</a></div>
           <div className='navbar-items_a'><a className='Navbar_links' href='#Contacts'>Contact</a></div>
         </div>
-        <a href='https://www.ecellvitbhopal.in/recruitment'><button className='join-button'>Join now</button></a>
+        <button className='join-button' onClick={()=>{navigate('/recruitment')}}>Join now</button>
       </div>
     </div>
   );

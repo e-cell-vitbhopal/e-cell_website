@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import './recruitment.css';
 import Logo from '../../images/ecell-logo-dark.png';
@@ -9,6 +10,7 @@ import BackgroundLight from '../../images/background-light.svg';
 
 function Recruitment() {
   const winWidth = window.innerWidth;
+  const navigate = useNavigate();
 
   const moveVariants = {
     animationOne: {
@@ -50,7 +52,7 @@ function Recruitment() {
     <div className='recruitment'>
       <div className='recruitment-head'>
         <img className='logo' src={Logo} alt='ecell' />
-        <button style={{width: '10vh'}} className='join-button'>Back</button>
+        <button style={{width: '10vh'}} className='join-button' onClick={()=>{navigate('/')}}>Back</button>
       </div>
       <div className='recruitment-content'>
         <div className='rec-con-heading'>
