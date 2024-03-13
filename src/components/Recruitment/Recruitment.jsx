@@ -40,6 +40,7 @@ function Recruitment() {
           <RecTeamCard name="Operations" link="https://docs.google.com/forms/d/e/1FAIpQLSeN98oUoZx6SCqlewgM_H4xREKO0C0n4FPaap1T6-hFbGlkiw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"/>
           <RecTeamCard name="Events" link="https://forms.gle/rSFBhFvta7eGpw558"/>
           <RecTeamCard name="Finance" link="https://forms.gle/rymjRtLVV27qxm8R9"/>
+          <RecTeamCard name="Design" link="https://forms.gle/TTaqoJooCd5zU9kZA"/>
         </div>
       </div>
 
