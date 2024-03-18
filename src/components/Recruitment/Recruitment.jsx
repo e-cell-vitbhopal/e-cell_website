@@ -78,7 +78,14 @@ function Recruitment() {
           </ul>
         </div>
   
-        <div className='rec-team-container'>
+        <div style={{textAlign:"center"}}>
+          <br />
+          <br />
+          <p className='pink-text'>We are not accepting responses now.</p>
+          <p>Please try again when recruitment reopens.</p>
+        </div>
+
+        {/* <div className='rec-team-container'>
           <RecTeamCard name="Social" link="https://docs.google.com/forms/d/e/1FAIpQLSfPiAlEM1TYwFVs751uZCDDTAF49ro-vg1B0BNTFr1zGz533w/viewform?usp=sf_link"/>
           <RecTeamCard name="Technical" link="https://forms.gle/azn66gsf2qjvUFoP7"/>
           <RecTeamCard name="Corporate" link="https://docs.google.com/forms/d/e/1FAIpQLScyBJW6d-M-z3suHecGVDt_QeE72Y2u_Qp6BxW-yE6gCiCt5Q/viewform"/>
@@ -87,7 +94,7 @@ function Recruitment() {
           <RecTeamCard name="Events" link="https://forms.gle/rSFBhFvta7eGpw558"/>
           <RecTeamCard name="Finance" link="https://forms.gle/rymjRtLVV27qxm8R9"/>
           <RecTeamCard name="Design" link="https://forms.gle/TTaqoJooCd5zU9kZA"/>
-        </div>
+        </div> */}
       </div>
 
       </div>
