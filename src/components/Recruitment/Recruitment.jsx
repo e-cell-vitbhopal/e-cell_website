@@ -69,13 +69,7 @@ function Recruitment() {
             Look no further because the Entrepreneurship Cell (E-Cell) of VIT Bhopal University is 
             on the lookout for passionate individuals like you to join our dynamic teams!
           </p>
-          <p>You'll have the opportunity to:</p>
-          <ul>
-            <li><span className='pink-text'>Collaborate </span>with like-minded peers</li>
-            <li>Gain <span className='pink-text'>hands-on experience</span> in entrepreneurship</li>
-            <li><span className='pink-text'>Recognition </span> for your contributions to the entrepreneurial ecosystem</li>
-            <li>A <span className='pink-text'>supportive community</span> that encourages growth and innovation</li>
-          </ul>
+          
         </div>
   
         <div style={{textAlign:"center"}}>
