@@ -5,6 +5,7 @@ import Main from './Main';
 import Technical from './components/Team/Technical';
 import Recruitment from './components/Recruitment/Recruitment';
 import Summit from './Summit';
+import Registration from './e_summit_components/Registration/Registration';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/e-cell-technical" element={<Technical />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/e_summit_2024" element={<Summit />} />
+          <Route path="/e_summit_2024/registration" element={<Registration />} />
         </Routes>
       </BrowserRouter>
     </div>

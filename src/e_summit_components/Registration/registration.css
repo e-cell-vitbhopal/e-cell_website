@@ -1,0 +1,198 @@
+.form-body{
+  /* width: calc(100vw - 6vh);
+  height: calc(100vh - 6vh); */
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: rgb(1, 1, 13);
+  overflow-x: hidden;
+}
+
+.form-container {
+  width: calc(100vw - 6vh);
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container .heading {
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 2%;
+  font-weight: 600;
+  text-decoration: underline #F200DE;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.registration-form {
+  width: 60vw;
+  border-radius: 49px;
+  background-color: rgb(255, 255, 255, 0.1);
+  padding: 7.5vh 20vh;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* input design */
+.registration-form-unit{
+  width: 40%;
+  position: relative;
+  height: 55px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.registration-form-unit input[type="text"] {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 14px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+.registration-form-unit label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.registration-form-unit label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #F200DE;
+  transform: translateX(-110%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.registration-form-unit input:focus {
+  outline: none;
+}
+.registration-form-unit input:focus + .label-name .content-name,
+.registration-form-unit input:valid + .label-name .content-name {
+  transform: translateY(-100%);
+  font-size: 14px;
+  left: 0px;
+  color: #F200DE;
+}
+.registration-form-unit input:focus + .label-name::after,
+.registration-form-unit input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.registration-form .batch {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.registration-form .batch .batch-options{
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.registration-form .batch .batch-options input[type="radio"] {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  border: 2px solid #F200DE; /* Border color */
+}
+
+.registration-form .batch .batch-options input[type="radio"]:checked {
+  background-color: #F200DE; /* Dot color */
+}
+
+
+
+/* .registration-form input[type="text"]{
+  font-size: 2.5vh;
+  width: 96%;
+  margin-bottom: 2.5vh;
+  margin-top: 1vh;
+  border: none;
+  height: 5vh;
+  border-radius: 10px;
+  padding: 0 10px;
+} */
+
+.registration-form input[type="checkbox"]{
+  font-size: 2.5vh;
+  margin-bottom: 2.5vh;
+  margin-top: 1vh;
+  margin-right: 2vh;
+  width: 17px;
+  height: 17px;
+}
+
+.registration-form .btn-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.registration-form .btn-container button {
+  padding: 10px 40px;
+  margin-top: 40px;
+  border-radius: 0px 28px 0px 28px;
+  background: linear-gradient(to right, #F200DE, #BA00AB, #8C0080);
+  border: 2px solid #FF00EA;
+  font-size: 25px;
+  line-height: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .form-container {
+    width: 90vw;
+    height: 90vh;
+    border-radius: 35px;
+  }
+
+  .form-container h2 {
+    font-size: 6vh;
+    margin-bottom: 6vh;
+  }
+  
+  .registration-form {
+    font-size: 3vh;
+    width: 75vw;
+  }
+  
+  
+  .registration-form input[type="text"]{
+    font-size: 2.5vh;
+    width: 93%;
+  }
+}
