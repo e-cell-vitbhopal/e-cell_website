@@ -1,17 +1,22 @@
-.form-body{
-  /* width: calc(100vw - 6vh);
-  height: calc(100vh - 6vh); */
-  padding: 3vh;
+.esummit-registration {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: start;
-  background-color: rgb(1, 1, 13);
+  background-image: url('./form_background.png');
+  background-size: cover;
+  background-position: center;
   overflow-x: hidden;
 }
 
+.esummit-registration .logo {
+  height: 80px;
+  margin: 20px;
+}
+
 .form-container {
-  width: calc(100vw - 6vh);
-  height: 80vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,17 +26,18 @@
 .form-container .heading {
   font-size: 40px;
   line-height: 60px;
+  height: 70px;
   letter-spacing: 2%;
   font-weight: 600;
   text-decoration: underline #F200DE;
-  margin-bottom: 30px;
   color: white;
 }
 
 .registration-form {
-  width: 60vw;
+  width: 70vw;
   border-radius: 49px;
-  background-color: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 7.5vh 20vh;
   color: white;
   display: flex;
@@ -131,19 +137,6 @@
   background-color: #F200DE; /* Dot color */
 }
 
-
-
-/* .registration-form input[type="text"]{
-  font-size: 2.5vh;
-  width: 96%;
-  margin-bottom: 2.5vh;
-  margin-top: 1vh;
-  border: none;
-  height: 5vh;
-  border-radius: 10px;
-  padding: 0 10px;
-} */
-
 .registration-form input[type="checkbox"]{
   font-size: 2.5vh;
   margin-bottom: 2.5vh;
@@ -173,26 +166,25 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 992px) {
-  .form-container {
-    width: 90vw;
-    height: 90vh;
-    border-radius: 35px;
-  }
+/* Events Section */
 
-  .form-container h2 {
-    font-size: 6vh;
-    margin-bottom: 6vh;
-  }
+.registration-form .events {
+  width: 70vw;
+  text-align: center;
+}
+
+.registration-form .events-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-height: 40vh;
+}
+
+.registration-form .events-section {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 992px) {
   
-  .registration-form {
-    font-size: 3vh;
-    width: 75vw;
-  }
-  
-  
-  .registration-form input[type="text"]{
-    font-size: 2.5vh;
-    width: 93%;
-  }
 }
