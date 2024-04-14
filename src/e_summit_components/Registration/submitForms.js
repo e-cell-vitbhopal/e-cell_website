@@ -24,22 +24,28 @@ async function submitForms(data) {
   }
 
   try {
-    const response = await fetch('http://localhost:5000/sendmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      mode: 'no-cors'
-    });
-
-    if (response.ok) {
-      console.log('Email sent successfully');
-    } else {
-      console.error('Failed to send email');
+      const url = new URL('http://localhost:5000/sendmail');
+      url.searchParams.append('name', data.name);
+      url.searchParams.append('email', data.email);
+      url.searchParams.append('confirmedEvents', data.confirmedEvents);
+    
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        mode: 'no-cors'
+      });
+    
+      if (response.ok) {
+        console.log('Email sent successfully');
+      } else {
+        console.error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
     }
-  } catch (error) {
-    console.error('Error sending email:', error);
-  }
+    
 }
 
 export default submitForms;

@@ -93,7 +93,7 @@ function FormRenderer({
           <p>Total Amount: ${totalAmount}</p>
           <div>
             <button onClick={(e) => Payment(e)}>Proceed to Pay</button>
-            <button onClick={() => setPage(2)}>Cancel</button>
+            <button onClick={() => {setPage(2); setConfirmedEvents([]);}}>Cancel</button>
           </div>
         </div>
       )}

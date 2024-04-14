@@ -10,7 +10,7 @@ function IshaanSharma({ selectedEvents, page, event, setPage, setConfirmedEvents
 
   const handleCancel = (e) => {
     e.preventDefault();
-    setConfirmedEvents(prevConfirmedEvents => prevConfirmedEvents.filter(e => e !== event));
+    setConfirmedEvents([]);
     setPage(2); 
   };
 
