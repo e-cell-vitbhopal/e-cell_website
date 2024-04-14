@@ -24,7 +24,8 @@ async function submitForms(data) {
   }
 
   try {
-      const url = new URL('http://localhost:5000/sendmail');
+      // const url = new URL('http://localhost:5000/sendmail');
+      const url = new URL('https://esummit-registration-backend.onrender.com/sendmail');
       url.searchParams.append('name', data.name);
       url.searchParams.append('email', data.email);
       url.searchParams.append('confirmedEvents', data.confirmedEvents);
