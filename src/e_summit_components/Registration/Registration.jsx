@@ -26,7 +26,7 @@ function Registration() {
   const [selectedEvents, setSelectedEvents] = useState([]);
   const [confirmedEvents, setConfirmedEvents] = useState([]);
   const [totalAmount, setTotalAmount] = useState([]);
-  const [submitted, setSubmitted] = useState(false);
+  const [registered, setRegistered] = useState(false);
   const [page, setPage] = useState(1);
 
   const Payment = ((e) => {
@@ -85,6 +85,8 @@ function Registration() {
             eventFees={eventFees}
             totalAmount={totalAmount}
             Payment={Payment}
+            registered={registered}
+            setRegistered={setRegistered}
           />
         </form>
       </div>

@@ -25,6 +25,8 @@ function FormRenderer({
   eventFees,
   totalAmount,
   Payment,
+  registered,
+  setRegistered
 }) {
   return (
     <>
@@ -91,10 +93,12 @@ function FormRenderer({
         <div>
           <p>Thank You</p>
           <p>Total Amount: ${totalAmount}</p>
+          {registered?
+          <p>You have registered successfully.</p>:
           <div>
-            <button onClick={(e) => Payment(e)}>Proceed to Pay</button>
+            <button onClick={(e) => {Payment(e); setRegistered(true)}}>Proceed to Pay</button>
             <button onClick={() => {setPage(2); setConfirmedEvents([]);}}>Cancel</button>
-          </div>
+          </div>}
         </div>
       )}
     </>
