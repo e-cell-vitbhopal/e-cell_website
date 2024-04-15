@@ -10,6 +10,7 @@ async function submitForms(data) {
       formData.append('entry.846125518', data.regNo);
       formData.append('entry.412436832', data.contact);
       formData.append('entry.1964165348', data.batch);
+      // formData.append('entry.1964165348', data.tranID);
 
       await fetch(event1URL, {
         method: "POST",
@@ -27,8 +28,11 @@ async function submitForms(data) {
       // const url = new URL('http://localhost:5000/sendmail');
       const url = new URL('https://esummit-registration-backend.onrender.com/sendmail');
       url.searchParams.append('name', data.name);
+      url.searchParams.append('regno', data.regNo);
       url.searchParams.append('email', data.email);
       url.searchParams.append('confirmedEvents', data.confirmedEvents);
+      url.searchParams.append('total Amount', data.totalAmount);
+      url.searchParams.append('tranID', data.tranID);
     
       const response = await fetch(url, {
         method: 'GET',

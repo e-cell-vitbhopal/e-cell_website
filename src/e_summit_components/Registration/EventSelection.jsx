@@ -45,7 +45,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 1")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event1">Event 1 ($50)</label>
+            <label htmlFor="event1">Event 1 (₹50)</label>
           </div>
           <div>
             <input
@@ -65,7 +65,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 3")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event3">Event 3 ($70)</label>
+            <label htmlFor="event3">Event 3 (₹70)</label>
           </div>
           <div>
             <input
@@ -75,7 +75,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 4")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event4">Event 4 ($80)</label>
+            <label htmlFor="event4">Event 4 (₹80)</label>
           </div>
           <div>
             <input
@@ -85,7 +85,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 5")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event5">Event 5 ($90)</label>
+            <label htmlFor="event5">Event 5 (₹90)</label>
           </div>
         </div>
 
@@ -100,7 +100,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 6")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event6">Event 6 ($100)</label>
+            <label htmlFor="event6">Event 6 (₹100)</label>
           </div>
           <div>
             <input
@@ -110,7 +110,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 7")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event7">Event 7 ($110)</label>
+            <label htmlFor="event7">Event 7 (₹110)</label>
           </div>
           <div>
             <input
@@ -120,7 +120,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 8")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event8">Event 8 ($120)</label>
+            <label htmlFor="event8">Event 8 (₹120)</label>
           </div>
           <div>
             <input
@@ -130,13 +130,13 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
               checked={selectedEvents.includes("Event 9")}
               onChange={handleEventChange}
             />
-            <label htmlFor="event9">Event 9 ($130)</label>
+            <label htmlFor="event9">Event 9 (₹130)</label>
           </div>
         </div>
       </div>
 
       {/* Total Fee */}
-      <div>Total Fee: ${calculateTotalFee()}</div>
+      <div>Total Fee: ₹{calculateTotalFee()}</div>
 
       {/* Navigation Buttons */}
       <div className='btn-container'>
