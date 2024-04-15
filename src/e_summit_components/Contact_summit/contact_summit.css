@@ -1,0 +1,103 @@
+  .contact-section {
+    text-align: center;
+  }
+  
+  .contact_text {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color:#F200DE;
+}
+
+  
+  .container {
+    background-color: #910085;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 80%;
+    border-radius: 0px 64px 0px 74px;
+  }
+  
+  .query {
+    text-align: center;
+    color: white;
+  }
+  
+  .club-coordinator,
+  .faculty-coordinator {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    color: white;
+    text-align: left;
+    padding:5px;
+  }
+  
+  .club-coordinator h3,
+  .faculty-coordinator h3{
+    color: #FF9BF7;
+    text-decoration: underline #FF9BF7;
+  }
+  
+  svg{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:3px;
+    height:1.6rem;
+  }
+  
+  .contact-section p {
+    margin: 10px 0;
+  }
+  
+  .copyright {
+    color: white;
+    margin-top: 30px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container,
+    .club-coordinator,
+    .faculty-coordinator {
+      max-width: 100%;
+      padding: 10px; 
+      margin: 0 auto; 
+      border-radius: 0px 64px 0px 74px;
+    }
+  
+    .club-coordinator,
+    .faculty-coordinator {
+      display: inline-block; 
+      vertical-align: top; 
+      width: 70%; 
+      text-align: left; 
+      padding: 5px; 
+    }
+  
+    .club-coordinator h3,
+    .faculty-coordinator h3 {
+      color: #FF9BF7; 
+      text-decoration: underline #FF9BF7; 
+    }
+  
+    svg {
+      display: inline-block; 
+      vertical-align: middle; 
+      margin-right: 3px; 
+      height: 1.6rem; 
+    }
+  }
+  
+  .contact_header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .query_header{
+    margin-bottom: 30px;
+    color: white;
+  }
