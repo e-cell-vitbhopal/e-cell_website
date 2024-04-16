@@ -81,7 +81,7 @@ function FormRenderer({
 
       {page >= 5 && page <= 11 && (
         <EventPage1
-          event={`Event ${page - 2}`}
+          event={`Event ₹{page - 2}`}
           selectedEvents={selectedEvents}
           page={page}
           setPage={setPage}
@@ -92,7 +92,7 @@ function FormRenderer({
       {page === 12 && (
         <div>
           <p>Thank You</p>
-          <p>Total Amount: ${totalAmount}</p>
+          <p>Total Amount: ₹{totalAmount}</p>
           {registered?
           <p>You have registered successfully.</p>:
           <div>

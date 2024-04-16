@@ -32,6 +32,7 @@ function Registration() {
   const Payment = ((e) => {
     e.preventDefault()
     // call payment gateway
+    const tranID = '123'
     
     const formData = {
       name,
@@ -41,6 +42,7 @@ function Registration() {
       batch,
       confirmedEvents,
       totalAmount,
+      tranID
     };
     console.log('Ok')
     // Call submitForms and pass the formData
