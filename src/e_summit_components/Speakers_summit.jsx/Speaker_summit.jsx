@@ -1,6 +1,7 @@
 import React from 'react';
 import "./speaker_summit.css";
-//import image from "./image.jpeg";
+import Ishan from '../../images/FR5jHQ_VEAAsU_m.webp'
+import Vijendra from '../../images/channels4_profile.jpg'
 import { Carousel } from 'react-responsive-carousel';
 import { useMediaQuery } from 'react-responsive';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -18,17 +19,17 @@ function Speaker_summit() {
       <div className="speaker-container">
       <Carousel>
         <div className="image-container">
-          <img src={Download} className="image" />
+          <img src={Ishan} className="image" />
           <div className="color-rectangle">
-            <div className="name-text">Revealing Soon</div>
-            <div className="position-text">CEO and Founder</div>
+            <div className="name-text">Ishan Sharma</div>
+            <div className="position-text">Co-Founder at MarkitUp</div>
           </div>
         </div>
         <div className="image-container">
-          <img src={Download} className="image" />
+          <img src={Vijendra} className="image" />
           <div className="color-rectangle">
-            <div className="name-text">Revealing Soon</div>
-            <div className="position-text">CEO and Founder</div>
+            <div className="name-text">Dr.Vijendra Chauhan</div>
+            <div className="position-text">Asso. Prof. DU. Interviewer</div>
           </div>
         </div>
         <div className="image-container">
@@ -50,17 +51,17 @@ function Speaker_summit() {
   </div>
   <div className="speaker-container">
     <div className="image-container">
-      <img src={Download} className="image" />
+      <img src={Ishan} className="image" />
       <div className="color-rectangle">
-        <div className="name-text">Revealing Soon</div>
-        <div className="position-text">CEO and Founder</div>
+        <div className="name-text">Ishan Sharma</div>
+        <div className="position-text">Co-Founder at MarkitUp</div>
       </div>
     </div>
     <div className="image-container">
-      <img src={Download} className="image" />
+      <img src={Vijendra} className="image" />
       <div className="color-rectangle">
-        <div className="name-text">Revealing soon</div>
-        <div className="position-text">CEO and Founder</div>
+        <div className="name-text">Dr.Vijendra Chauhan</div>
+        <div className="position-text">Asso. Prof. DU. Interviewer</div>
       </div>
     </div>
     <div className="image-container">
