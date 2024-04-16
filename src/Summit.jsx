@@ -6,7 +6,7 @@ import About_summit from './e_summit_components/About_summit/About_summit';
 import Sponsors_summit from './e_summit_components/Sponsors_summit/Sponsors_summit';
 import Speaker_summit from './e_summit_components/Speakers_summit.jsx/Speaker_summit';
 import Contact_summit from './e_summit_components/Contact_summit/Contact_summit';
-
+import Event_summit from './e_summit_components/Event_summit/Event_summit';
 
 
 function Summit() {
@@ -15,6 +15,7 @@ function Summit() {
       <Navbar_summit />
       <Dashboard_summit />
       <About_summit />
+      <Event_summit />
       <Sponsors_summit />
       <Speaker_summit />
       <Contact_summit />

@@ -18,8 +18,8 @@ const Navbar_summit = () => {
           <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#'>Home</a></div>
           <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#about'>About</a></div>
           <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#'>Events</a></div>
-          <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#'>Sponser</a></div>
-          <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#'>Speaker</a></div>
+          <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#sponsers'>Sponser</a></div>
+          <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#speaker'>Speaker</a></div>
           <div className='navbar-items_a'><a className='Navbar_links nav_link_font' href='#contact'>Contact</a></div>
         </div>
       </div>
