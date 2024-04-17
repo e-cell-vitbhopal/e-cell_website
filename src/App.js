@@ -10,6 +10,8 @@ import FormLinks from './e_summit_components/Registration/FormLinks';
 import IshaanSharma from './e_summit_components/Registration/IshaanSharma';
 import ProductDesign from './e_summit_components/Registration/ProductDesign';
 import InternshipFair from './e_summit_components/Registration/InternshipFair';
+import IPLAuction from './e_summit_components/Registration/IPLAuction';
+import SilentDisco from './e_summit_components/Registration/SilentDisco';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/e_summit_2024/registration/IshaanSharma" element={<IshaanSharma />} />
           <Route path="/e_summit_2024/registration/ProductDesign" element={<ProductDesign />} />
           <Route path="/e_summit_2024/registration/InternshipFair" element={<InternshipFair />} />
+          <Route path="/e_summit_2024/registration/IPLAuction" element={<IPLAuction />} />
+          <Route path="/e_summit_2024/registration/SilentDisco" element={<SilentDisco />} />
         </Routes>
       </BrowserRouter>
     </div>
