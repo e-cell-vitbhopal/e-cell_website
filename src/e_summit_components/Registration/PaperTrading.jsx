@@ -40,9 +40,9 @@ function PaperTrading() {
           
             <br />
           Competition Awards:<br />
-          1st Prize: Rs. 500/-<br />
-          2nd Prize: Rs. 300/-<br />
-          3rd Prize: Rs. 200/-<br />
+          1st Prize: Rs. 5000/-<br />
+          2nd Prize: Rs. 3000/-<br />
+          3rd Prize: Rs. 2000/-<br />
           </p>
           <div className='btn-container'>
          
