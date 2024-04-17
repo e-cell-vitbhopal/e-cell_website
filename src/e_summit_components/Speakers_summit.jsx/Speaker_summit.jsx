@@ -21,15 +21,15 @@ function Speaker_summit() {
         <div className="image-container">
           <img src={Download} className="image" />
           <div className="color-rectangle">
-            <div className="name-text">Ishan Sharma</div>
-            <div className="position-text">Co-Founder at MarkitUp</div>
+            <div className="name-text">Revealing Soon</div>
+            <div className="position-text">Revealing Soon</div>
           </div>
         </div>
         <div className="image-container">
           <img src={Download} className="image" />
           <div className="color-rectangle">
-            <div className="name-text">Dr.Vijendra Chauhan</div>
-            <div className="position-text">Asso. Prof. DU. Interviewer</div>
+            <div className="name-text">Revealing Soon</div>
+            <div className="position-text">Revealing Soon</div>
           </div>
         </div>
         <div className="image-container">
@@ -53,15 +53,15 @@ function Speaker_summit() {
     <div className="image-container">
       <img src={Download} className="image" />
       <div className="color-rectangle">
-        <div className="name-text">Ishan Sharma</div>
-        <div className="position-text">Co-Founder at MarkitUp</div>
+        <div className="name-text">Revealing Soon</div>
+        <div className="position-text">Revealing Soon</div>
       </div>
     </div>
     <div className="image-container">
       <img src={Download} className="image" />
       <div className="color-rectangle">
-        <div className="name-text">Dr.Vijendra Chauhan</div>
-        <div className="position-text">Asso. Prof. DU. Interviewer</div>
+        <div className="name-text">Revealing Soon</div>
+        <div className="position-text">Revealing Soon</div>
       </div>
     </div>
     <div className="image-container">
