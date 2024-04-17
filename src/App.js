@@ -12,6 +12,9 @@ import ProductDesign from './e_summit_components/Registration/ProductDesign';
 import InternshipFair from './e_summit_components/Registration/InternshipFair';
 import IPLAuction from './e_summit_components/Registration/IPLAuction';
 import SilentDisco from './e_summit_components/Registration/SilentDisco';
+import FireSideChat from './e_summit_components/Registration/FireSideChat';
+import CaseStudyCompetition from './e_summit_components/Registration/CaseStudyCompetition';
+import PaperTrading from './e_summit_components/Registration/PaperTrading';
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
           <Route path="/e_summit_2024/registration/InternshipFair" element={<InternshipFair />} />
           <Route path="/e_summit_2024/registration/IPLAuction" element={<IPLAuction />} />
           <Route path="/e_summit_2024/registration/SilentDisco" element={<SilentDisco />} />
+          <Route path="/e_summit_2024/registration/FireSideChat" element={<FireSideChat />} />
+          <Route path="/e_summit_2024/registration/CaseStudyCompetition" element={<CaseStudyCompetition />} />
+          <Route path="/e_summit_2024/registration/PaperTrading" element={<PaperTrading />} />
         </Routes>
       </BrowserRouter>
     </div>

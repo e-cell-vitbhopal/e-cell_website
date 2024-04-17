@@ -40,6 +40,31 @@ function FormLinks() {
                   </div>
                 </div>
               </div>
+
+              {/* Day 2 Events */}
+              <div className='events-container'>
+                <div className="events-section">
+                  <h3>8th May</h3>
+                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/FireSideChat')}}>
+                    <span>Fire Side Chat</span>
+                  </div>
+
+                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/CaseStudyCompetition')}}>
+                    <span>Case Study Competition</span>
+                  </div>
+
+                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/PaperTrading')}}>
+                    <span>Paper Trading</span>
+                  </div>
+
+                </div>
+                
+              </div>
+              <div className='btn-container'>
+                <a><button onClick={(e)=>{navigate('/e_summit_2024')}}>Return</button></a>
+              </div>
+              
+
             </div>
           </div>
       </div>  
