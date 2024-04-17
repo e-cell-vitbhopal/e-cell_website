@@ -9,6 +9,7 @@ import Registration from './e_summit_components/Registration/Registration';
 import FormLinks from './e_summit_components/Registration/FormLinks';
 import IshaanSharma from './e_summit_components/Registration/IshaanSharma';
 import ProductDesign from './e_summit_components/Registration/ProductDesign';
+import InternshipFair from './e_summit_components/Registration/InternshipFair';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/e_summit_2024/registration" element={<FormLinks />} />
           <Route path="/e_summit_2024/registration/IshaanSharma" element={<IshaanSharma />} />
           <Route path="/e_summit_2024/registration/ProductDesign" element={<ProductDesign />} />
+          <Route path="/e_summit_2024/registration/InternshipFair" element={<InternshipFair />} />
         </Routes>
       </BrowserRouter>
     </div>

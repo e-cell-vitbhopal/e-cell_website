@@ -101,6 +101,7 @@
   margin: 5px;
   color: white;
   cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.31);
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -150,25 +151,12 @@
   .form-container .events-section {
     text-align: center;
   }
-  
-  .form-container .events-section h3{
-    color: #FF00EA;
-    text-decoration: underline 2px white;
-  }
+
   
   .event {
-    border-radius: 5px;
     width: 80vw;
     padding: 10px;
     font-size: 3vh;
-    margin: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
   }
   
-  .event:hover {
-    background-color: #F200DE;
-    transition: background-color 0.3s, transform 0.3s;
-  }
 }
