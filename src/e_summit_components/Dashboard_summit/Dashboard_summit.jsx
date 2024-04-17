@@ -7,7 +7,7 @@ const Dashboard_summit = () => {
     const navigate = useNavigate();
 
   return (
-    <div className="dashboard">
+    <div className="dashboarddd">
       <img
         className="logos"
         alt=" background image"
