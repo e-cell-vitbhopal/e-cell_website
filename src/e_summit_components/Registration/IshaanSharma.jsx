@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../../images/ecell-logo-dark.png';
 
-function IshaanSharma({ selectedEvents, page, event, setPage, setConfirmedEvents, eventCost }) {
+function IshaanSharma() {
   const navigate=useNavigate()
 
   return (
@@ -31,7 +31,7 @@ function IshaanSharma({ selectedEvents, page, event, setPage, setConfirmedEvents
          
             <a href='https://forms.gle/dJWG1YeVdi6yXq5R6' target='_blank' rel='noopener noreferrer'><button>Register</button></a>
 
-            <button onClick={(e)=>{navigate('/e_summit_2024/registration')}}>Return</button>
+            <a><button onClick={(e)=>{navigate('/e_summit_2024/registration')}}>Return</button></a>
           </div>
         </div>
           
