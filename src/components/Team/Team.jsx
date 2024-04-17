@@ -30,13 +30,13 @@ export default function Team() {
           </div>
         </div>
       </div>
-      <div className='teams flex'>
+      {/*<div className='teams flex'>
         <TeamsCard name="Operations"/>
         <TeamsCard name="Event"/>
         <TeamsCard name="Technical" link={'/e-cell-technical'}/>
         <TeamsCard name="Design"/>
         <TeamsCard name="Content"/>
-      </div>
+      </div> */}
     </div>
   )
 }
