@@ -6,15 +6,19 @@ import submitForms from './submitForms';
 
 function Registration() {
   const eventFees = {
-    "Event 1": 50,
     "Speaker Session: Ishaan Sharma": 150,
-    "Event 3": 70,
-    "Event 4": 80,
-    "Event 5": 90,
-    "Event 6": 100,
-    "Event 7": 110,
-    "Event 8": 120,
-    "Event 9": 130,
+    "Paper Trading Competition 1": 75,
+    "Paper Trading Competition 2": 150,
+    "Paper Trading Competition": 150,
+    "Internship/Job Fair": 50,
+    "Silent Disco": 200,
+    "IPL Auction": 250,
+    "Product Design 3": 150,
+    "Product Design 4": 200,
+    "Product Design 5": 250,
+    "Product Design Competition": 250,
+    "Fire Side Chat": 75,
+    "Case Study Competition": 200,
   };
 
   const [heading, setHeading] = useState('Registration Form');
@@ -23,18 +27,33 @@ function Registration() {
   const [regNo, setRegNo] = useState('');
   const [contact, setContact] = useState('');
   const [batch, setBatch] = useState('');
+  const [tranID, settranID] = useState('');
+  const [screenshot, setScreenShot] = useState('');
+
   const [selectedEvents, setSelectedEvents] = useState([]);
   const [confirmedEvents, setConfirmedEvents] = useState([]);
   const [totalAmount, setTotalAmount] = useState([]);
   const [registered, setRegistered] = useState(false);
   const [page, setPage] = useState(1);
 
+  // Product design competiton can have 3-5 members make a state no of members and for each member state for name, email and registration Number send it to form Rendering
+
   const Payment = ((e) => {
     e.preventDefault()
     // call payment gateway
-    const tranID = '123'
+
+    const data = new FormData();
+    data.append('name', name);
+    data.append('email', email);
+    data.append('regNo', regNo);
+    data.append('contact', contact);
+    data.append('batch', batch);
+    data.append('confirmedEvents', confirmedEvents);
+    data.append('totalAmount', totalAmount);
+    data.append('tranID', tranID);
+    data.append('screenshot', screenshot);
     
-    const formData = {
+    const regformData = {
       name,
       email,
       regNo,
@@ -42,11 +61,22 @@ function Registration() {
       batch,
       confirmedEvents,
       totalAmount,
-      tranID
+      tranID,
     };
-    console.log('Ok')
-    // Call submitForms and pass the formData
-    submitForms(formData);
+
+
+    fetch('https://script.google.com/macros/s/AKfycbwG5qJqwgiPDykZp5tvIIi5-r1ZvqU_1R0dWsSKj0alvKhTU-czdl4rZcCHoELadfA7xw/exec', {
+      method: 'POST',
+      body: data
+    })
+      .then(response => {
+        console.log('Form data sent successfully');
+      })
+      .catch(error => {
+        console.error('Error sending form data:', error);
+      });
+
+    submitForms(regformData);
   })
 
   useEffect(() => {
@@ -80,6 +110,10 @@ function Registration() {
             setContact={setContact}
             batch={batch}
             setBatch={setBatch}
+            tranID={tranID}
+            settranID={settranID}
+            screenshot={screenshot}
+            setScreenShot={setScreenShot}
             selectedEvents={selectedEvents}
             setSelectedEvents={setSelectedEvents}
             confirmedEvents={confirmedEvents}

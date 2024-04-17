@@ -35,7 +35,7 @@
 }
 
 .registration-form {
-  width: 70vw;
+  width: 80vw;
   border-radius: 49px;
   backdrop-filter: blur(2px);
   background-color: rgba(255, 255, 255, 0.1);
@@ -45,109 +45,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5vh;
 }
 
-/* input design */
-.registration-form-unit{
-  width: 40%;
-  position: relative;
-  height: 55px;
-  overflow: hidden;
-  margin: 10px 0;
-}
+/* Styling for checkboxes */
 
-.registration-form-unit input[type="text"] {
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  padding-top: 14px;
-  border: none;
-  background-color: transparent;
-  font-size: 20px;
-}
-.registration-form-unit label {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 1px solid white;
-}
-.registration-form-unit label::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  border-bottom: 3px solid #F200DE;
-  transform: translateX(-110%);
-  transition: all 0.3s ease;
-}
-
-.content-name {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  padding-bottom: 5px;
-  transition: all 0.3s ease;
-}
-.registration-form-unit input:focus {
-  outline: none;
-}
-.registration-form-unit input:focus + .label-name .content-name,
-.registration-form-unit input:valid + .label-name .content-name {
-  transform: translateY(-100%);
-  font-size: 14px;
-  left: 0px;
-  color: #F200DE;
-}
-.registration-form-unit input:focus + .label-name::after,
-.registration-form-unit input:valid + .label-name::after {
-  transform: translateX(0%);
-}
-
-.registration-form .batch {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 17px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.registration-form .batch .batch-options{
-  display: flex;
-  gap: 50px;
-  font-size: 20px;
-}
-
-.registration-form .batch .batch-options input[type="radio"] {
-  height: 15px;
-  width: 15px;
-  margin-right: 10px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 50%;
-  border: 2px solid #F200DE; /* Border color */
-}
-
-.registration-form .batch .batch-options input[type="radio"]:checked {
-  background-color: #F200DE; /* Dot color */
-}
-
-.registration-form input[type="checkbox"]{
-  font-size: 2.5vh;
-  margin-bottom: 2.5vh;
-  margin-top: 1vh;
-  margin-right: 2vh;
-  width: 17px;
-  height: 17px;
-}
-
-.registration-form .btn-container {
+.form-container .btn-container {
   width: 100%;
   text-align: center;
   display: flex;
@@ -155,7 +58,7 @@
   gap: 50px;
 }
 
-.registration-form .btn-container button {
+.form-container .btn-container button {
   padding: 10px 40px;
   margin-top: 40px;
   border-radius: 0px 28px 0px 28px;
@@ -169,118 +72,93 @@
 
 /* Events Section */
 
-.registration-form .events {
-  width: 70vw;
+.form-container .events {
+  width: 80vw;
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.registration-form .events-container {
+.form-container .events-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-height: 40vh;
+  height: auto;
+  margin-bottom: 50px;
 }
 
-.registration-form .events-section {
+.form-container .events-section {
   text-align: center;
 }
 
+.form-container .events-section h3{
+  color: #FF00EA;
+  text-decoration: underline 2px white;
+}
+
+.event {
+  border-radius: 5px;
+  width: 70vw;
+  padding: 10px;
+  font-size: 4vh;
+  margin: 5px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.31);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.event:hover {
+  background-color: #F200DE;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+
 
 @media screen and (max-width: 992px) {
-  .esummit-registration {
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .esummit-registration .logo {
-    height: 70px;
-    margin: 20px;
-  }
-  
-  .form-container {
-    width: 100vw;
-    height: 100%;
-    display: block;
-    transform: translate(5%);
-  }
-  
-  .form-container .heading {
-    width: 90%;
-    font-size: 35px;
-    line-height: 50px;
-    height: 60px;
-  }
-  
+
   .registration-form {
-    width: 90vw;
-    border-radius: 35px;
-    padding: 3vh 5vh;
-    flex-direction: column;
+    width: 95vw;
+    padding: 10vh 5vh;
+    font-size: 2.3vh;
   }
+  /* Styling for checkboxes */
   
-  /* input design */
-  .registration-form-unit{
-    width: 100%;
-    height: 55px;
-    overflow: hidden;
-    margin: 10px 0;
-  }
-  
-  .registration-form-unit input[type="text"] {
-    padding-top: 26px;
-    font-size: 21px;
-  }
-  
-  .content-name {
-    padding-bottom: 3px;
-  }
-  
-  .registration-form-unit input:focus + .label-name .content-name,
-  .registration-form-unit input:valid + .label-name .content-name {
-    font-size: 16px;
-  }
-  
-  .registration-form .batch {
-    margin-top: 10px;
-    font-size: 20px;
-  }
-  
-  .registration-form .batch .batch-options{
-    gap: 40px;
-  }
-  
-  .registration-form .batch .batch-options input[type="radio"] {
-    height: 17px;
-    width: 17px;
-    margin-right: 10px;
-    appearance: none;
-  }
-  
-  .registration-form .btn-container {
+  .form-container .btn-container {
     width: 100%;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
   }
   
+  .form-container .btn-container button {
+    width: 50vw;
+  }
   
   /* Events Section */
   
-  .registration-form .events {
+  .form-container .events {
     width: 90vw;
     text-align: center;
   }
   
-  .registration-form .events-container {
+  .form-container .events-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
-    max-height: 100vh;
+    max-height: 60vh;
   }
   
-  .registration-form .events-section {
+  .form-container .events-section {
     text-align: center;
-    width: 80vw;
   }
+
+  
+  .event {
+    width: 80vw;
+    padding: 10px;
+    font-size: 3vh;
+  }
+  
 }

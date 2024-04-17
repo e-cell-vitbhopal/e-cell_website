@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BasicInfo from './BasicInfo';
 import EventSelection from './EventSelection';
 import EventPage1 from './EventPage1';
 import IshaanSharma from './IshaanSharma';
+import ProductDesign from './ProductDesign';
 
 function FormRenderer({
   setHeading,
@@ -18,6 +19,10 @@ function FormRenderer({
   setContact,
   batch,
   setBatch,
+  tranID,
+  settranID,
+  screenshot,
+  setScreenShot,
   selectedEvents,
   setSelectedEvents,
   confirmedEvents,
@@ -28,6 +33,12 @@ function FormRenderer({
   registered,
   setRegistered
 }) {
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    setScreenShot(file);
+  };
+
   return (
     <>
       {page === 1 && (
@@ -59,17 +70,18 @@ function FormRenderer({
       )}
 
       {page === 3 && (
-        <EventPage1
-          event="Event 1"
+        <IshaanSharma
+          event="Speaker Session: Ishaan Sharma"
           selectedEvents={selectedEvents}
           page={page}
           setPage={setPage}
           setConfirmedEvents={setConfirmedEvents}
+          eventCost={eventFees["Speaker Session: Ishaan Sharma"]}
         />
       )}
 
       {page === 4 && (
-        <IshaanSharma
+        <ProductDesign
           event="Speaker Session: Ishaan Sharma"
           selectedEvents={selectedEvents}
           page={page}
@@ -93,12 +105,20 @@ function FormRenderer({
         <div>
           <p>Thank You</p>
           <p>Total Amount: ₹{totalAmount}</p>
-          {registered?
-          <p>You have registered successfully.</p>:
-          <div>
-            <button onClick={(e) => {Payment(e); setRegistered(true)}}>Proceed to Pay</button>
-            <button onClick={() => {setPage(2); setConfirmedEvents([]);}}>Cancel</button>
-          </div>}
+          {registered ?
+            <p>You have registered successfully.</p> :
+            <div>
+              <label htmlFor="transactionID">Transaction ID:</label>
+              <input
+                type="text"
+                id="transactionID"
+                value={tranID}
+                onChange={(e) => settranID(e.target.value)}
+              />
+              <input type="file" onChange={handleFileUpload} />
+              <button onClick={(e) => { Payment(e); setRegistered(false) }}>Proceed to Pay</button>
+              <button onClick={() => { setPage(2); setConfirmedEvents([]); }}>Cancel</button>
+            </div>}
         </div>
       )}
     </>

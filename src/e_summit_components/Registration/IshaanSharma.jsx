@@ -1,33 +1,44 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Logo from '../../images/ecell-logo-dark.png';
 
-function IshaanSharma({ selectedEvents, page, event, setPage, setConfirmedEvents, eventCost }) {
-
-  const handleConfirm = (e) => {
-    e.preventDefault();
-    setConfirmedEvents(prevConfirmedEvents => [...prevConfirmedEvents, event]);
-    setPage(page + 1); 
-  };
-
-  const handleCancel = (e) => {
-    e.preventDefault();
-    setConfirmedEvents([]);
-    setPage(2); 
-  };
+function IshaanSharma() {
+  const navigate=useNavigate()
 
   return (
-    selectedEvents.includes(event) ? (
-      <div>
+
+    <div className='esummit-registration'>
+       <div className='esummit-registration'>
+          <img className='logo' src={Logo} alt='e-cell vit bhopal' />
+          <div className='form-container'>
+            <h2 className='heading'>Events</h2>
+
+            
+      <div className='registration-form'>
         <h2>Speaker Session: Ishaan Sharma</h2>
-        <p>Description: Add your event description here.</p>
-        <p>Cost: ₹{eventCost}</p>
-        <div>
-          <button onClick={(e)=>handleConfirm(e)}>Confirm</button>
-          <button onClick={(e)=>handleCancel(e)}>Cancel</button>
+        <br />
+          <p>Get ready to experience a thrilling speaker session with ISHAN SHARMA , E-Cell VIT Bhopal is 
+            excited to present an upcoming speaker session that will delve into the intricacies of 
+            entrepreneurship, research and effective marketing strategies. This event offers a unique 
+            learning opportunity and networking platform tailored for students passionate about 
+            problem-solving, solution-building, and entrepreneurship exploration.
+          </p>
+
+          <p>Date: 7th May 2024,9:30am onwards</p>
+          <p>Venue: Auditorium</p>
+          <p>Registration fee : 150 INR / person</p>
+          <div className='btn-container'>
+         
+            <a href='https://forms.gle/dJWG1YeVdi6yXq5R6' target='_blank' rel='noopener noreferrer'><button>Register</button></a>
+
+            <a><button onClick={(e)=>{navigate('/e_summit_2024/registration')}}>Return</button></a>
+          </div>
         </div>
-      </div>
-    ) : (
-      setPage(page + 1)
-    )
+          
+        </div>
+      </div>  
+    </div>
+
   );
 }
 
