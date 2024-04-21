@@ -10,6 +10,10 @@
   justify-content: center;
 }
 
+.poster_dash_res{
+  display: none;
+}
+
 .heading h1{
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #FFF;
@@ -64,6 +68,10 @@
     width: 80vw;
     justify-content: space-evenly;
   }
+
+  .poster_dash_res{
+    display: block
+    }
 
   .heading h1{
     font-size: 7.5vw;

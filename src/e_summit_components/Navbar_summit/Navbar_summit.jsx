@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons/lib';
 const Navbar_summit = () => {
   return (
     <div className='navbar navbar-expand-lg flex'>
-      <img className='logo logo_summit' src={Logo} alt='ecell' />
+     <a href="https://www.ecellvitbhopal.in/"><img className='logo logo_summit' src={Logo} alt='ecell' /> </a> 
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
         <IconContext.Provider value={{ color: "#FFF", size: '20px' }}>
           <HiOutlineMenuAlt1 />

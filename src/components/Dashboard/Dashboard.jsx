@@ -9,6 +9,7 @@ import Typewriter from 'react-typewriter-effect';
 import './Typewriter';
 import Esummit from "../../images/Esummit.png";
 import { useNavigate } from 'react-router-dom';
+import Logo from '../../images/Logo.png'
 
 
 export default function Dashboard() {
@@ -54,7 +55,7 @@ export default function Dashboard() {
 
   const navigate = useNavigate();
   return (
-
+<section>
     <div className='dashboard flex'>
       <div className='heading flex'>
       <div>
@@ -64,6 +65,15 @@ export default function Dashboard() {
         src={Esummit}
       />
       <button class="rounded-button" onClick={()=>{navigate('/e_summit_2024')}}>Learn More</button>
+    </div>
+
+    <div className='poster_dash_res'>
+    <img
+    className="logos"
+        alt="Poster"
+        src={Logo}
+      />
+
     </div>
 
     {/* <h1> Transforming Dreams into Reality  <br /></h1>
@@ -122,5 +132,6 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
+    </section>
   )
 }
