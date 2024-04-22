@@ -5,7 +5,7 @@ import './registration.css';
 
 function FormLinks() {
   const navigate=useNavigate()
-  const registrationOpen = false;
+  const registrationOpen = true;
 
   return (
     registrationOpen?
