@@ -15,15 +15,15 @@ function FireSideChat() {
 
             
       <div className='registration-form'>
-        <h2>Fire Side Chat</h2>
+        <h2>Speaker session: Dr. Vijender Singh Chauhan</h2>
         <br />
           <p> 
             E - Cell of VIT Bhopal is back with yet another exiciting event. <br />
-            Fire side chat, it's a dynamic exchange with a renowned where you'll have the chance to ask questions, 
+            Speaker session, it's a dynamic exchange with a renowned where you'll have the chance to ask questions, 
             share your thoughts, and connect with fellow enthusiasts.Plus, we'll be having a podcast session, ensuring 
             that the excitement continues long after the event ends.<br />
   
-            Join us for an inspiring fireside chat featuring successful speaker sharing their journey, insights, and advice. Engage in candid conversations, participate in a Q&A, and network with industry professionals.
+            Join us for an inspiring Speaker Session featuring successful speaker sharing their journey, insights, and advice. Engage in candid conversations, participate in a Q&A, and network with industry professionals.
             <br /><br />
             Key Takeaways: <br />
             - Hear personal stories and lessons from successful entrepreneurs. <br />

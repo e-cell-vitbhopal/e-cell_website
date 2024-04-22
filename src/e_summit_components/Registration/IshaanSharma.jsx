@@ -15,9 +15,9 @@ function IshaanSharma() {
 
             
       <div className='registration-form'>
-        <h2>Speaker Session: Ishaan Sharma</h2>
+        <h2>Speaker Session</h2>
         <br />
-          <p>Get ready to experience a thrilling speaker session with ISHAN SHARMA , E-Cell VIT Bhopal is 
+          <p>Get ready to experience a thrilling speaker session , E-Cell VIT Bhopal is 
             excited to present an upcoming speaker session that will delve into the intricacies of 
             entrepreneurship, research and effective marketing strategies. This event offers a unique 
             learning opportunity and networking platform tailored for students passionate about 
