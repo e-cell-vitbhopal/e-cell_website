@@ -5,8 +5,10 @@ import './registration.css';
 
 function FormLinks() {
   const navigate=useNavigate()
+  const registrationOpen = false;
 
   return (
+    registrationOpen?
     <div className='esummit-registration'>
        <div className='esummit-registration'>
           <img className='logo' src={Logo} alt='e-cell vit bhopal' />
@@ -68,6 +70,10 @@ function FormLinks() {
             </div>
           </div>
       </div>  
+    </div>
+    :
+    <div className='events-container'>
+      <h2 className='heading' style={{width: '100vw'}}>Registrations will resume Shortly.</h2>
     </div>
   );
 }
