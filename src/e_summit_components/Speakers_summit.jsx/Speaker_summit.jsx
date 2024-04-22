@@ -18,13 +18,13 @@ function Speaker_summit() {
       </div>
       <div className="speaker-container">
       <Carousel>
-        <div className="image-container">
-          <img src={Download} className="image" />
+      <a href='https://www.ecellvitbhopal.in/e_summit_2024/registration/FireSideChat'><div className="image-container">
+          <img src={Vijendra} className="image" />
           <div className="color-rectangle">
-            <div className="name-text">Revealing Soon</div>
-            <div className="position-text">Revealing Soon</div>
+            <div className="name-text">Dr. Vijender Singh Chauhan</div>
+            <div className="position-text">Asso. Prof. DU. Interviewer</div>
           </div>
-        </div>
+        </div></a>
         <div className="image-container">
           <img src={Download} className="image" />
           <div className="color-rectangle">
@@ -50,13 +50,13 @@ function Speaker_summit() {
     <h2>SPEAKERS</h2>
   </div>
   <div className="speaker-container">
-    <div className="image-container">
-      <img src={Download} className="image" />
+    <a href='https://www.ecellvitbhopal.in/e_summit_2024/registration/FireSideChat'><div className="image-container">
+      <img src={Vijendra} className="image" />
       <div className="color-rectangle">
-        <div className="name-text">Revealing Soon</div>
-        <div className="position-text">Revealing Soon</div>
+        <div className="name-text">Dr. Vijender Singh Chauhan</div>
+        <div className="position-text">Asso. Prof. DU. Interviewer</div>
       </div>
-    </div>
+    </div> </a>
     <div className="image-container">
       <img src={Download} className="image" />
       <div className="color-rectangle">

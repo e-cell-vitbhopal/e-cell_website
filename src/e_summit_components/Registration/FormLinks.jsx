@@ -20,7 +20,7 @@ function FormLinks() {
                 <div className="events-section">
                   <h3>7th May</h3>
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/IshaanSharma')}}>
-                    <span>Speaker Session: Ishaan Sharma</span>
+                    <span>Speaker Session</span>
                   </div>
 
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/ProductDesign')}}>
@@ -46,7 +46,7 @@ function FormLinks() {
                 <div className="events-section">
                   <h3>8th May</h3>
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/FireSideChat')}}>
-                    <span>Fire Side Chat</span>
+                    <span>Speaker session: Dr. Vijender Singh Chauhan</span>
                   </div>
 
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/CaseStudyCompetition')}}>

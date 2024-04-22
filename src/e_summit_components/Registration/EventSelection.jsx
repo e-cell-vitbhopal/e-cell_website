@@ -40,7 +40,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
         <div className="events-section">
           <h3>Day 1 Events</h3>
           <div className={isEventSelected("Speaker Session: Ishaan Sharma") ? "selected-event" : "event"} onClick={() => handleEventChange("Speaker Session: Ishaan Sharma")}>
-            <span>Speaker Session: Ishaan Sharma (₹150)</span>
+            <span>Speaker Session (₹150)</span>
           </div>
           <div className={isEventSelected("Product Design Competition") ? "selected-event" : "event"} onClick={() => handleEventChange("Product Design Competition")}>
             <span>Product Design Competition (₹250)</span>
@@ -64,7 +64,7 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
             <span>Paper Trading Competition (₹150)</span>
           </div>
           <div className={isEventSelected("Fire Side Chat") ? "selected-event" : "event"} onClick={() => handleEventChange("Fire Side Chat")}>
-            <span>Fire Side Chat (₹75)</span>
+            <span>Speaker session: Dr. Vijender Singh Chauhan (₹75)</span>
           </div>
           <div className={isEventSelected("Case Study Competition") ? "selected-event" : "event"} onClick={() => handleEventChange("Case Study Competition")}>
             <span>Case Study Competition (₹200)</span>
