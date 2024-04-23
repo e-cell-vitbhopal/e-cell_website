@@ -1,3 +1,4 @@
+/* General Styles */
 .esummit-registration {
   width: 100vw;
   height: 100vh;
@@ -8,20 +9,23 @@
   background-size: cover;
   background-position: center;
   overflow-x: hidden;
-  font-family: Plus Jakarta Sans,sans-serif;
+  font-family: Plus Jakarta Sans, sans-serif;
 }
 
 .esummit-registration .logo {
   height: 80px;
   margin: 20px;
+  animation: fadeIn 1s ease-in-out; /* Fade in animation */
 }
 
+/* Form Container Styles */
 .form-container {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: slideInFromTop 1s ease-in-out; /* Slide in from top animation */
 }
 
 .form-container .heading {
@@ -46,10 +50,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5vh;
+  animation: fadeIn 1s ease-in-out; /* Fade in animation */
 }
 
-/* Styling for checkboxes */
-
+/* Buttons Container Styles */
 .form-container .btn-container {
   width: 100%;
   text-align: center;
@@ -68,10 +72,14 @@
   line-height: 40px;
   color: white;
   cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Events Section */
+.form-container .btn-container button:hover {
+  transform: scale(1.1);
+}
 
+/* Events Section Styles */
 .form-container .events {
   width: 80vw;
   text-align: center;
@@ -90,7 +98,7 @@
   text-align: center;
 }
 
-.form-container .events-section h3{
+.form-container .events-section h3 {
   color: #FF00EA;
   text-decoration: underline 2px white;
 }
@@ -112,17 +120,14 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 
-
-
+/* Responsive Styles */
 @media screen and (max-width: 992px) {
-
   .registration-form {
     width: 95vw;
     padding: 10vh 5vh;
     font-size: 2.3vh;
   }
-  /* Styling for checkboxes */
-  
+
   .form-container .btn-container {
     width: 100%;
     text-align: center;
@@ -131,34 +136,51 @@
     justify-content: center;
     gap: 10px;
   }
-  
+
   .form-container .btn-container button {
     width: 50vw;
   }
-  
-  /* Events Section */
-  
+
   .form-container .events {
     width: 90vw;
     text-align: center;
   }
-  
+
   .form-container .events-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     max-height: 60vh;
   }
-  
+
   .form-container .events-section {
     text-align: center;
   }
 
-  
   .event {
     width: 80vw;
     padding: 10px;
     font-size: 3vh;
   }
-  
+}
+
+/* Keyframe Animations */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

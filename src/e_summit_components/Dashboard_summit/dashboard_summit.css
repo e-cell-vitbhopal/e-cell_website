@@ -1,49 +1,71 @@
 .dashboarddd {
-    background-size: cover;
-    background-position: center;
-    margin-top:60px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rounded-button {
+  background: linear-gradient(45deg, #F60B8A, #FF686B);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  animation: pulse 2s infinite alternate; /* Pulse animation */
+  transition: background 0.4s ease;
+}
+
+/* Hover effect for rounded-button */
+.rounded-button:hover {
+  background: linear-gradient(45deg, #FF686B, #F60B8A);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  from {
+    transform: scale(1);
   }
-  
-  .rounded-button {
-    background-color: #F60B8A;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    width: 200px;
-    height: 50px;
-    margin-top: 40px ;
-    margin-bottom: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+  to {
+    transform: scale(1.05);
   }
-  
-  /* Optional: Add hover effect */
-  .rounded-button:hover {
-    opacity: 0.9;
-    color:#690239;
+}
+
+.logos {
+  width: 100%;
+  max-width: 1000px; /* Adjust the maximum width as needed */
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards, pulse 3s infinite alternate; /* Fade-in animation and Pulse animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
   .logos {
-    width: 100%;
-    max-width: 1000px; /* Adjust the maximum width as needed */
-    height: auto;
-    margin-bottom: 20px;
+    max-width: 80%; /* Adjust the maximum width for smaller screens */
   }
-  
-  @media (max-width: 768px) {
-    .logos {
-      max-width: 80%; /* Adjust the maximum width for smaller screens */
-    }
-  
-    .rounded-button {
-      height: 40px; /* Adjust button height for smaller screens */
-    }
+
+  .rounded-button {
+    height: 40px; /* Adjust button height for smaller screens */
   }
-  
+}

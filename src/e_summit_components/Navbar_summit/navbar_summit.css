@@ -1,17 +1,54 @@
-.logo_summit{
+.logo_summit {
   justify-content: flex-start;
 }
 
-.navbar_collapse_end{
+.navbar_collapse_end {
   justify-content: flex-end;
 }
 
-.nav_link_font{
+.nav_link_font {
   font-size: large;
+  transition: color 0.3s ease, transform 0.3s ease; /* Adding transition for color and transform */
+  position: relative; /* Adding position for pseudo-elements */
 }
 
-.nav_link_font:hover{
-  text-decoration: underline;
-  text-decoration-color: #F200DE;
-  text-decoration-thickness: 3px;
+.nav_link_font::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent; /* Initially transparent */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Adding transition for background color */
+  transform-origin: bottom right; /* Set transform origin for animation */
+}
+
+.nav_link_font:hover {
+  color: #F200DE; /* Change text color on hover */
+}
+
+.nav_link_font:hover::after {
+  background-color: #F200DE; /* Change background color on hover */
+  transform: scaleX(1); /* Scale up underline on hover */
+}
+
+/* Add animation for mobile devices */
+@media only screen and (max-width: 768px) {
+  .nav_link_font {
+    font-size: medium; /* Adjust font size for better readability on mobile */
+  }
+  
+  .nav_link_font:hover::after {
+    animation: underlineFade 0.3s ease forwards; /* Animate underline on hover */
+  }
+  
+  @keyframes underlineFade {
+    0% {
+      transform: scaleX(0); /* Start with no underline */
+    }
+    100% {
+      transform: scaleX(1); /* Scale up underline */
+    }
+  }
 }
