@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../../images/ecell-logo-dark.png';
@@ -58,3 +59,4 @@ function InternshipFair() {
 }
 
 export default InternshipFair;
+*/
