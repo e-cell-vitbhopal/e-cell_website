@@ -48,9 +48,9 @@ function EventSelection({ setHeading, selectedEvents, setSelectedEvents, eventFe
           <div className={isEventSelected("IPL Auction") ? "selected-event" : "event"} onClick={() => handleEventChange("IPL Auction")}>
             <span>IPL Auction (₹250)</span>
           </div>
-          <div className={isEventSelected("Internship/Job Fair") ? "selected-event" : "event"} onClick={() => handleEventChange("Internship/Job Fair")}>
+      {/*<div className={isEventSelected("Internship/Job Fair") ? "selected-event" : "event"} onClick={() => handleEventChange("Internship/Job Fair")}>
             <span>Internship/Job Fair (₹50)</span>
-          </div>
+          </div>*/}
           <div className={isEventSelected("Silent Disco") ? "selected-event" : "event"} onClick={() => handleEventChange("Silent Disco")}>
             <span>Silent Disco (₹200)</span>
           </div>
