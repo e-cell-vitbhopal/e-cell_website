@@ -16,44 +16,52 @@ const sponsorData = [
     src: notion,
     link: 'https://www.instagram.com/notionhq?igsh=MTZ4emZ2ZTd1MDlwMg==',
     alt: 'Notion',
+    name: 'Notion',
   },
   {
     src: SG,
     link: 'https://www.instagram.com/stock_gro?igsh=aDZuM2VrMTEyaHZ2',
     alt: 'Stock Gro',
+    name: 'Stock Gro', 
   },
   {
     src: BL,
     link: 'https://www.instagram.com/bluelearn.in?igsh=bWh3cmZkcWNpZ2c5',
     alt: 'Blue Learn',
+    name: 'Blue Learn', 
   },
   {
     src: unstop,
     link: 'https://www.instagram.com/unstop.world?igsh=cmFneHB6bDk4Mzdk',
     alt: 'unstop',
+    name: 'Unstop', 
   },
   {
     src: Notebook,
     link: 'https://www.instagram.com/noticebardofficial?igsh=eDJmYTN0dm12MDQy',
     alt: 'NB',
+    name: 'NoticeBard', 
   },
   {
     src: ST,
     link: 'https://www.instagram.com/startup_talky?igsh=dWxwYmp5NWF2ZzFp5',
     alt: 'ST',
+    name: 'Startup Talky', 
   },
   {
     src: CT,
     link: 'https://www.instagram.com/campustimes.pune?igsh=NjU2NWNiYnZ6bWY0',
     alt: 'CT',
+    name: 'Campus Times',
   },
 ];
+
 
 function Sponsors_summit() {
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
   return (
-    <div id='sponsors'>
+    <div id="sponsors">
       <div className="sponsor-text">
         <h2>SPONSORS</h2>
       </div>
@@ -64,16 +72,13 @@ function Sponsors_summit() {
           infiniteLoop
           autoPlay
           interval={3000}
-          showArrows={false}
         >
           {sponsorData.map((sponsor, index) => (
-            <div key={index} className="carousel-slide hover-effect">
+            <div key={index}>
               <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={sponsor.src}
-                  className='ellipse'
-                  alt={sponsor.alt}
-                />
+                <p className="sponsor-name">{sponsor.name}
+                <img src={sponsor.src} className="ellipse" alt={sponsor.alt} />
+                </p>
               </a>
             </div>
           ))}
@@ -81,13 +86,10 @@ function Sponsors_summit() {
       ) : (
         <div className="ellipse-container">
           {sponsorData.map((sponsor, index) => (
-            <div key={index} className="ellipse hid_sponsor_1 hover-effect">
+            <div key={index} >
               <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={sponsor.src}
-                  className='ellipse'
-                  alt={sponsor.alt}
-                />
+                <img src={sponsor.src} className="ellipse" alt={sponsor.alt} />
+                  <p className="sponsor-name">{sponsor.name}</p> 
               </a>
             </div>
           ))}
