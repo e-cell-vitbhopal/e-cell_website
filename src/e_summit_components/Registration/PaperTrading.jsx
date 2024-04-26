@@ -35,10 +35,11 @@ function PaperTrading() {
           Venue: Classroom (TBD)<br />
           <br />
           Participation Fee: <br />
-            Rs. 150/- per person <br />
-            <br />
+          Solo - 150/-per person<br />
+          Duo - 250/-per team<br />
+          Trio - 300/-per team<br />
+          <br/>
           
-            <br />
           Competition Awards:<br />
           1st Prize: Rs. 5000/-<br />
           2nd Prize: Rs. 3000/-<br />
