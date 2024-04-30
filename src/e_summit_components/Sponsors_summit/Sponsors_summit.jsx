@@ -10,6 +10,7 @@ import CT from '../../images/CT.png';
 import notion from '../../images/Notion.png';
 import ST from '../../images/ST.jpg';
 import unstop from '../../images/unstop.png';
+import FN from '../../images/FN.jpg';
 
 const sponsorData = [
   {
@@ -53,6 +54,12 @@ const sponsorData = [
     link: 'https://www.instagram.com/campustimes.pune?igsh=NjU2NWNiYnZ6bWY0',
     alt: 'CT',
     name: 'Campus Times',
+  },
+  {
+    src: FN,
+    link: 'https://www.instagram.com/finlatics?igsh=cTY1c3o3dW50azE1',
+    alt: 'FN',
+    name: 'Finlatics',
   },
 ];
 
