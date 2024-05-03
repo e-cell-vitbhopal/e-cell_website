@@ -21,7 +21,7 @@ function IshaanSharma() {
 
           <p>Date: 8th May 2024, 12.30PM onwards</p>
           <p>Venue: Auditorium</p>
-          <p>Registration fee : 150 INR / person</p>
+          <p>Registration fee : 99 INR / person</p>
           <div className='btn-container'>
          
             <a href='https://forms.gle/dJWG1YeVdi6yXq5R6' target='_blank' rel='noopener noreferrer'><button>Register</button></a>
