@@ -34,7 +34,7 @@ function IPLAuction() {
           <br />
           Registration:
 
-          Fees: ₹250 per team (3-5 members).
+          Fees: ₹350 per team (3-5 members).
           <br />
 
           Don't miss out on this exciting opportunity to experience the thrill of IPL player auctions firsthand! Register your team now and get ready for an action-packed event. <br />
