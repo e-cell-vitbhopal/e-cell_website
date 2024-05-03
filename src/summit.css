@@ -1,6 +1,5 @@
 .summit_body{
-    background-image: url("https://images.unsplash.com/photo-1634632109601-bcfd0a649a07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGdyYWRpZW50JTIwYmxhY2t8ZW58MHwxfDB8fHww&w=1000&q=80");
-}
+    background-image: url("https://s3-alpha-sig.figma.com/img/0ccf/3388/734a695e612ca200296bd65c353a0d76?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cqwk~XYygptc7hrJ0fCRqpoyFo0igi0XO1jGS6owqFcBd1iC8IaT6LduHXie5Cn4ps1FU8o6PusNP5MzSRSCiMyY1MzXmAwdAPaGNm3a10VQPTWwGXQc29zUA-G-aMVp-m0WK0OCdAu6ogW2zjkavaiCwcED-SRFO3xQH4Q7ykPzSCAa1NUCy~bfDowvGZ~OcxbJpwojQNm9SPQQY8zOHBw~nCABjAjvRa8sO2HamSMqGBc6apkFX~cLoG-aetNN0T~dhVqMzCeJU6pc15FDMyJpdg-6z0gcKPmMYHW4U7bk3WP1wpm4vJRuGPd-imFM1myR0FzytLpQzGihYvH1Jw__");}
 
 @media only screen and (max-width: 600px) {
    .summit_body{
