@@ -3,68 +3,107 @@ import './sponsors_summit.css';
 import { Carousel } from 'react-responsive-carousel';
 import { useMediaQuery } from 'react-responsive';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Notebook from '../../images/NB.png';
+import Notion from '../../images/Notion.png';
 import SG from '../../images/SG.png';
-import BL from '../../images/blue learn.jpg';
+import BL from '../../images/blue_learn.jpg';
 import CT from '../../images/CT.png';
-import notion from '../../images/Notion.png';
 import ST from '../../images/ST.jpg';
-import unstop from '../../images/unstop.png';
+import Unstop from '../../images/unstop.jpg';
 import FN from '../../images/FN.jpg';
+import Notebook from '../../images/NB.png';
+import IS from '../../images/IS.png';
 
 const sponsorData = [
   {
-    src: notion,
-    link: 'https://www.instagram.com/notionhq?igsh=MTZ4emZ2ZTd1MDlwMg==',
-    alt: 'Notion',
-    name: 'Notion',
+    title: 'Design Partner',
+    imageSrc: Notion,
+    sponsorName: 'Notion',
+    sponsorLink: 'https://www.instagram.com/notionhq',
   },
   {
-    src: SG,
-    link: 'https://www.instagram.com/stock_gro?igsh=aDZuM2VrMTEyaHZ2',
-    alt: 'Stock Gro',
-    name: 'Stock Gro', 
+    title: 'Trading Partner',
+    imageSrc: SG,
+    sponsorName: 'Stock Gro',
+    sponsorLink: 'https://www.instagram.com/stock_gro',
   },
   {
-    src: BL,
-    link: 'https://www.instagram.com/bluelearn.in?igsh=bWh3cmZkcWNpZ2c5',
-    alt: 'Blue Learn',
-    name: 'Blue Learn', 
+    title: 'Education Partner',
+    imageSrc: BL,
+    sponsorName: 'Blue Learn',
+    sponsorLink: 'https://www.instagram.com/bluelearn.in',
   },
   {
-    src: unstop,
-    link: 'https://www.instagram.com/unstop.world?igsh=cmFneHB6bDk4Mzdk',
-    alt: 'unstop',
-    name: 'Unstop', 
+    title: 'Education Partner',
+    imageSrc: IS,
+    sponsorName: 'Insternshala',
+    sponsorLink: 'https://www.instagram.com/internshala?igsh=MXR6NjMwcThhMXNvOQ==',
   },
   {
-    src: Notebook,
-    link: 'https://www.instagram.com/noticebardofficial?igsh=eDJmYTN0dm12MDQy',
-    alt: 'NB',
-    name: 'NoticeBard', 
+    title: 'Platform Partner',
+    imageSrc: Unstop,
+    sponsorName: 'Unstop',
+    sponsorLink: 'https://www.instagram.com/unstop.world',
   },
   {
-    src: ST,
-    link: 'https://www.instagram.com/startup_talky?igsh=dWxwYmp5NWF2ZzFp5',
-    alt: 'ST',
-    name: 'Startup Talky', 
+    title: 'Media Partner',
+    imageSrc: Notebook,
+    sponsorName: 'NoticeBard',
+    sponsorLink: 'https://www.instagram.com/noticebardofficial',
   },
   {
-    src: CT,
-    link: 'https://www.instagram.com/campustimes.pune?igsh=NjU2NWNiYnZ6bWY0',
-    alt: 'CT',
-    name: 'Campus Times',
+    title: 'Media Partner',
+    imageSrc: ST,
+    sponsorName: 'Startup Talky',
+    sponsorLink: 'https://www.instagram.com/startup_talky',
   },
   {
-    src: FN,
-    link: 'https://www.instagram.com/finlatics?igsh=cTY1c3o3dW50azE1',
-    alt: 'FN',
-    name: 'Finlatics',
+    title: 'Media Partner',
+    imageSrc: CT,
+    sponsorName: 'Campus Times',
+    sponsorLink: 'https://www.instagram.com/campustimes.pune',
+  },
+  {
+    title: 'Finance Partner',
+    imageSrc: FN,
+    sponsorName: 'Finlatics',
+    sponsorLink: 'https://www.instagram.com/finlatics',
   },
 ];
 
+const SponsorSection = ({ sectionTitle, sponsors }) => (
+  <div className="sponsor-subsection">
+    <h3>{sectionTitle}</h3>
+    <hr/>
+    <div className="sponsor-content">
+      {sponsors.map((sponsor, index) => (
+        <div key={index} className="sponsor-item">
+          <a href={sponsor.sponsorLink} target="_blank" rel="noopener noreferrer">
+            <img src={sponsor.imageSrc} alt={sponsor.sponsorName} className="img-sponsor" />
+          </a>
+          <p className="sponsor-name">{sponsor.sponsorName}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+)
+const SponsorSection1 = ({ sectionTitle, sponsors }) => (
+  <div className="sponsor-subsection1">
+    <h3>{sectionTitle}</h3>
+    <hr/>
+    <div className="sponsor-content">
+      {sponsors.map((sponsor, index) => (
+        <div key={index} className="sponsor-item">
+          <a href={sponsor.sponsorLink} target="_blank" rel="noopener noreferrer">
+            <img src={sponsor.imageSrc} alt={sponsor.sponsorName} className="img-sponsor" />
+          </a>
+          <p className="sponsor-name">{sponsor.sponsorName}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
 
-function Sponsors_summit() {
+function SponsorsSummit() {
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
   return (
@@ -72,6 +111,7 @@ function Sponsors_summit() {
       <div className="sponsor-text">
         <h2>SPONSORS</h2>
       </div>
+
       {isMobile ? (
         <Carousel
           showThumbs={false}
@@ -79,31 +119,35 @@ function Sponsors_summit() {
           infiniteLoop
           autoPlay
           interval={3000}
+          
         >
           {sponsorData.map((sponsor, index) => (
             <div key={index}>
-              <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                <p className="sponsor-name">{sponsor.name}
-                <img src={sponsor.src} className="ellipse" alt={sponsor.alt} />
-                </p>
+              <p className="sponsor-name">{sponsor.title}</p>
+              <a href={sponsor.sponsorLink} target="_blank" rel="noopener noreferrer">
+                
+                <img src={sponsor.imageSrc} className="ellipse" alt={sponsor.sponsorName} />
+                <p className="sponsor-name1">{sponsor.sponsorName}</p>
               </a>
             </div>
           ))}
         </Carousel>
       ) : (
-        <div className="ellipse-container">
-          {sponsorData.map((sponsor, index) => (
-            <div key={index} >
-              <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                <img src={sponsor.src} className="ellipse" alt={sponsor.alt} />
-                  <p className="sponsor-name">{sponsor.name}</p> 
-              </a>
-            </div>
-          ))}
-        </div>
+        <>
+          <div className='horizontal-flex'>
+            <SponsorSection sectionTitle="Design Partner" sponsors={[sponsorData[0]]} />
+            <SponsorSection sectionTitle="Trading Partner" sponsors={[sponsorData[1]]} />
+            <SponsorSection1 sectionTitle="Education Partner" sponsors={sponsorData.slice(2,4)} />
+          </div>
+          <div className='horizontal-flex'>
+            <SponsorSection1 sectionTitle="Media Partners" sponsors={sponsorData.slice(5,8)} />
+            <SponsorSection sectionTitle="Platform Partner" sponsors={[sponsorData[4]]} />
+            <SponsorSection sectionTitle="Finance Partner" sponsors={[sponsorData[8]]} />
+          </div>
+        </>
       )}
     </div>
   );
 }
 
-export default Sponsors_summit;
+export default SponsorsSummit;
