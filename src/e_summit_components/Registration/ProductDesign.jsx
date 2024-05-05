@@ -44,13 +44,15 @@ function ProductDesign() {
 
             Event Date: 7 May 2024<br />
 
-            Event Venue: Classroom(TBD)<br />
+            Event Time: 9.30 am - 5.00 pm <br />
+
+            Event Venue: AB 206 <br />
 
             Team Strength – 3-5 Members<br />
 
             Participation Fees per person: Rs. 50 /-<br />
 
-            Award for Competition: TBD
+            Top Prize: Rs. 3500/-
 
           <div className='btn-container'>
          

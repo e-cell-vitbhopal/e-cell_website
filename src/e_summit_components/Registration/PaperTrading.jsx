@@ -31,7 +31,7 @@ function PaperTrading() {
           Feedback and Learning: Receive feedback on your trading performance and learn from experienced traders and mentors, helping you improve your investment approach.<br />
           <br />
           Event Details:<br />
-          Date: 8th May 2024<br />
+          Date: 8th May 2024, From 8.30 am to 5.00 pm<br />
           Venue: Classroom (TBD)<br />
           <br />
           Participation Fee: <br />

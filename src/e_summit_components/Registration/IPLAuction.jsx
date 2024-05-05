@@ -22,7 +22,7 @@ function IPLAuction() {
           bidding on players with virtual currency.<br />
           <br />
 
-          Date & Time: May 7, 2024, starting at 2:00 PM onwards.<br />
+          Date & Time: May 7, 2024, From 9.00 am to 6.00 pm<br />
 
           Venue: Auditorium<br />
 
@@ -33,9 +33,16 @@ function IPLAuction() {
           highest points, considering both player performance and remaining virtual currency, will emerge victorious.<br />
           <br />
           Registration:
-
+          
           Fees: ₹350 per team (3-5 members).
+
           <br />
+
+          Competition Awards:<br />
+          1st Prize: Rs. 5000/-<br />
+          2nd Prize: Rs. 3000/-<br />
+          3rd Prize: Rs. 2000/-<br />
+
 
           Don't miss out on this exciting opportunity to experience the thrill of IPL player auctions firsthand! Register your team now and get ready for an action-packed event. <br />
         </p>

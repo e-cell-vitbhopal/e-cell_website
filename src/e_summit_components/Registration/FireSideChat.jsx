@@ -32,7 +32,7 @@ function FireSideChat() {
 
             Don't miss this opportunity to ignite your entrepreneurial spirit!<br /><br />
 
-            Date : 8 May, 9.30am to 11:30 am <br />
+            Date : 8 May, 9.30am to 1.00 pm <br />
             Venue - Auditorium, VIT Bhopal University<br />
           </p>
           <div className='btn-container'>

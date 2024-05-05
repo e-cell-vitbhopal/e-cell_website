@@ -19,7 +19,7 @@ function IshaanSharma() {
         <br />
           <p>Get ready to experience a thrilling NETWORKING session, E-Cell VIT Bhopal is excited to present an upcoming session that will delve into the intricacies of entrepreneurship, research and effective marketing strategies. From panel discussion to dynamic networking opportunities, this event is your gateway to unlocking the potential of your start-up dreams. Don't miss out on this chance to connect, learn, and thrive in the vibrant landscape of entrepreneurship. See you there!"</p>
 
-          <p>Date: 8th May 2024, 12.30PM onwards</p>
+          <p>Date: 8th May 2024, 1.10 pm to 6.00 pm </p>
           <p>Venue: Auditorium</p>
           <p>Registration fee : 99 INR / person</p>
           <div className='btn-container'>

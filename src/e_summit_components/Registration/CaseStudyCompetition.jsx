@@ -28,13 +28,15 @@ function CaseStudyCompetition() {
         
           Details of the Event:<br />
 
-          Event Date: 8 May 2024<br />
+          Event Date: 8 May 2024, From 8.30 am to 6.00 pm<br />
 
-          Event Venue: TBD<br />
+          Event Venue: AB 206<br />
 
           Team Strength – 4 Members<br />
 
           Participation Fees: Rs. 200 /-<br />
+
+          Top Prize: Rs. 3500 /- <br />
 
         Don't miss out on this chance to test your mettle, collaborate with peers, and showcase your problem-solving prowess. Register today and embark on a journey of strategic exploration and innovation!<br />
 
