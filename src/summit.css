@@ -1,5 +1,7 @@
 .summit_body{
-    background-image: url("https://s3-alpha-sig.figma.com/img/0ccf/3388/734a695e612ca200296bd65c353a0d76?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cqwk~XYygptc7hrJ0fCRqpoyFo0igi0XO1jGS6owqFcBd1iC8IaT6LduHXie5Cn4ps1FU8o6PusNP5MzSRSCiMyY1MzXmAwdAPaGNm3a10VQPTWwGXQc29zUA-G-aMVp-m0WK0OCdAu6ogW2zjkavaiCwcED-SRFO3xQH4Q7ykPzSCAa1NUCy~bfDowvGZ~OcxbJpwojQNm9SPQQY8zOHBw~nCABjAjvRa8sO2HamSMqGBc6apkFX~cLoG-aetNN0T~dhVqMzCeJU6pc15FDMyJpdg-6z0gcKPmMYHW4U7bk3WP1wpm4vJRuGPd-imFM1myR0FzytLpQzGihYvH1Jw__");}
+    background-image: url("https://images.pexels.com/photos/207529/pexels-photo-207529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/2753432/pexels-photo-2753432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+background-size: contain;
+}
 
 @media only screen and (max-width: 600px) {
    .summit_body{
