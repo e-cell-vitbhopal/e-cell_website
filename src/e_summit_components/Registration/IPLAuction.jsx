@@ -34,7 +34,7 @@ function IPLAuction() {
           <br />
           Registration:
           
-          Fees: ₹350 per team (3-5 members).
+          Fees: ₹700 per team (3-5 members).
 
           <br />
 
