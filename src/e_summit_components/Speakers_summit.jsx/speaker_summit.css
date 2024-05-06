@@ -17,15 +17,18 @@
   
   .speaker-container {
     position: relative;
-    display: flex; 
+    display: flex;
+    align-items: center; 
     justify-content: space-between; 
-    width: 80%; 
+    width: auto; 
     margin: 0 auto; 
     padding: 20px;
+    gap: 20px;
   }
   
   .image-container {
     position: relative;
+    margin-right: 20px;
   }
   
   .image {
@@ -45,6 +48,7 @@
     background: linear-gradient(180deg, rgba(255, 33, 236, 0) 0%, #99148E 73.13%);
     border-radius: 2px 2px 30px 30px;
     opacity: 1;
+    
   }
   
   .name-text {
@@ -70,6 +74,29 @@
     bottom: 20px;
     left: 20px;
   }
+
+  /* CSS for the marquee */
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .marquee-content {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+    white-space: wrap; 
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
   
   @media only screen and (max-width: 1024px) {
     .speaker-text {
