@@ -46,7 +46,7 @@ function ProductDesign() {
 
             Event Time: 9.30 am - 5.00 pm <br />
 
-            Event Venue: AB 206 <br />
+            Event Venue: LC - 205 <br />
 
             Team Strength – 3-5 Members<br />
 
