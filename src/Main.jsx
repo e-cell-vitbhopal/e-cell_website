@@ -13,7 +13,7 @@ function Main() {
       <Navbar />
       <Dashboard />
       {/* <Founder /> */}
-      <PopUp/>
+      {/* <PopUp/> */}
       <Events />
       <Team />
       <Footer />
