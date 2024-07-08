@@ -67,14 +67,14 @@ export default function Dashboard() {
       {/* <button class="rounded-button" onClick={()=>{navigate('/e_summit_2024')}}>Learn More</button> */}
     </div>
 
-    <div className='poster_dash_res'>
+    {/* <div className='poster_dash_res'>
     <img
     className="logos"
         alt="Poster"
         src={Logo}
       />
 
-    </div>
+    </div> */}
 
     <h1> Transforming Dreams into Reality  <br /></h1>
 
