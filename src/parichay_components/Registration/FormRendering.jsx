@@ -58,7 +58,7 @@ function FormRenderer({
         />
       )}
 
-      {page === 2 && (
+      {/* {page === 2 && (
         <EventSelection
           setHeading={setHeading}
           selectedEvents={selectedEvents}
@@ -71,12 +71,12 @@ function FormRenderer({
 
       {page === 3 && (
         <IshaanSharma
-          event="Speaker Session: Metersh Sharma"
+          event="Speaker Session: Ishaan Sharma"
           selectedEvents={selectedEvents}
           page={page}
           setPage={setPage}
           setConfirmedEvents={setConfirmedEvents}
-          eventCost={eventFees["Speaker Session: Metersh Sharma"]}
+          eventCost={eventFees["Speaker Session: Ishaan Sharma"]}
         />
       )}
 
@@ -99,9 +99,9 @@ function FormRenderer({
           setPage={setPage}
           setConfirmedEvents={setConfirmedEvents}
         />
-      )}
+      )} */}
 
-      {page === 12 && (
+      {/* {page === 12 && (
         <div>
           <p>Thank You</p>
           <p>Total Amount: ₹{totalAmount}</p>
@@ -120,7 +120,7 @@ function FormRenderer({
               <button onClick={() => { setPage(2); setConfirmedEvents([]); }}>Cancel</button>
             </div>}
         </div>
-      )}
+      )} */}
     </>
   );
 }

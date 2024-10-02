@@ -15,7 +15,7 @@ function FireSideChat() {
 
             
       <div className='registration-form'>
-        <h2>Speaker session:  Metresh Sharma</h2>
+        <h2>Speaker session: n</h2>
         <br />
           <p> 
             E - Cell of VIT Bhopal is back with yet another exiciting event. <br />
@@ -32,12 +32,12 @@ function FireSideChat() {
 
             Don't miss this opportunity to ignite your entrepreneurial spirit!<br /><br />
 
-            Date : 11 May, --am to -- pm <br />
+            Date : 11 October, --- am to --pm <br />
             Venue - Auditorium, VIT Bhopal University<br />
           </p>
           <div className='btn-container'>
          
-            <a href='https://forms.gle/86Q6f9CdaTpMt2XB7' target='_blank' rel='noopener noreferrer'><button>Register</button></a>
+            <a href='----------0' target='_blank' rel='noopener noreferrer'><button>Register</button></a>
 
             <a><button onClick={(e)=>{navigate('/e_summit_2024/registration')}}>Return</button></a>
           </div>

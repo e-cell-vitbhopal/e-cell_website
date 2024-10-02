@@ -17,27 +17,49 @@ function FormLinks() {
           
             <div className='events'>
 
-
-
-              {/* Day 2 Events */}
+            {/* Day 1 Events */}
               <div className='events-container'>
                 <div className="events-section">
-                  <h3>11th October</h3>
+                  <h3>11th October 2024</h3>
+                  
+
+                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/ProductDesign')}}>
+                    <span> Parichay </span>
+                  </div>
+
+{/*                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/InternshipFair')}}>
+                    <span>Internship/Job Fair</span>
+                  </div> */}
+{/* 
+                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/IPLAuction')}}>
+                    <span>IPL Auction</span>
+                  </div> */}
+
+                  {/* <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/SilentDisco')}}>
+                    <span>Silent Disco</span>
+                  </div> */}
+                </div>
+              </div>
+
+              {/* Day 2 Events */}
+              {/* <div className='events-container'>
+                <div className="events-section">
+                  <h3>8th May</h3>
 
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/FireSideChat')}}>
-                    <span>Speaker session:  Metresh Sharma</span>
+                    <span>Speaker session: Dr. Vijender Singh Chauhan</span>
                   </div>
 
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/IshaanSharma')}}>
-                    <span>Speaker session:2</span>
+                    <span>Networking arena</span>
                   </div>
 
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/CaseStudyCompetition')}}>
-                    <span>Speaker session:3</span>
+                    <span>Case Study Competition</span>
                   </div>
 
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/PaperTrading')}}>
-                    <span>Speaker session:4</span>
+                    <span>Paper Trading</span>
                   </div>
 
                 </div>
@@ -45,7 +67,7 @@ function FormLinks() {
               </div>
               <div className='btn-container'>
                 <a><button onClick={(e)=>{navigate('/e_summit_2024')}}>Return</button></a>
-              </div>
+              </div> */}
               
 
             </div>
