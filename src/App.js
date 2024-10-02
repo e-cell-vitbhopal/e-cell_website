@@ -15,6 +15,7 @@ import SilentDisco from './e_summit_components/Registration/SilentDisco';
 import FireSideChat from './e_summit_components/Registration/FireSideChat';
 import CaseStudyCompetition from './e_summit_components/Registration/CaseStudyCompetition';
 import PaperTrading from './e_summit_components/Registration/PaperTrading';
+import Summit_copy from './Summit - Copy';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/recruitment" element={<Recruitment />} />
           {/* Esummit */}
           <Route path="/e_summit_2024" element={<Summit />} />
+          <Route path="/parichay" element={<Summit_copy />} />
           <Route path="/e_summit_2024/registration" element={<FormLinks />} />
           <Route path="/e_summit_2024/registration/IshaanSharma" element={<IshaanSharma />} />
           <Route path="/e_summit_2024/registration/ProductDesign" element={<ProductDesign />} />
