@@ -28,7 +28,7 @@ function App() {
           <Route path="/recruitment" element={<Recruitment />} />
           {/* Esummit */}
           <Route path="/e_summit_2024" element={<Summit />} />
-          <Route path="/parichay" element={<Summit_copy />} />
+          <Route path="/parichay" element={<SummitCopy />} />
           <Route path="/e_summit_2024/registration" element={<FormLinks />} />
           <Route path="/e_summit_2024/registration/IshaanSharma" element={<IshaanSharma />} />
           <Route path="/e_summit_2024/registration/ProductDesign" element={<ProductDesign />} />
