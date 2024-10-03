@@ -1,0 +1,223 @@
+#sponsors {
+  padding: 40px;
+}
+
+.sponsor-text {
+  font-family: Oxanium;
+  font-size: 65px;
+  font-weight: 400;
+  line-height: 81.25px;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+.sponsor-text h2 {
+  text-decoration: underline #F200DE;
+  color: #FFFFFF;
+}
+
+.ellipse-container {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  align-self: center;
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.ellipse {
+  transition: transform 0.3s ease-in-out;
+  padding: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.ellipse:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 16px #F200DE; 
+}
+
+.img-sponsor {
+  transition: transform 0.9s ease-in-out;
+  border-radius: 20px; 
+  margin: 3%;
+  object-fit: cover;
+}
+
+.sponsor-name {
+  text-align: center;
+  font-family: 'Oxanium', sans-serif;
+  font-size: medium;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-top: 10px;
+  text-decoration: underline #F200DE;
+}
+
+.sponsor-subsection {
+  margin: 20px 0; 
+  padding: 20px; 
+  border-radius: 10px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgba(242, 0, 222, 0.3);
+
+  /* Glassmorphism  */
+  backdrop-filter: blur(10px); 
+  background-color: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.sponsor-subsection:hover {
+  backdrop-filter: blur(15px); 
+  box-shadow: 0 6px 20px rgba(242, 0, 222, 0.4); 
+}
+
+.sponsor-subsection h3 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sponsor-subsection hr {
+  border: none;
+  height: 1px;
+  background-color: #F200DE; 
+  margin: 10px; 
+  width: 350px;
+}
+
+/* media parterns  */
+.sponsor-subsection1 {
+  margin: 20px 0; 
+  padding: 20px; 
+  border-radius: 10px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgba(242, 0, 222, 0.3);
+
+  backdrop-filter: blur(10px); 
+  background-color: rgba(255, 255, 255, 0.1);  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.sponsor-subsection1:hover {
+  backdrop-filter: blur(15px); 
+  box-shadow: 0 6px 20px rgba(242, 0, 222, 0.4); 
+}
+
+.sponsor-subsection1 h3 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sponsor-subsection1 hr {
+  border: none;
+  height: 1px;
+  background-color: #F200DE; 
+  margin: 10px; 
+  width: 450px;
+}
+
+.sponsor-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center; 
+  gap: 30px;
+}
+
+.sponsor-content img {
+  width: 120px;
+  height: 120px; 
+  border-radius: 20px; 
+  transition: transform 0.3s; 
+}
+
+.sponsor-content img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px #F200DE; 
+}
+
+.sponsor-name {
+  font-size: 1.2em;
+  color: #fff; 
+  text-decoration: none;
+}
+
+.horizontal-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles for desktop view */
+@media only screen and (min-width: 1024px) {
+  .ellipse {
+    width: 180px;
+    height: 180px; 
+    border-radius: 100%; 
+    opacity: 1; 
+    top: 300px;
+    padding: 20px;
+    margin: 1%; 
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Adjustments for smaller desktop screens and tablets */
+@media only screen and (max-width: 1024px) {
+  .sponsor-text {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .ellipse-container {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .ellipse {
+    margin: 1% auto; 
+  }
+}
+
+/* Mobile view adjustments */
+@media only screen and (max-width: 600px) {
+  .ellipse-container {
+    display: none; 
+  }
+
+  .ellipse {
+    width: 150px;
+    height: 280px; 
+    border-radius: 0%;
+    padding: 30px;
+    overflow: hidden;
+  }
+
+  .sponsor-name {
+    color:#fff;
+    font-size: 20px; 
+  }
+
+  .sponsor-name1 {
+    color: #fff;
+    font-size: 18px; 
+  }
+}
+
+.carousel .control-dots{
+  display: none;
+}
