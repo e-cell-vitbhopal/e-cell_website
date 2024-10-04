@@ -1,0 +1,133 @@
+  .speaker-text {
+    font-family: Oxanium;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 81.25px;
+    letter-spacing: 0.02em;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  
+  .speaker-text h2 {
+    text-decoration: underline #F200DE;
+    color: #FFFFFF;
+  }
+  
+  .speaker-container {
+    position: relative;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: auto; 
+    margin: 0 auto; 
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .image {
+    width: 323.71px;
+    height: 377.79px;
+    border-radius: 32px 32px 32px 32px;
+    opacity: 1;
+    border: 100%;
+  }
+  
+  .color-rectangle {
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 33, 236, 0) 0%, #99148E 73.13%);
+    border-radius: 2px 2px 30px 30px;
+    opacity: 1;
+    
+  }
+  
+  .name-text {
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31.47px;
+    text-align: left;
+    color: white;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+  }
+  
+  .position-text {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 24.2px;
+    text-align: left;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  /* CSS for the marquee */
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .marquee-content {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+    white-space: wrap; 
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  
+  @media only screen and (max-width: 1024px) {
+    .speaker-text {
+      font-size: 48px;
+      line-height: 60px;
+      text-align: center;
+    }
+  
+    .speaker-container {
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: auto; 
+    }
+  
+    .image-container{
+      margin: 1%;
+    }
+  }
+
+  .thumbs-wrapper{
+    display: none;
+  }
+
+  .carousel-status{
+    display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .speaker-container{
+      max-width: 90%;
+    }
+  }
