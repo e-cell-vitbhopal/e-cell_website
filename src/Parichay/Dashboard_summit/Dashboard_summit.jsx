@@ -1,6 +1,6 @@
 import React from "react";
 import "./dashboard_summit.css";
-import Esummit from "../../images/Esummit.png";
+import Pari from "../../images/Parichay.png";
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard_summit = () => {
@@ -8,10 +8,9 @@ const Dashboard_summit = () => {
 
   return (
     <div className="dashboarddd">
-      <img
-        className="logos"
+      <img className="logos"
         alt=" background image"
-        src={Esummit}
+        src={Pari}
       />
 
       <a href="#"><button class="rounded-button">REGISTER NOW</button></a>

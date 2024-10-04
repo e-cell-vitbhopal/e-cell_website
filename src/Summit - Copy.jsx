@@ -1,12 +1,12 @@
 import React from 'react';
 import './summit - Copy.css'
-import Navbar_summit from './e_summit_components - Copy/Navbar_summit/Navbar_summit.jsx';
-import Dashboard_summit from './e_summit_components - Copy/Dashboard_summit/Dashboard_summit.jsx';
-import About_summit from './e_summit_components - Copy/About_summit/About_summit';
-import Sponsors_summit from './e_summit_components - Copy/Sponsors_summit/Sponsors_summit';
-import Speaker_summit from './e_summit_components - Copy/Speakers_summit.jsx/Speaker_summit';
-import Contact_summit from './e_summit_components - Copy/Contact_summit/Contact_summit';
-import Event_summit from './e_summit_components - Copy/Event_summit/Event_summit';
+import Navbar_summit from './Parichay/Navbar_summit/Navbar_summit.jsx';
+import Dashboard_summit from './Parichay/Dashboard_summit/Dashboard_summit.jsx';
+import About_summit from './Parichay/About_summit/About_summit';
+import Sponsors_summit from './Parichay/Sponsors_summit/Sponsors_summit';
+import Speaker_summit from './Parichay/Speakers_summit.jsx/Speaker_summit';
+import Contact_summit from './Parichay/Contact_summit/Contact_summit';
+import Event_summit from './Parichay/Event_summit/Event_summit';
 
 
 function Summit_copy() {

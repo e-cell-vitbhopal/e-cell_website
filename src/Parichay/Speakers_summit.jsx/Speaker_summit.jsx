@@ -5,58 +5,33 @@ import { useMediaQuery } from 'react-responsive';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 // Speaker images
-import Vijendra from '../../images/channels4_profile.jpg';
-import Abhay from '../../images/Abhay Yadav.jpg';
-import Ruchi from '../../images/Amruta.jpg';
-import Amruta from '../../images/ruchi.jpg';
-import Shreyas from '../../images/Shreyas.jpg';
-import Siddharth from '../../images/Siddharth.jpg';
-import Download from '../../images/download.jpeg';
+import Sri from '../../images/Sri.jpg';
+import Punit from '../../images/Punit.jpg';
+import Sharma from '../../images/Sharma.jpg';
 
 // Speaker data
 const speakers = [
   {
     id: 1,
-    image: Vijendra,
-    name: 'Dr. Vijender Singh Chauhan',
-    position: 'Asso. Prof. DU. Interviewer',
+    image: Sri,
+    name: 'Srijan Mehrotra',
+    position: 'MODELVERSE FOUNDER',
     link: 'https://www.ecellvitbhopal.in/e_summit_2024/registration/FireSideChat',
   },
   {
     id: 2,
-    image: Abhay,
-    name: 'Dr. Abhay Yadav',
-    position: 'Founder of Bhopal Angels',
-    link: 'https://www.linkedin.com/in/drabhayyadav',
+    image: Punit,
+    name: 'PUNIT G',
+    position: 'TEDX SPEAKER',
+    link: 'https://www.linkedin.com/in/drpunitg/?originalSubdomain=in',
   },
   {
     id: 3,
-    image: Amruta,
-    name: 'Amruta Shingwekar',
-    position: 'Co-Founder Ezeseed',
-    link: 'https://www.linkedin.com/in/amruta-shingwekar-av',
-  },
-  {
-    id: 4,
-    image: Ruchi,
-    name: 'Ruchi Puri',
-    position: 'Angel Investor',
-    link: 'https://in.linkedin.com/in/ruchi-gulatee-puri-9b59475',
-  },
-  {
-    id: 5,
-    image: Shreyas,
-    name: 'Shreyas Sharma',
-    position: 'Co-Founder Ezeseed',
-    link: 'https://www.linkedin.com/in/shreyas-sharma-60437a247',
-  },
-  {
-    id: 6,
-    image: Siddharth,
-    name: 'Siddharth Pal',
-    position: 'Angel Investor',
-    link: 'https://www.linkedin.com/in/isiddharthpal/',
-  },
+    image: Sharma,
+    name: 'MITRESH SHARMA',
+    position: 'FIRST BUD ORGANIC, FOUNDER',
+    link: 'https://www.linkedin.com/in/mitreshsharma/?originalSubdomain=in',
+  }
 ];
 
 // Reusable component for a speaker card

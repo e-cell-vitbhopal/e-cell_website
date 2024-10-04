@@ -64,20 +64,20 @@ function BasicInfo({ name, setName, email, setEmail, regNo, setRegNo, contact, s
         </label>
         <div className="batch-options">
           <div>
-            <input type="radio" id="batch20" name="batch" value="20" required checked={batch === '20'} onChange={() => setBatch('20')} />
-            <label htmlFor="batch21">2020</label>
-          </div>
-          <div>
             <input type="radio" id="batch21" name="batch" value="21" required checked={batch === '21'} onChange={() => setBatch('21')} />
             <label htmlFor="batch21">2021</label>
           </div>
           <div>
             <input type="radio" id="batch22" name="batch" value="22" required checked={batch === '22'} onChange={() => setBatch('22')} />
-            <label htmlFor="batch22">2022</label>
+            <label htmlFor="batch21">2022</label>
           </div>
           <div>
             <input type="radio" id="batch23" name="batch" value="23" required checked={batch === '23'} onChange={() => setBatch('23')} />
-            <label htmlFor="batch23">2023</label>
+            <label htmlFor="batch22">2023</label>
+          </div>
+          <div>
+            <input type="radio" id="batch24" name="batch" value="24" required checked={batch === '24'} onChange={() => setBatch('24')} />
+            <label htmlFor="batch23">2024</label>
           </div>
         </div>
       </div>

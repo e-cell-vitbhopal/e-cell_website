@@ -3,70 +3,64 @@ import './sponsors_summit.css';
 import { Carousel } from 'react-responsive-carousel';
 import { useMediaQuery } from 'react-responsive';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Notion from '../../images/Notion.png';
-import SG from '../../images/SG.png';
-import BL from '../../images/blue_learn.jpg';
-import CT from '../../images/CT.png';
-import ST from '../../images/ST.jpg';
-import Unstop from '../../images/unstop.jpg';
-import FN from '../../images/FN.jpg';
-import Notebook from '../../images/NB.png';
-import IS from '../../images/IS.png';
+import GC from '../../images/GC.png';
+import VD from '../../images/VD.jpg';
+import BV from '../../images/BV.png';
+import SE from '../../images/SE.png';
+import FL from '../../images/FL.png';
+import TY from '../../images/TY.png';
+import SNF from '../../images/SNF.png';
+import TOP from '../../images/TOP.png';
+
 
 const sponsorData = [
   {
-    title: 'Design Partner',
-    imageSrc: Notion,
-    sponsorName: 'Notion',
-    sponsorLink: 'https://www.instagram.com/notionhq',
-  },
-  {
-    title: 'Trading Partner',
-    imageSrc: SG,
-    sponsorName: 'Stock Gro',
-    sponsorLink: 'https://www.instagram.com/stock_gro',
-  },
-  {
-    title: 'Education Partner',
-    imageSrc: BL,
-    sponsorName: 'Blue Learn',
-    sponsorLink: 'https://www.instagram.com/bluelearn.in',
-  },
-  {
-    title: 'Education Partner',
-    imageSrc: IS,
-    sponsorName: 'Insternshala',
-    sponsorLink: 'https://www.instagram.com/internshala?igsh=MXR6NjMwcThhMXNvOQ==',
-  },
-  {
-    title: 'Platform Partner',
-    imageSrc: Unstop,
-    sponsorName: 'Unstop',
-    sponsorLink: 'https://www.instagram.com/unstop.world',
+    title: 'Study Partner',
+    imageSrc: TOP,
+    sponsorName: 'Top One Percent',
+    sponsorLink: 'https://www.instagram.com/toponepercent.gmatgre/?hl=en',
   },
   {
     title: 'Media Partner',
-    imageSrc: Notebook,
-    sponsorName: 'NoticeBard',
-    sponsorLink: 'https://www.instagram.com/noticebardofficial',
+    imageSrc: SNF,
+    sponsorName: 'Startupnews',
+    sponsorLink: 'https://www.instagram.com/startupnews.fyi/?hl=en',
   },
   {
-    title: 'Media Partner',
-    imageSrc: ST,
-    sponsorName: 'Startup Talky',
-    sponsorLink: 'https://www.instagram.com/startup_talky',
-  },
-  {
-    title: 'Media Partner',
-    imageSrc: CT,
-    sponsorName: 'Campus Times',
-    sponsorLink: 'https://www.instagram.com/campustimes.pune',
+    title: 'Travelling Partner',
+    imageSrc: TY,
+    sponsorName: 'Travelyatri',
+    sponsorLink: 'https://www.instagram.com/Travelyaari_India/?hl=en',
   },
   {
     title: 'Finance Partner',
-    imageSrc: FN,
-    sponsorName: 'Finlatics',
-    sponsorLink: 'https://www.instagram.com/finlatics',
+    imageSrc: FL,
+    sponsorName: ' Finlatics',
+    sponsorLink: 'https://www.instagram.com/finlatics/?hl=en',
+  },
+  {
+    title: 'Knowledge Partner',
+    imageSrc: SE,
+    sponsorName: ' Stockedge',
+    sponsorLink: 'https://www.instagram.com/mystockedge/?hl=en',
+  },
+  {
+    title: 'Merchandise Partner',
+    imageSrc: BV,
+    sponsorName: 'Bazarville',
+    sponsorLink: 'https://www.instagram.com/bazarvilleindia/?hl=en',
+  },
+  {
+    title: 'Energy Partner',
+    imageSrc: VD,
+    sponsorName: 'VOLD',
+    sponsorLink: 'https://www.instagram.com/voldenergydrink/?hl=en',
+  },
+  {
+    title: 'Certification Partner',
+    imageSrc: GC,
+    sponsorName: 'Give My Certificate',
+    sponsorLink: 'https://www.instagram.com/givemycertificate/',
   },
 ];
 

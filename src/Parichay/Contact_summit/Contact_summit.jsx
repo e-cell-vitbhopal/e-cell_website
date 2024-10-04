@@ -27,7 +27,7 @@ const Contact_summit = () => {
                 fill="#F8F8F8"
               />
             </svg>
-            Shobhit Chavan: 8104128267
+            Ayush: 7080873578
           </p>
           <p>
             <svg
@@ -43,7 +43,7 @@ const Contact_summit = () => {
                 fill="#F8F8F8"
               />
             </svg>
-            Suhani Panda: 8328985503
+            Aishwarya Tripathi: 8253051401
           </p>
 
           <p>
@@ -60,7 +60,7 @@ const Contact_summit = () => {
                 fill="#F8F8F8"
               />
             </svg>
-            Pankaj Gour: 7742283868
+            Mohit upadhyay: 7889111072
           </p>
 
           <p>

@@ -11,11 +11,11 @@ function FireSideChat() {
        <div className='esummit-registration'>
           <img className='logo' src={Logo} alt='e-cell vit bhopal' />
           <div className='form-container'>
-            <h2 className='heading'>Events</h2>
+            <h2 className='heading'>Parichay</h2>
 
             
       <div className='registration-form'>
-        <h2>Speaker session: Dr. Vijender Singh Chauhan</h2>
+        <h2>About Parichay</h2>
         <br />
           <p> 
             E - Cell of VIT Bhopal is back with yet another exiciting event. <br />
@@ -25,14 +25,15 @@ function FireSideChat() {
   
             Join us for an inspiring Speaker Session featuring successful speaker sharing their journey, insights, and advice. Engage in candid conversations, participate in a Q&A, and network with industry professionals.
             <br /><br />
-            Key Takeaways: <br />
-            - Hear personal stories and lessons from successful entrepreneurs. <br />
-            - Gain practical advice and strategies for entrepreneurship. <br />
-            - Network with fellow entrepreneurs and industry experts. <br />
+            At Parichay, you’ll get to: <br />
+            - Learn about E-Cell: We’ll take you through what our Entrepreneurship Cell is all about, the activities we organize, and how we support aspiring entrepreneurs on their journey. <br />
+            - Hearfrom Industry Leaders: Get inspired by a guest speaker from the industry who will share valuable insights on the entrepreneurial ecosystem, real-world challenges, and success stories.<br />
+            - Experience Interactive Activities: Participate in engaging sessions like dance, fun games like Pictionary Buzzer, and innovative pitching exercises that will challenge your creativity and teamwork. <br />
+            - Pitch Your Ideas: As part of our 'Eureka' pitching event, you’ll get a chance to pitch your unique business ideas and receive valuable feedback, along with the possibility of progressing to higher rounds.. <br />
 
-            Don't miss this opportunity to ignite your entrepreneurial spirit!<br /><br />
+            Whether you’re an aspiring entrepreneur or just curious about how the world of startups works, Parichay is your entry point into this exciting ecosystem. Join us and be part of a transformative journey at VIT Bhopal!<br /><br />
 
-            Date : 8 May, 9.30am to 1.00 pm <br />
+            Date : 11 October, 9.30am to 3.00 pm <br />
             Venue - Auditorium, VIT Bhopal University<br />
           </p>
           <div className='btn-container'>

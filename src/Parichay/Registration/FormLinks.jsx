@@ -20,20 +20,13 @@ function FormLinks() {
             {/* Day 1 Events */}
               <div className='events-container'>
                 <div className="events-section">
-                  <h3>7th May</h3>
                   
-
-                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/ProductDesign')}}>
-                    <span>Product Design Competition</span>
-                  </div>
 
 {/*                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/InternshipFair')}}>
                     <span>Internship/Job Fair</span>
                   </div> */}
 
-                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/IPLAuction')}}>
-                    <span>IPL Auction</span>
-                  </div>
+                  
 
                   {/* <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/SilentDisco')}}>
                     <span>Silent Disco</span>
@@ -44,22 +37,10 @@ function FormLinks() {
               {/* Day 2 Events */}
               <div className='events-container'>
                 <div className="events-section">
-                  <h3>8th May</h3>
+                  <h3>11 October</h3>
 
                   <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/FireSideChat')}}>
-                    <span>Speaker session: Dr. Vijender Singh Chauhan</span>
-                  </div>
-
-                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/IshaanSharma')}}>
-                    <span>Networking arena</span>
-                  </div>
-
-                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/CaseStudyCompetition')}}>
-                    <span>Case Study Competition</span>
-                  </div>
-
-                  <div className="event" onClick={()=>{navigate('/e_summit_2024/registration/PaperTrading')}}>
-                    <span>Paper Trading</span>
+                    <span>Parichay 2024</span>
                   </div>
 
                 </div>
