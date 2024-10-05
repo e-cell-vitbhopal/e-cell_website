@@ -14,7 +14,7 @@ const Dashboard_summit = () => {
         src={Parichay}
       />
 
-      <a href="#"><button class="rounded-button">REGISTER NOW</button></a>
+      <a href="https://forms.gle/RobtGxSGTT2ze4Xb6"><button class="rounded-button">REGISTER NOW</button></a>
     </div>
   );
 };

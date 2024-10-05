@@ -11,7 +11,7 @@ import ST from '../../images/ST.jpg';
 import Travel from '../../images/travelyatri.png';
 import FN from '../../images/FN.jpg';
 import Notebook from '../../images/NB.png';
-import IS from '../../images/IS.png';
+import VD from '../../images/vold.jpeg';
 
 const sponsorData = [
   {
@@ -33,34 +33,16 @@ const sponsorData = [
     sponsorLink: 'https://startupnews.fyi/',
   },
   {
-    title: 'Education Partner',
-    imageSrc: IS,
-    sponsorName: 'Insternshala',
-    sponsorLink: 'https://www.instagram.com/internshala?igsh=MXR6NjMwcThhMXNvOQ==',
+    title: 'Drinks Partner',
+    imageSrc: VD,
+    sponsorName: 'VOLD',
+    sponsorLink: 'https://www.voldenergy.in/',
   },
   {
     title: 'Travelling Partner',
     imageSrc: Travel,
     sponsorName: 'Travel yatri',
     sponsorLink: 'http://travelyatri.net.in/',
-  },
-  {
-    title: 'Media Partner',
-    imageSrc: Notebook,
-    sponsorName: 'NoticeBard',
-    sponsorLink: 'https://www.instagram.com/noticebardofficial',
-  },
-  {
-    title: 'Media Partner',
-    imageSrc: ST,
-    sponsorName: 'Startup Talky',
-    sponsorLink: 'https://www.instagram.com/startup_talky',
-  },
-  {
-    title: 'Media Partner',
-    imageSrc: CT,
-    sponsorName: 'Campus Times',
-    sponsorLink: 'https://www.instagram.com/campustimes.pune',
   },
   {
     title: 'Finance Partner',
@@ -85,7 +67,8 @@ const SponsorSection = ({ sectionTitle, sponsors }) => (
       ))}
     </div>
   </div>
-)
+);
+
 const SponsorSection1 = ({ sectionTitle, sponsors }) => (
   <div className="sponsor-subsection1">
     <h3>{sectionTitle}</h3>
@@ -119,13 +102,11 @@ function SponsorsSummit() {
           infiniteLoop
           autoPlay
           interval={3000}
-          
         >
           {sponsorData.map((sponsor, index) => (
             <div key={index}>
               <p className="sponsor-name">{sponsor.title}</p>
               <a href={sponsor.sponsorLink} target="_blank" rel="noopener noreferrer">
-                
                 <img src={sponsor.imageSrc} className="ellipse" alt={sponsor.sponsorName} />
                 <p className="sponsor-name1">{sponsor.sponsorName}</p>
               </a>
@@ -137,12 +118,12 @@ function SponsorsSummit() {
           <div className='horizontal-flex'>
             <SponsorSection sectionTitle="Study Partner" sponsors={[sponsorData[0]]} />
             <SponsorSection sectionTitle="Knowledge Partner" sponsors={[sponsorData[1]]} />
-            <SponsorSection1 sectionTitle="Media Partner" sponsors={sponsorData.slice(2,3)} />
+            <SponsorSection1 sectionTitle="Media Partner" sponsors={sponsorData.slice(2, 3)} />
           </div>
           <div className='horizontal-flex'>
-            {/* <SponsorSection1 sectionTitle="Media Partners" sponsors={sponsorData.slice(5,8)} /> */}
             <SponsorSection sectionTitle="Travelling Partner" sponsors={[sponsorData[4]]} />
-            <SponsorSection sectionTitle="Finance Partner" sponsors={[sponsorData[8]]} />
+            <SponsorSection sectionTitle="Finance Partner" sponsors={[sponsorData[5]]} />
+            <SponsorSection1 sectionTitle="Drinks Partner" sponsors={[sponsorData[3]]} />
           </div>
         </>
       )}
