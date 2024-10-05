@@ -142,7 +142,7 @@ function SponsorsSummit() {
           <div className='horizontal-flex'>
             {/* New sponsor sections */}
             <SponsorSection sectionTitle="Technology Partner" sponsors={[sponsorData[6]]} />
-            <SponsorSection sectionTitle="Healthcare Partner" sponsors={[sponsorData[7]]} />
+            <SponsorSection sectionTitle="Placement Partner" sponsors={[sponsorData[7]]} />
           </div>
         </>
       )}
