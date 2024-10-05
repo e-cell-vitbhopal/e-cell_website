@@ -3,34 +3,34 @@ import './sponsors_summit.css';
 import { Carousel } from 'react-responsive-carousel';
 import { useMediaQuery } from 'react-responsive';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Notion from '../../images/Notion.png';
-import SG from '../../images/SG.png';
-import BL from '../../images/blue_learn.jpg';
+import Top from '../../images/top_one.png';
+import SE from '../../images/stockedge.png';
+import SU from '../../images/startupnews.jpg';
 import CT from '../../images/CT.png';
 import ST from '../../images/ST.jpg';
-import Unstop from '../../images/unstop.jpg';
+import Travel from '../../images/travelyatri.png';
 import FN from '../../images/FN.jpg';
 import Notebook from '../../images/NB.png';
 import IS from '../../images/IS.png';
 
 const sponsorData = [
   {
-    title: 'Design Partner',
-    imageSrc: Notion,
-    sponsorName: 'Notion',
-    sponsorLink: 'https://www.instagram.com/notionhq',
+    title: 'Study Partners',
+    imageSrc: Top,
+    sponsorName: 'Top One Percent',
+    sponsorLink: 'https://www.top-one-percent.com/',
   },
   {
-    title: 'Trading Partner',
-    imageSrc: SG,
-    sponsorName: 'Stock Gro',
-    sponsorLink: 'https://www.instagram.com/stock_gro',
+    title: 'Knowledge Partner',
+    imageSrc: SE,
+    sponsorName: 'Stock Edge',
+    sponsorLink: 'https://stockedge.com/',
   },
   {
-    title: 'Education Partner',
-    imageSrc: BL,
-    sponsorName: 'Blue Learn',
-    sponsorLink: 'https://www.instagram.com/bluelearn.in',
+    title: 'Media Partner',
+    imageSrc: SU,
+    sponsorName: 'StartupNews',
+    sponsorLink: 'https://startupnews.fyi/',
   },
   {
     title: 'Education Partner',
@@ -39,10 +39,10 @@ const sponsorData = [
     sponsorLink: 'https://www.instagram.com/internshala?igsh=MXR6NjMwcThhMXNvOQ==',
   },
   {
-    title: 'Platform Partner',
-    imageSrc: Unstop,
-    sponsorName: 'Unstop',
-    sponsorLink: 'https://www.instagram.com/unstop.world',
+    title: 'Travelling Partner',
+    imageSrc: Travel,
+    sponsorName: 'Travel yatri',
+    sponsorLink: 'http://travelyatri.net.in/',
   },
   {
     title: 'Media Partner',
@@ -135,13 +135,13 @@ function SponsorsSummit() {
       ) : (
         <>
           <div className='horizontal-flex'>
-            <SponsorSection sectionTitle="Design Partner" sponsors={[sponsorData[0]]} />
-            <SponsorSection sectionTitle="Trading Partner" sponsors={[sponsorData[1]]} />
-            <SponsorSection1 sectionTitle="Education Partner" sponsors={sponsorData.slice(2,4)} />
+            <SponsorSection sectionTitle="Study Partner" sponsors={[sponsorData[0]]} />
+            <SponsorSection sectionTitle="Knowledge Partner" sponsors={[sponsorData[1]]} />
+            <SponsorSection1 sectionTitle="Media Partner" sponsors={sponsorData.slice(2,3)} />
           </div>
           <div className='horizontal-flex'>
-            <SponsorSection1 sectionTitle="Media Partners" sponsors={sponsorData.slice(5,8)} />
-            <SponsorSection sectionTitle="Platform Partner" sponsors={[sponsorData[4]]} />
+            {/* <SponsorSection1 sectionTitle="Media Partners" sponsors={sponsorData.slice(5,8)} /> */}
+            <SponsorSection sectionTitle="Travelling Partner" sponsors={[sponsorData[4]]} />
             <SponsorSection sectionTitle="Finance Partner" sponsors={[sponsorData[8]]} />
           </div>
         </>
