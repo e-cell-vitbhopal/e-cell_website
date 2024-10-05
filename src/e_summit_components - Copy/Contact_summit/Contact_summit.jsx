@@ -101,7 +101,7 @@ const Contact_summit = () => {
           </p>
         </div>
         <div className="copyright">
-          <p>&copy; Esummit 2024, VIT Bhopal</p>
+          <p>&copy; Ecell, VIT Bhopal</p>
         </div>
       </div>
     </section>
