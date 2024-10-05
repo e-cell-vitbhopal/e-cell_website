@@ -8,7 +8,7 @@ import SE from '../../images/stockedge.png';
 import SU from '../../images/startupnews.jpg';
 import CT from '../../images/CT.png';
 import ST from '../../images/ST.jpg';
-import Travel from '../../images/travelyatri.png';
+import Travel from '../../images/yatri.jpg';
 import FN from '../../images/FN.jpg';
 import Notebook from '../../images/NB.png';
 import VD from '../../images/vold.jpeg';
@@ -33,7 +33,7 @@ const sponsorData = [
     sponsorLink: 'https://startupnews.fyi/',
   },
   {
-    title: 'Drinks Partner',
+    title: 'Energy Partner',
     imageSrc: VD,
     sponsorName: 'VOLD',
     sponsorLink: 'https://www.voldenergy.in/',
@@ -123,7 +123,7 @@ function SponsorsSummit() {
           <div className='horizontal-flex'>
             <SponsorSection sectionTitle="Travelling Partner" sponsors={[sponsorData[4]]} />
             <SponsorSection sectionTitle="Finance Partner" sponsors={[sponsorData[5]]} />
-            <SponsorSection1 sectionTitle="Drinks Partner" sponsors={[sponsorData[3]]} />
+            <SponsorSection1 sectionTitle="Energy Partner" sponsors={[sponsorData[3]]} />
           </div>
         </>
       )}

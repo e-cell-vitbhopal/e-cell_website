@@ -18,14 +18,14 @@ const speakers = [
   },
   {
     id: 2,
-    image: Punit,
+    image: Srijan,
     name: 'Punit G.',
     position: 'ARTH NIRMITI CEO ',
     link: 'https://www.linkedin.com/in/drpunitg/?originalSubdomain=in',
   },
   {
     id: 3,
-    image: Srijan,
+    image: Punit,
     name: 'Srijan Mehrotra',
     position: 'MODELVERSE Founder',
     link: 'https://www.linkedin.com/in/srijan-mehrotra-01b18b2b8/?originalSubdomain=in',
