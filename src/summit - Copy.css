@@ -8,5 +8,6 @@ background-attachment: fixed;
    .summit_body_copy{
     background-image: url("https://tasbihdigital.com/wp-content/uploads/2022/06/Mobile-Wallpaper-Blue.jpg");
     background-size: contain;
+    background-repeat: round;
    }
 }

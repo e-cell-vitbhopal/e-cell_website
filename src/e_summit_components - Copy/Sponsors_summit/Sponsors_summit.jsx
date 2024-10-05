@@ -42,13 +42,13 @@ const sponsorData = [
     title: 'Travelling Partner',
     imageSrc: Travel,
     sponsorName: 'Travel yatri',
-    sponsorLink: 'http://travelyatri.net.in/',
+    sponsorLink: 'https://travelyatri.online/',
   },
   {
     title: 'Finance Partner',
     imageSrc: FN,
     sponsorName: 'Finlatics',
-    sponsorLink: 'https://www.instagram.com/finlatics',
+    sponsorLink: 'https://www.finlatics.com/',
   },
 ];
 

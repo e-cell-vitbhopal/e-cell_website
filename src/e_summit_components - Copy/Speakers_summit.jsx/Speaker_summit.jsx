@@ -4,7 +4,7 @@ import "./speaker_summit.css";
 // Speaker images
 import Mitresh from '../../images/mitresh.jpeg';
 import Punit from '../../images/PUNIT.png';
-import Ruchi from '../../images/Amruta.jpg';
+import Vold from '../../images/volde.png';
 import Srijan from '../../images/srijan.jpeg';
 
 // Speaker data
@@ -29,6 +29,13 @@ const speakers = [
     name: 'Srijan Mehrotra',
     position: 'MODELVERSE Founder',
     link: 'https://www.linkedin.com/in/srijan-mehrotra-01b18b2b8/?originalSubdomain=in',
+  },
+  {
+    id: 4,
+    image: Vold,
+    name: 'Devesh Bochre',
+    position: 'Vold Energy Founder',
+    link: 'https://www.linkedin.com/in/devesh-bochre/?originalSubdomain=in',
   },
 ];
 
