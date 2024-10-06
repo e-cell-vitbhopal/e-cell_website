@@ -6,7 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Top from '../../images/top_one.png';
 import SE from '../../images/stockedge.png';
 import SU from '../../images/startupnews.jpg';
-import Interview from '../../images/inter.png';
+import Interview from '../../images/interbud.jpg';
 import Certificate from '../../images/certi.png';
 import Travel from '../../images/yatri.jpg';
 import FN from '../../images/FN.jpg';
@@ -52,14 +52,14 @@ const sponsorData = [
   },
   // New sponsor 1
   {
-    title: 'Technology Partner',
+    title: 'Educational Partner',
     imageSrc: Interview,
-    sponsorName: 'Interview Bit',
+    sponsorName: 'Interview Buddy',
     sponsorLink: 'https://www.interviewbit.com/',
   },
   // New sponsor 2
   {
-    title: 'Healthcare Partner',
+    title: 'Certification Partner',
     imageSrc: Certificate,
     sponsorName: 'Give My Certificate',
     sponsorLink: 'https://givemycertificate.com/',
@@ -141,8 +141,8 @@ function SponsorsSummit() {
           </div>
           <div className='horizontal-flex'>
             {/* New sponsor sections */}
-            <SponsorSection sectionTitle="Placement Partner" sponsors={[sponsorData[6]]} />
-            <SponsorSection sectionTitle="Technology Partner" sponsors={[sponsorData[7]]} />
+            <SponsorSection sectionTitle="Educational Partner" sponsors={[sponsorData[6]]} />
+            <SponsorSection sectionTitle="Certification Partner" sponsors={[sponsorData[7]]} />
           </div>
         </>
       )}
