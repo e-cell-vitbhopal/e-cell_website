@@ -55,7 +55,7 @@ const sponsorData = [
     title: 'Educational Partner',
     imageSrc: Interview,
     sponsorName: 'Interview Buddy',
-    sponsorLink: 'https://www.interviewbit.com/',
+    sponsorLink: 'https://interviewbuddy.net/',
   },
   // New sponsor 2
   {
