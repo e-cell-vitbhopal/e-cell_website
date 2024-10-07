@@ -6,8 +6,7 @@ background-attachment: fixed;
 
 @media only screen and (max-width: 600px) {
    .summit_body_copy{
-    background-image: url("https://tasbihdigital.com/wp-content/uploads/2022/06/Mobile-Wallpaper-Blue.jpg");
-    background-size: contain;
-    background-repeat: round;
+   background-color: #0f022d;
+   background-image: none;
    }
 }
