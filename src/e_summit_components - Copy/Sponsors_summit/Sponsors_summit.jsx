@@ -12,6 +12,7 @@ import Travel from '../../images/yatri.jpg';
 import FN from '../../images/FN.jpg';
 import Notebook from '../../images/NB.png';
 import VD from '../../images/vold.jpeg';
+import BV from '../../images/BV.png'
 
 const sponsorData = [
   {
@@ -63,6 +64,12 @@ const sponsorData = [
     imageSrc: Certificate,
     sponsorName: 'Give My Certificate',
     sponsorLink: 'https://givemycertificate.com/',
+  },
+  {
+    title: 'Merchandise Partner',
+    imageSrc: BV,
+    sponsorName: 'BazarVille',
+    sponsorLink: 'https://bazarville.com/',
   },
 ];
 
@@ -136,13 +143,14 @@ function SponsorsSummit() {
           </div>
           <div className='horizontal-flex'>
             <SponsorSection sectionTitle="Travelling Partner" sponsors={[sponsorData[4]]} />
-            <SponsorSection sectionTitle="Finance Partner" sponsors={[sponsorData[5]]} />
-            <SponsorSection1 sectionTitle="Energy Partner" sponsors={[sponsorData[3]]} />
+            <SponsorSection1 sectionTitle="Finance Partner" sponsors={[sponsorData[5]]} />
+            <SponsorSection sectionTitle="Energy Partner" sponsors={[sponsorData[3]]} />
           </div>
           <div className='horizontal-flex'>
             {/* New sponsor sections */}
-            <SponsorSection sectionTitle="Educational Partner" sponsors={[sponsorData[6]]} />
+            <SponsorSection1 sectionTitle="Educational Partner" sponsors={[sponsorData[6]]} />
             <SponsorSection sectionTitle="Certification Partner" sponsors={[sponsorData[7]]} />
+            <SponsorSection sectionTitle="Merchandise Partner" sponsors={[sponsorData[8]]} />
           </div>
         </>
       )}
