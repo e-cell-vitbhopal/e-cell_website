@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className='navbar-items_a'><a className='Navbar_links' href='#About'>About-Us</a></div>
           <div className='navbar-items_a'><a className='Navbar_links' href='#Events'>Events</a></div>
           <div className='navbar-items_a'><a className='Navbar_links' href='https://www.ecellvitbhopal.in/e_summit_2024'>E-summit</a></div>
-          <div className='navbar-items_a'><a className='Navbar_links' href='https://www.ecellvitbhopal.in/parichay'>Prichay</a></div>
+          <div className='navbar-items_a'><a className='Navbar_links' href='https://www.ecellvitbhopal.in/parichay'>Parichay</a></div>
           <div className='navbar-items_a'><a className='Navbar_links' href='#Contacts'>Contact</a></div>
         </div>
         <button className='join-button' onClick={()=>{navigate('/recruitment')}}>Join now</button>
