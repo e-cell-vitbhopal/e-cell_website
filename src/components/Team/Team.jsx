@@ -7,7 +7,7 @@ import TeamsCard from './TeamsCard';
 import BhaktiParashar from '../../images/Bhakti Parashar.png';
 import Maragatharajan from '../../images/Maragatharajan.jfif';
 import Shrinath from '../../images/Shrinath Mishra President.jpg';
-import Shobhit from '../../images/shobhit_president - SHOBHIT SOPAN CHAVAN 21BSA10061.png'
+import Ayush from '../../images/Ayush.jpeg'
 
 export default function Team() {
   return (
@@ -26,7 +26,7 @@ export default function Team() {
             <LeadCards img={Maragatharajan} href={'https://mail.google.com/mail/?view=cm&fs=1&to=maragatharajan@vitbhopal.ac.in'} name="Dr. M Maragatharajan" position="Faculty Coordinator"/>
           </div>
           <div className='col-lg-4'>
-            <LeadCards img={Shobhit} href={'https://mail.google.com/mail/?view=cm&fs=1&to=Shobhit.chavan2021@vitbhopal.ac.in'} name="Shobhit Chavan" position="President"/>
+            <LeadCards img={Ayush} href={'https://mail.google.com/mail/?view=cm&fs=1&to=ayushmishra2022@vitbhopal.ac.in'} name="Ayush Mishra" position="President"/>
           </div>
         </div>
       </div>
