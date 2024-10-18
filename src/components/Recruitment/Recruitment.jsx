@@ -75,20 +75,20 @@ function Recruitment() {
         <div style={{textAlign:"center"}}>
           <br />
           <br />
-          <p className='pink-text'>We are not accepting responses now.</p>
-          <p>Please try again when recruitment reopens.</p>
+          {/* <p className='pink-text'>We are not accepting responses now.</p>
+          <p>Please try again when recruitment reopens.</p> */}
         </div>
 
-        {/* <div className='rec-team-container'>
-          <RecTeamCard name="Social" link="https://docs.google.com/forms/d/e/1FAIpQLSfPiAlEM1TYwFVs751uZCDDTAF49ro-vg1B0BNTFr1zGz533w/viewform?usp=sf_link"/>
-          <RecTeamCard name="Technical" link="https://forms.gle/azn66gsf2qjvUFoP7"/>
-          <RecTeamCard name="Corporate" link="https://docs.google.com/forms/d/e/1FAIpQLScyBJW6d-M-z3suHecGVDt_QeE72Y2u_Qp6BxW-yE6gCiCt5Q/viewform"/>
-          <RecTeamCard name="Content" link="https://forms.gle/4CFGj6vscgbn3zLXA"/>
-          <RecTeamCard name="Operations" link="https://docs.google.com/forms/d/e/1FAIpQLSeN98oUoZx6SCqlewgM_H4xREKO0C0n4FPaap1T6-hFbGlkiw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"/>
-          <RecTeamCard name="Events" link="https://forms.gle/rSFBhFvta7eGpw558"/>
-          <RecTeamCard name="Finance" link="https://forms.gle/rymjRtLVV27qxm8R9"/>
-          <RecTeamCard name="Design" link="https://forms.gle/TTaqoJooCd5zU9kZA"/>
-        </div> */}
+        {<div className='rec-team-container'>
+          <RecTeamCard name="Social" link="https://forms.gle/W4RZViEoSv4pStpP6"/>
+          <RecTeamCard name="Technical" link="https://docs.google.com/forms/d/e/1FAIpQLSc1zPMlDTmNQRw6yfqP7hnWBz8fuBlxLul8ve4QBD2CjLlTrA/viewform?usp=sf_link"/>
+          <RecTeamCard name="Corporate" link="https://forms.gle/w6yUhmy6MntBdxz16"/>
+          {/* <RecTeamCard name="Content" link="https://forms.gle/4CFGj6vscgbn3zLXA"/> */}
+          {/* <RecTeamCard name="Operations" link="https://docs.google.com/forms/d/e/1FAIpQLSeN98oUoZx6SCqlewgM_H4xREKO0C0n4FPaap1T6-hFbGlkiw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"/> */}
+          <RecTeamCard name="Events" link="https://forms.gle/VXF4Sf9N55UNBKWE8"/>
+          <RecTeamCard name="Finance" link="https://docs.google.com/forms/d/e/1FAIpQLScnEJTgpI2n7r5nnaQGBKB4Qett0Rp3BVhJsnDc9-n0aqIOYA/viewform"/>
+          <RecTeamCard name="Design" link="https://forms.gle/58V8vWJwqGEhyaYh7"/>
+        </div>}
       </div>
 
       </div>
