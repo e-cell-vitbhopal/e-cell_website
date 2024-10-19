@@ -64,7 +64,6 @@ export default function Dashboard() {
         alt=" background image"
         src={Esummit}
       /> */}
-      {/* <button class="rounded-button" onClick={()=>{navigate('/e_summit_2024')}}>Learn More</button> */}
     </div>
 
     {/* <div className='poster_dash_res'>
@@ -97,10 +96,14 @@ export default function Dashboard() {
           The future of your idea begins here, at the Entrepreneurial Cell of VIT Bhopal - where we don't just promote entrepreneurs,
           we build success stories.
         </p>  
+        <button class="rounded-button" onClick={()=>{navigate('/recruitment')}}>Join Our Team</button> 
+
         <motion.img variants={moveVariants} animate="animationOne" className="background-light bl-1" src={BackgroundLight} alt="" />
         <motion.img variants={moveVariants} animate="animationTwo" className="background-light bl-2" src={BackgroundLight} alt="" />
 
       </div>  
+
+
 
       <div className='about flex'>
         <div class="row">
