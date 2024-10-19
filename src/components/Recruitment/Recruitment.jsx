@@ -84,10 +84,11 @@ function Recruitment() {
           <RecTeamCard name="Technical" link="https://docs.google.com/forms/d/e/1FAIpQLSc1zPMlDTmNQRw6yfqP7hnWBz8fuBlxLul8ve4QBD2CjLlTrA/viewform?usp=sf_link"/>
           <RecTeamCard name="Corporate" link="https://forms.gle/w6yUhmy6MntBdxz16"/>
           <RecTeamCard name="Content" link="https://forms.gle/DRAiBfQdrgzqJhxWA"/> 
-          {/* <RecTeamCard name="Operations" link="https://docs.google.com/forms/d/e/1FAIpQLSeN98oUoZx6SCqlewgM_H4xREKO0C0n4FPaap1T6-hFbGlkiw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"/> */}
+          <RecTeamCard name="Operations" link="https://forms.gle/A67pAd8AMTUztqXP8"/> 
           <RecTeamCard name="Events" link="https://forms.gle/VXF4Sf9N55UNBKWE8"/>
           <RecTeamCard name="Finance & Sponsorship" link="https://docs.google.com/forms/d/e/1FAIpQLScnEJTgpI2n7r5nnaQGBKB4Qett0Rp3BVhJsnDc9-n0aqIOYA/viewform"/>
           <RecTeamCard name="Design" link="https://forms.gle/58V8vWJwqGEhyaYh7"/>
+         {/*<RecTeamCard name="Podcast" link="https://forms.gle/58V8vWJwqGEhyaYh7"/> */}
         </div>}
       </div>
 
