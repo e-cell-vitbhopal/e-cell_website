@@ -88,7 +88,7 @@ function Recruitment() {
           <RecTeamCard name="Events" link="https://forms.gle/VXF4Sf9N55UNBKWE8"/>
           <RecTeamCard name="Finance & Sponsorship" link="https://docs.google.com/forms/d/e/1FAIpQLScnEJTgpI2n7r5nnaQGBKB4Qett0Rp3BVhJsnDc9-n0aqIOYA/viewform"/>
           <RecTeamCard name="Design" link="https://forms.gle/58V8vWJwqGEhyaYh7"/>
-         {/*<RecTeamCard name="Podcast" link="https://forms.gle/58V8vWJwqGEhyaYh7"/> */}
+         <RecTeamCard name="Podcast" link="https://forms.gle/XgzJKLe7CS8u1xrk6"/> 
         </div>}
       </div>
 
