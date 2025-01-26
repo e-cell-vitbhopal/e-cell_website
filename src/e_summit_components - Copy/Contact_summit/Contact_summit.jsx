@@ -3,15 +3,15 @@ import "./contact_summit.css";
 
 const Contact_summit = () => {
   return (
-    <section className="contact-section" id="contact">
-    <div className="contact_header">
-      <h1 className="contact_text">CONTACT</h1>
+    <section className="esummit-contact-section" id="contact">
+      <div className="esummit-contact-header">
+        <h1 className="esummit-contact-title">CONTACT</h1>
       </div>
-      <div className="container">
-      <div className="query_header">
-        <p>FOR ANY QUERY!</p>
+      <div className="esummit-contact-container">
+        <div className="esummit-contact-query-header">
+          <p>FOR ANY QUERY!</p>
         </div>
-        <div className="club-coordinator">
+        <div className="esummit-contact-club-coordinator">
           <h3>Club Coordinator</h3>
           <p>
             <svg
@@ -27,7 +27,7 @@ const Contact_summit = () => {
                 fill="#F8F8F8"
               />
             </svg>
-            Mohit Upadhyay: 7889111072
+            Shobhit Chavan: 8104128267
           </p>
           <p>
             <svg
@@ -43,7 +43,24 @@ const Contact_summit = () => {
                 fill="#F8F8F8"
               />
             </svg>
-            Shlok Shukla: 8957979586
+            Suhani Panda: 8328985503
+          </p>
+
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="45"
+              height="45"
+              viewBox="0 0 45 45"
+              fill="none"
+            >
+              <circle cx="22.5" cy="22.5" r="22" stroke="white" />
+              <path
+                d="M32.2625 26.475C30.725 26.475 29.2375 26.225 27.85 25.775C27.6326 25.7013 27.3989 25.6904 27.1756 25.7434C26.9523 25.7965 26.7485 25.9114 26.5875 26.075L24.625 28.5375C21.0875 26.85 17.775 23.6625 16.0125 20L18.45 17.925C18.7875 17.575 18.8875 17.0875 18.75 16.65C18.2875 15.2625 18.05 13.775 18.05 12.2375C18.05 11.5625 17.4875 11 16.8125 11H12.4875C11.8125 11 11 11.3 11 12.2375C11 23.85 20.6625 33.5 32.2625 33.5C33.15 33.5 33.5 32.7125 33.5 32.025V27.7125C33.5 27.0375 32.9375 26.475 32.2625 26.475Z"
+                fill="#F8F8F8"
+              />
+            </svg>
+            Pankaj Gour: 7742283868
           </p>
 
           <p>
@@ -65,7 +82,7 @@ const Contact_summit = () => {
             ecell@vitbhopal.ac.in
           </p>
         </div>
-        <div className="faculty-coordinator">
+        <div className="esummit-contact-faculty-coordinator">
           <h3>Faculty Coordinator</h3>
           <p>
             <svg
@@ -100,8 +117,8 @@ const Contact_summit = () => {
             Dr. M Maragatharajan: maragatharajan@vitbhopal.ac.in
           </p>
         </div>
-        <div className="copyright">
-          <p>&copy; Ecell, VIT Bhopal</p>
+        <div className="esummit-contact-copyright">
+          <p>&copy; Esummit 2024, VIT Bhopal</p>
         </div>
       </div>
     </section>

@@ -3,15 +3,15 @@ import "./contact_summit.css";
 
 const Contact_summit = () => {
   return (
-    <section className="contact-section" id="contact">
-    <div className="contact_header">
-      <h1 className="contact_text">CONTACT</h1>
+    <section className="esummit-contact-section" id="contact">
+      <div className="esummit-contact-header">
+        <h1 className="esummit-contact-title">CONTACT</h1>
       </div>
-      <div className="container">
-      <div className="query_header">
-        <p>FOR ANY QUERY!</p>
+      <div className="esummit-contact-container">
+        <div className="esummit-contact-query-header">
+          <p>FOR ANY QUERY!</p>
         </div>
-        <div className="club-coordinator">
+        <div className="esummit-contact-club-coordinator">
           <h3>Club Coordinator</h3>
           <p>
             <svg
@@ -82,7 +82,7 @@ const Contact_summit = () => {
             ecell@vitbhopal.ac.in
           </p>
         </div>
-        <div className="faculty-coordinator">
+        <div className="esummit-contact-faculty-coordinator">
           <h3>Faculty Coordinator</h3>
           <p>
             <svg
@@ -117,7 +117,7 @@ const Contact_summit = () => {
             Dr. M Maragatharajan: maragatharajan@vitbhopal.ac.in
           </p>
         </div>
-        <div className="copyright">
+        <div className="esummit-contact-copyright">
           <p>&copy; Esummit 2024, VIT Bhopal</p>
         </div>
       </div>

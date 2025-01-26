@@ -1,21 +1,21 @@
-import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Dashboard from './components/Dashboard/Dashboard';
-import Events from './components/Events/Events';
-import PopUp from "./components/Dashboard/PopUp"
-// import Founder from './components/Founder/Founder';
-import Team from './components/Team/Team';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Sponsors from './components/sponsor-components/Sponsors';
+import Teams from './components/Team-Components/Teams';
+import Speakers from "./components/Speaker-Components/Speakers"
+import EventExport from "./components/Event-Components/EventExport"
+import Footer from './components/Footer-Components/Footer';
+import Dashboard from './components/Dashboard-components/Dashboard';
+import Navbar from './components/Dashboard-components/Navbar';
 
 function Main() {
   return (
     <div>
-      <Navbar />
+    <Navbar />
       <Dashboard />
-      {/* <Founder /> */}
-      {/* <PopUp/> */}
-      <Events />
-      <Team />
+      <EventExport />
+      <Teams />
+      <Sponsors />
+      <Speakers />
       <Footer />
     </div>
   )

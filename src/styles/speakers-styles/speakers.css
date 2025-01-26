@@ -1,0 +1,231 @@
+:root {
+    --container-width: calc(80vw);
+    --margin-left-small-screen-size: calc(2vw);
+    --card-speakers-width: calc(40vw);
+    --dynamic-font-size: calc(1rem + 6vw);
+}
+
+#right-icon-speakers-slide {
+    background-color: #00a1ff;
+}
+
+#left-icon-speakers-slide {
+    background-color: #00a1ff;
+}
+
+.main-speakers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 35px;
+    color: black;
+}
+
+.wrapper-speakers {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+
+}
+
+.wrapper-speakers i {
+    height: 50px;
+    width: 50px;
+    background: #0F1221;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.3);
+}
+
+.wrapper-speakers i:first-child {
+    left: -22px;
+}
+
+.wrapper-speakers i:last-child {
+    right: -22px;
+}
+
+.wrapper-speakers .carousel-speakers {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel-speakers::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-speakers :where(.card-speakers, .image-speaker) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.carousel-speakers .card-speakers {
+    scroll-snap-align: start;
+    list-style: none;
+    height: 360px;
+    background: #0F1221;
+    /* background: #fff; */
+    border-radius: 8px;
+    display: flex;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.carousel-speakers.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel-speakers.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel-speakers .dragging .card-speakers {
+    cursor: grab;
+    user-select: none;
+}
+
+.card-speakers {
+    border: 2px solid #8A2BE2;
+    /* border-color: #8A2BE2; */
+}
+
+.card-speakers .image-speaker {
+    background: black;
+    margin-top: 32px;
+    width: 252px;
+    height: 252px;
+    border-radius: 20px;
+}
+
+.card-speakers .image-speaker img {
+    width: 248px;
+    height: 248px;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.card-speakers h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px
+}
+
+.card-speakers span {
+    color: #6a6d78;
+    font-size: 1.31rem;
+}
+
+.speaker-heading-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker-heading {
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-bottom: 40px;
+    font-size: var(--dynamic-font-size);
+
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper-speakers .carousel-speakers {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+    /* .speaker-heading {
+        font-size: 5rem;
+    } */
+}
+
+@media screen and (max-width: 750px) {
+
+    /* .speaker-heading {
+        font-size: 4rem;
+        margin-left: -100px;
+    } */
+
+    .card-speakers .image-speaker {
+        width: 160px;
+        height: 160px;
+
+    }
+
+    .card-speakers .image-speaker img {
+        width: 156px;
+        height: 156px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* .speaker-heading-div {
+        margin-left: -300px;
+    } */
+
+    .speaker-heading-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .wrapper-speakers i {
+        display: none;
+    }
+
+    .wrapper-speakers .carousel-speakers {
+        grid-auto-columns: 100%;
+        gap: -20px;
+    }
+
+    .card-speakers {
+        height: 280px;
+    }
+
+    .card-speakers .image-speaker {
+        width: 180px;
+        height: 180px;
+        border-radius: 12px;
+    }
+
+    .card-speakers .image-speaker img {
+        width: 176px;
+        height: 176px;
+        /* border-radius: 8px; */
+    }
+
+    .card-speakers h2 {
+        font-size: 1.2rem;
+        margin: 20px 0 5px;
+    }
+
+    .card-speakers span {
+        font-size: 1rem;
+    }
+
+    .carousel-speakers .card-speakers {
+        width: var(--container-width);
+    }
+}

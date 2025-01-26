@@ -1,0 +1,107 @@
+.team-member-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.team-row {
+  display: flex;
+  gap: 8vw;
+  /* Reduced gap to prevent overlap */
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Ensure responsiveness */
+  margin-bottom: 5rem;
+  /* Adjusted for better spacing */
+}
+
+.team-member {
+  text-align: center;
+  max-width: 250px;
+  /* Increased for better spacing */
+  margin-bottom: 2rem;
+  /* Added margin to prevent overlap */
+}
+
+.member-image {
+  width: 250px;
+  /* Reduced size for better spacing */
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.member-details {
+  margin-top: 1.5rem;
+  /* Reduced top margin */
+  background-color: #0F1221;
+  border-radius: 8px;
+  width: 100%;
+  /* Adjusted to fit within container */
+  max-width: 280px;
+  /* Ensure it fits well */
+  padding: 16px 12px;
+  box-shadow: 0 4px 6px rgba(248, 248, 248, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.member-details::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, skyblue, transparent);
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  pointer-events: none;
+}
+
+.member-details:hover::before {
+  opacity: 0.4;
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.member-details::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: rgba(15, 18, 33, 0.8);
+  z-index: -1;
+}
+
+.member-details h3,
+.member-details p {
+  color: white;
+  margin: 0;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .member-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .team-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    /* Adjust spacing for smaller screens */
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .member-details {
+    width: 100%;
+  }
+}
