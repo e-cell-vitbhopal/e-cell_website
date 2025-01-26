@@ -171,6 +171,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+*/
 
 /* Pop up effect */
 .social-media-item::before {
@@ -215,7 +216,7 @@ body {
     opacity: 1;
 }
 
-*/ .social-links {
+* .social-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
