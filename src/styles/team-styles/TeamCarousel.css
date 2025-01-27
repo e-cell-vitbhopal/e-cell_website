@@ -1,0 +1,185 @@
+:root {
+  --container-width: calc(80vw);
+  /* 80% of the viewport width dynamically */
+  --nargin-left-small-screen-size: calc(6vw)
+}
+
+.container-teams {
+  /* width: 100%; */
+  height: 500px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.cards {
+  position: relative;
+  width: 70%;
+  height: 400px;
+  margin-bottom: 15px;
+}
+
+.card {
+  position: absolute;
+  width: 50%;
+  height: 300px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Card positions */
+.card-left {
+  transform: translatex(-50%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.card-right {
+  transform: translatex(50%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.card-center {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Info card styles */
+.info-card {
+  background-color: #0F1221;
+  border-radius: 8px;
+  width: 80%;
+  padding: 12px 8px;
+  box-shadow: 0 4px 6px rgba(248, 248, 248, 0.1);
+  position: relative;
+  /* Required for pseudo-elements */
+  overflow: hidden;
+  /* Ensure the glow stays inside the card */
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, skyblue, transparent);
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  pointer-events: none;
+}
+
+.info-card:hover::before {
+  opacity: 0.4;
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.info-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: rgba(15, 18, 33, 0.8);
+  z-index: -1;
+  /* Ensures it stays behind the content */
+}
+
+
+.member-info {
+  color: #ffffff;
+  text-align: center;
+  padding: 8px;
+}
+
+.role {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  color: #2992dc;
+  font-size: 12px;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 750px) {
+  .container-teams {
+    height: 450px;
+    padding: 10px;
+    margin: var(--nargin-left-small-screen-size);
+    width: var(--container-width);
+  }
+
+  .card img {
+    margin: auto;
+    width: 100%;
+    height: 150%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .cards {
+    width: 80%;
+    height: 350px;
+  }
+
+  .card {
+    width: 70%;
+    height: 250px;
+  }
+
+  .info-card {
+    margin: auto;
+    padding: 10px 6px;
+    position: relative;
+    top: 19vh;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}

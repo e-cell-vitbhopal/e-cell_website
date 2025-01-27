@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+
+:root {
+    --dynamic-font-size-welcome-text: calc(1rem + 2vw);
+}
+
+.welcome-text-comp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid skyblue; */
+    border-radius: 2rem;
+    padding: 40px 60px;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 75%;
+    background-color: #0F1221;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-text-comp::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    background: radial-gradient(skyblue, transparent, transparent);
+    width: 700px;
+    height: 700px;
+    opacity: 0;
+    transition: 0.5s, top 0s, left 0s;
+}
+
+.welcome-text-comp:hover::before {
+    opacity: 1;
+}
+
+
+.welcome-text-comp::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    /* z-index: -1; */
+    border-radius: 2rem;
+    background: rgba(15, 18, 33, 0.9);
+}
+
+.text-desc {
+    z-index: 100;
+    font-size: calc(1rem + 0.8vw);
+    text-align: center;
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+/* FOR 1350px */
+
+@media (max-width: 1350px) {
+    .text-desc {
+        line-height: 1.5;
+    }
+}
+
+/* FOR 1150px */
+
+@media (max-width: 1150px) {
+    .text-desc {
+        line-height: 1.5;
+    }
+}
+
+/* FOR 1050px */
+
+@media (max-width: 1050px) {
+    .text-desc {
+        line-height: 1;
+    }
+}
+
+/* 900px */
+@media (max-width: 900px) {
+
+    .text-desc {
+        line-height: 1;
+
+    }
+
+    .welcome-text-comp {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .welcome-text-comp {
+        height: 600px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .text-desc {
+        font-size: calc(1rem+50vw);
+        line-height: 1;
+
+    }
+}
+
+
+@media (max-width: 750px) {
+    .welcome-text-comp {
+        align-self: flex-start;
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .text-desc {
+        font-size: var(--dynamic-font-size-welcome-text);
+        line-height: 1;
+    }
+
+    .welcome-text-comp {
+        padding: 40px;
+        background-color: transparent;
+    }
+
+    .welcome-text-comp::before {
+        background: transparent;
+    }
+
+    .welcome-text-comp::after {
+        background: transparent;
+    }
+}
+
+
+
+@media(max-width:460px) {
+    .text-desc {
+        line-height: 1;
+
+    }
+}
+
+@media(max-width:380px) {
+    .text-desc {
+        line-height: 1;
+
+    }
+}

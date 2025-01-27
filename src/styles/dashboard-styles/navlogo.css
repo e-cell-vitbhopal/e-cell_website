@@ -1,0 +1,30 @@
+.nav-logo {
+    padding-left: 30px;
+}
+
+.nav-logo a {
+    text-decoration: none;
+}
+
+.nav-logo h1 {
+    color: rgb(154, 181, 255);
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-logo h1:hover {
+    color: #8A2BE2;
+}
+
+@media (max-width: 768px) {
+    .nav-logo {
+        padding-left: 15px;
+    }
+
+    .nav-logo h1 {
+        font-size: 1.5rem;
+    }
+}

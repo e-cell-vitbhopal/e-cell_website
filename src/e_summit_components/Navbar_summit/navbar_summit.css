@@ -1,17 +1,229 @@
-.logo_summit{
+.summit-navbar-toggler {
+  display: none;
+}
+
+.summit-flex {
+  display: flex;
+}
+
+.summit-logo-summit {
   justify-content: flex-start;
 }
 
-.navbar_collapse_end{
+.summit-navbar-collapse-end {
   justify-content: flex-end;
 }
 
-.nav_link_font{
+.summit-nav-link-font {
   font-size: large;
 }
 
-.nav_link_font:hover{
+.summit-nav-link-font:hover {
   text-decoration: underline;
   text-decoration-color: #F200DE;
   text-decoration-thickness: 3px;
+}
+
+/* NAV */
+.summit-navbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summit-navbar-collapse {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summit-navbar-items {
+  height: 100%;
+  align-items: center;
+  color: rgb(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.summit-navbar-items-a:hover {
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.summit-navbar-items div {
+  cursor: pointer;
+}
+
+.summit-navbar-links {
+  text-decoration: none;
+  color: white;
+}
+
+/* Mobile and Responsive Styles */
+@media only screen and (max-width: 991px) {
+  .summit-navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1000;
+    overflow-y: auto;
+    padding-top: 4rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .summit-navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  .summit-navbar-toggler {
+    display: block;
+    z-index: 1100;
+    background: none;
+    border: none;
+  }
+
+  .summit-navbar {
+    padding: 2.5rem 2rem;
+  }
+
+  .summit-navbar-collapse {
+    flex-grow: 0;
+    text-align: center;
+  }
+
+  .summit-logo {
+    height: 6vh;
+  }
+
+  .summit-navbar-items {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.3rem;
+  }
+
+  .summit-navbar-items-a {
+    margin: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .summit-navbar-items div {
+    margin: 0.5rem 1.125rem;
+  }
+
+  .summit-navbar .summit-join-button {
+    height: 7vw;
+    width: 30vw;
+    margin-top: 10px;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+
+/* Tablet Devices (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .summit-navbar {
+    padding: 3rem 4rem;
+  }
+
+  .summit-navbar-collapse {
+    flex-grow: 0;
+    text-align: center;
+  }
+
+  .summit-logo {
+    height: 7.5vh;
+  }
+
+  .summit-navbar-items {
+    font-size: 1.3rem;
+  }
+
+  .summit-navbar-items div {
+    margin: 0.75rem 1.125rem;
+  }
+
+  .summit-navbar .summit-join-button {
+    height: 6vw;
+    width: 23vw;
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Desktops and Laptops (992px to 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .summit-navbar-toggler {
+    display: none;
+  }
+
+  .summit-navbar-collapse {
+    display: block !important;
+  }
+
+  .summit-navbar {
+    padding: 2rem 5rem;
+  }
+
+  .summit-navbar-collapse {
+    flex-grow: 0;
+    width: 55vw;
+  }
+
+  .summit-logo {
+    height: 8vh;
+  }
+
+  .summit-navbar-items div {
+    margin: 0rem 1.125rem;
+  }
+
+  .summit-navbar .summit-join-button {
+    height: 3vw;
+    width: 9vw;
+    font-size: 0.8rem;
+  }
+}
+
+/* Large Desktops (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .summit-navbar-toggler {
+    display: none;
+  }
+
+  .summit-navbar-collapse {
+    display: block !important;
+  }
+
+  .summit-navbar {
+    padding: 2.5rem 7rem;
+  }
+
+  .summit-navbar-collapse {
+    flex-grow: 0;
+    width: 55vw;
+  }
+
+  .summit-logo {
+    height: 9vh;
+  }
+
+  .summit-navbar-items div {
+    margin: 0rem 1.125rem;
+  }
+
+  .summit-navbar .summit-join-button {
+    height: 3vw;
+    width: 10vw;
+  }
 }

@@ -1,0 +1,148 @@
+:root {
+    --dynamic-font-size: calc(1rem + 6.5vw);
+    --margin-left-small-screen-size: calc(2vw);
+}
+
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+    /* margin: 0 200px; */
+    padding: 0 400px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100vh;
+    gap: 30rem;
+}
+
+.container section {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.container section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 80%;
+}
+
+.info {
+    position: absolute;
+    bottom: 15%;
+    transform: translateX(-70%);
+}
+
+.slide-image {
+    max-width: 100%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    z-index: -100;
+}
+
+.slide-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px #e6e6fa, 0 0 12px #e6e6fa, 0 0 18px #d8bfd8, 0 0 24px #d8bfd8;
+
+}
+
+.slide-text {
+    color: #e6e6fa;
+    text-shadow: 0 0 5px #e6e6fa, 0 0 10px #e6e6fa, 0 0 15px #d8bfd8, 0 0 20px #d8bfd8;
+    transition: text-shadow 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.slide-text:hover {
+    text-shadow: 0 0 10px #e6e6fa, 0 0 20px #e6e6fa, 0 0 25px #d8bfd8, 0 0 30px #d8bfd8;
+}
+
+@media (max-width: 768px) {
+    .container section {
+        padding: 1rem;
+    }
+
+    .container section h1 {
+        font-size: 1.5rem;
+    }
+
+    .container section p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container section h1 {
+        font-size: 1.2rem;
+    }
+
+    .container section p {
+        font-size: 0.8rem;
+    }
+
+    .slide-image:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+.eventsMobile {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    margin-left: 4%;
+    margin: 0;
+
+}
+
+.eventsMobile-main {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.main-events {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-heading {
+    font-size: var(--dynamic-font-size);
+    align-self: center;
+}
+
+
+/* Variable Proximity */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
