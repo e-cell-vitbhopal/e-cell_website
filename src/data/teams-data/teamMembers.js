@@ -81,17 +81,17 @@ export const marketingTeam = [
     },
     {
         id: 2,
-        name: 'Vishal Kumar Ojha',
-        role: 'Co-lead',
-        description: 'Tech Team',
-        image: VishalKumarOjha,
-    },
-    {
-        id: 3,
         name: 'Dhruv Rai',
         role: 'Lead',
         description: 'Corporate and Outreach Team',
         image: DhruvRai,
+    },
+    {
+        id: 3,
+        name: 'Mayank Rathore',
+        role: 'Co-lead',
+        description: 'Design Team',
+        image: MayankRathore,
     },
 ];
 
@@ -143,29 +143,6 @@ export const productTeam = [
     },
 ];
 
-export const customerSupportTeam = [
-    {
-        id: 1,
-        name: 'Mayank Rathore',
-        role: 'Co-lead',
-        description: 'Design Team',
-        image: MayankRathore,
-    },
-    {
-        id: 2,
-        name: 'Swapnil Prabhat',
-        role: 'Co-lead',
-        description: 'Event Team',
-        image: SwapnilPrabhat,
-    },
-    {
-        id: 3,
-        name: 'Harsh Saxena',
-        role: 'Lead',
-        description: 'Design Team',
-        image: HarshSaxena,
-    },
-];
 export const lastone = [
     {
         id: 1,

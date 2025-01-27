@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Main from './Main';
 import Summit from './Summit';
+import Recruitment from './components/Recruitment/Recruitment';
 import Registration from './e_summit_components/Registration/Registration';
 import FormLinks from './e_summit_components/Registration/FormLinks';
 import IshaanSharma from './e_summit_components/Registration/IshaanSharma';
@@ -32,6 +33,7 @@ function App() {
         <UserContextProvider>
           <Routes>
             <Route path="/" element={<Main />} />
+            <Route path="/recruitment" element={<Recruitment />} /> 
             {/* Esummit */}
             <Route path="/e_summit_2024" element={<Summit />} />
             <Route path="/parichay" element={<Summit_copy />} />

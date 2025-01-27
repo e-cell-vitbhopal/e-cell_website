@@ -7,8 +7,16 @@ import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 import "../../styles/events-styles/events.css"
 import Box from '@mui/material/Box';
+import { useNavigate } from 'react-router-dom';
 
 const CardEvent = (props) => {
+    const navigate = useNavigate();
+
+    const handleLearnMoreClick = () => {
+        if (props.eventLink) {
+            navigate(props.eventLink);
+        }
+    };
 
     return (
         <Box component="div" className='slide' sx={{ p: 2, border: '0px dashed grey', height: '40vh', width: '50vw' }}>
@@ -22,9 +30,18 @@ const CardEvent = (props) => {
                             {props.eventDescription}
                         </Typography>
                     </CardContent>
-                    <CardActions>
-                        <Button size="small" variant="contained" sx={{ bgcolor: 'purple' }}>Learn More</Button>
-                    </CardActions>
+                    {props.eventLink && (
+                        <CardActions>
+                            <Button
+                                size="small"
+                                variant="contained"
+                                sx={{ bgcolor: 'purple' }}
+                                onClick={handleLearnMoreClick}
+                            >
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    )}
                 </Card>
             </div>
             <div className='slide-image' sx={{ width: '100%' }}>

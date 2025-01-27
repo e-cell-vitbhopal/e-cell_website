@@ -1,0 +1,277 @@
+body {
+  background-color: #080216;
+}
+.ecell-recruitment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5vh;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.rec-team-card {
+  width: 22vw;
+  margin: 20px 0;
+  height: 50vh;
+  margin: 25px 0vw;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.teams-card{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 0.35rem;
+  background-color: rgba(255,255,255,0.05);
+}
+
+.rec-team-card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.rec-team-card:hover .ecell-recruitment-card-bg-light{
+  top: 60%; 
+  left: 60%;
+}
+
+@media only screen and (max-width: 767px){
+  .ecell-recruitment-bg-light{
+    position: absolute;
+    filter: blur(50px);
+    z-index: -1;
+  }
+
+  .App {
+    width: 100vw;
+    overflow-y: hidden;
+  }
+
+  .teams-card{
+    height: 35vh;
+    min-width: 50vw;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+  }
+  .ecell-recruitment-card-bg-light{
+    height: 30vw;
+    width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ecell-recruitment-bg-light{
+    position: absolute;
+    filter: blur(90px);
+    z-index: -1;
+  }
+  .teams-card{
+    height: 45vh;
+    min-width: 55vw;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .ecell-recruitment-card-bg-light{
+    height: 30vw;
+    width: 35vw;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ecell-recruitment-bg-light{
+    position: absolute;
+    filter: blur(95px);
+    z-index: -1;
+  }
+  .teams-card{
+    height: 50vh;
+    min-width: 20vw;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .ecell-recruitment-card-bg-light{
+    height: 15vw;
+    width: 18vw;
+  }  
+  
+}
+
+@media only screen and (min-width: 1200px){
+  .ecell-recruitment-bg-light{
+    position: absolute;
+    filter: blur(100px);
+    z-index: -1;
+  }
+  .teams-card{
+    height: 50vh;
+    min-width: 20vw;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .ecell-recruitment-card-bg-light {
+    height: 15vw;
+    width: 18vw;
+  }
+}
+
+.ecell-recruitment-logo {
+  height: 6vh;
+}
+
+.ecell-recruitment-header {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ecell-recruitment-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5vh;
+  color: white;
+}
+
+.ecell-recruitment-main .ecell-recruitment-club-title {
+  color: rgb(255,255,255);
+  font-size: 2.5vh;
+  padding-top: 2vh 0;
+  text-align: center;
+}
+
+.ecell-recruitment-main .ecell-recruitment-main-heading {
+  color: pink;
+  width: 70vw;
+  font-size: 7vh;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ecell-recruitment-main .ecell-recruitment-description {
+  padding-top: 5vh;
+  text-align: center;
+  line-height: 5vh;
+  width: 75%;
+  font-size: 2.4vh;
+}
+
+.ecell-recruitment-main .ecell-recruitment-description ul {
+  list-style: none;
+}
+
+.ecell-recruitment-teams-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10vh 0vh;
+  width: 75vw;
+  justify-content: space-evenly;
+}
+
+.ecell-recruitment-team-card {
+  width: 22vw;
+  margin: 25px 0vw;
+  height: 50vh;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecell-recruitment-team-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.ecell-recruitment-card-bg-light {
+  position: absolute;
+  background: linear-gradient(270deg, #3A64FA 47.4%, #F963BC 92.87%);
+  border-radius: 50%;
+  filter: blur(70px);
+  top: -2vw;
+  left: -2vw;
+  transition: all 0.2s ease;
+}
+
+.ecell-recruitment-back-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: rgb(255,255,255,0.7);
+  border-radius: 0.25rem;
+}
+.ecell-recruitment-back-btn:hover {
+  border-color: #F963BC;
+  font-weight: 600;
+  color: white;
+}
+
+.ecell-recruitment-team-card:hover .ecell-recruitment-card-bg-light {
+  top: 50%;
+  left: 50%;
+}
+
+@media (max-width: 600px) {
+  .ecell-recruitment-container {
+    padding: 7vh 10vw 0vh;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  .ecell-recruitment-header {
+    width: 80vw;
+  }
+
+  .ecell-recruitment-main {
+    padding-top: 8vh;
+  }
+
+  .ecell-recruitment-main .ecell-recruitment-club-title {
+    color: rgb(255,255,255);
+    font-size: 2.4vh;
+    padding-top: 0vh 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .ecell-recruitment-main .ecell-recruitment-main-heading {
+    width: 100vw;
+    font-size: 3.5vh;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 3vh;
+  }
+
+  .ecell-recruitment-main .ecell-recruitment-description {
+    line-height: 4vh;
+    width: 90%;
+    font-size: 2vh;
+  }
+
+  .ecell-recruitment-main .ecell-recruitment-description ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .ecell-recruitment-teams-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0vh;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .ecell-recruitment-team-card {
+    width: 75vw;
+    margin: 20px 0;
+    height: 20vh;
+  }
+}
