@@ -26,17 +26,17 @@ import YathanshJavkhedkar from '../../assets/teams-images/Yathansh Javkhedkar 23
 export const box1 = [
     {
         id: 1,
-        name: 'Yathansh Javkhedkar',
-        role: 'Co-lead',
-        description: 'Event Team',
-        image: YathanshJavkhedkar,
-    },
-    {
-        id: 2,
         name: 'Himanshu Dey',
         role: 'Lead',
         description: 'Tech Team',
         image: HimanshuDey,
+    },
+    {
+        id: 2,
+        name: 'Yathansh Javkhedkar',
+        role: 'Co-lead',
+        description: 'Event Team',
+        image: YathanshJavkhedkar,
     },
     {
         id: 3,

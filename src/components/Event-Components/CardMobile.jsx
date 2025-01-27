@@ -10,8 +10,16 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import "../../styles/events-styles/events.css";
+import { useNavigate } from 'react-router-dom';
 
 const CardMobile = (props) => {
+    const navigate = useNavigate();
+    
+    const handleLearnMoreClick = () => {
+        if (props.eventLink) {
+            navigate(props.eventLink);
+        }
+    };
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', width: "300" }}>
             <Card
@@ -45,18 +53,20 @@ const CardMobile = (props) => {
                         </AccordionDetails>
                     </Accordion>
                 </CardContent>
-                <CardActions>
-                    <Button
-                        size="small"
-                        variant="contained"
-                        sx={{
-                            bgcolor: 'purple',
-                            '&:hover': { bgcolor: 'darkviolet' },
-                        }}
-                    >
-                        Learn More
-                    </Button>
-                </CardActions>
+                {props.eventLink && (
+                    <CardActions>
+                        <Button
+                            size="small"
+                            variant="contained"
+                            sx={{
+                                bgcolor: 'purple',
+                                '&:hover': { bgcolor: 'darkviolet' },
+                            }}
+                        >
+                            Learn More
+                        </Button>
+                    </CardActions>
+                )}
             </Card>
         </div>
     );

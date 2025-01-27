@@ -7,7 +7,7 @@ import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
     return (
-        <nav className="navbar">
+        <nav className="esummit-navbar">
             <NavLogo />
             <div className="navbar-right">
                 <Header />
