@@ -4,11 +4,13 @@ import { TransformText } from './TransformText'
 import WelcomeText from './WelcomeText'
 import Lottie from 'lottie-react';
 import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin, FaLinkedinIn } from 'react-icons/fa';
-
+import { useNavigate } from 'react-router-dom';
 import animationData from "../../assets/rocket-animation.json"
 import { AnimatedBackground } from 'animated-backgrounds';
 
 const Dashboard = () => {
+    const navigate = useNavigate();
+
     return (
 
 
@@ -74,7 +76,7 @@ const Dashboard = () => {
                 </div>
                 {/* JOIN US BUTTON */}
                 <div className="grid-item" id='join-btn'>
-                    <button className='join-btn'>
+                    <button className='join-btn' onClick={() => navigate('/recruitment')}>
                         <div>JOIN US</div>
                     </button>
                 </div>

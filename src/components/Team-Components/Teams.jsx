@@ -5,7 +5,6 @@ import {
     marketingTeam,
     salesTeam,
     productTeam,
-    customerSupportTeam,
     lastone
 } from "../../data/teams-data/teamMembers.js"
 import "../../styles/team-styles/teams.css"
@@ -56,11 +55,6 @@ export default function Teams() {
                 <div className="team-section">
 
                     <TeamCarousel members={productTeam} carouselId={5} />
-                </div>
-
-                <div className="team-section">
-
-                    <TeamCarousel members={customerSupportTeam} carouselId={6} />
                 </div>
                 <div className="team-section">
 

@@ -79,6 +79,7 @@ const Events = () => {
                         eventName="E-Summit 24"
                         eventDescription="E-Summit '24 by E-Cell VIT Bhopal was a landmark event celebrating innovation, entrepreneurship, and strategic thinking. Highlights included a legendary speaker session with Vijender Singh Chauhan, a Paper Trading Competition, an IPL Auction challenge, a dynamic Case Study Competition, and a Product Design Competition powered by Notion. The event also hosted venture capitalists, fostering groundbreaking ideas, insightful discussions, and unparalleled networking opportunities, making it a hub for entrepreneurial excellence."
                         eventImage={img1}
+                        eventLink="/e_summit_2024"
                     />
                 </section>
                 <section>
@@ -86,6 +87,7 @@ const Events = () => {
                         eventName="Parichay 24"
                         eventDescription="Parichay 24 by E-Cell VIT Bhopal brought together entrepreneurial leaders who shared their inspiring journeys and expertise. Highlights included Mitresh Sharma, Founder of First Bud Organics, and Srijan Mehrotra, Founder of Model Verse, both Shark Tank India alumni, along with Punit G, TEDx speaker and CEO of Arth Nirmiti, and Devesh Bochre, Founder of Vold Energy Drink. The event also introduced exciting opportunities like startup pitching, workshops, quizzes, networking with industry leaders, and the Eureka IIT Bombay Zonal Round, fostering innovation and entrepreneurial growth."
                         eventImage={img2}
+                        eventLink="/parichay"
                     />
                 </section>
                 <section>
