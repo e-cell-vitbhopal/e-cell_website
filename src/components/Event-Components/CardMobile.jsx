@@ -62,6 +62,7 @@ const CardMobile = (props) => {
                                 bgcolor: 'purple',
                                 '&:hover': { bgcolor: 'darkviolet' },
                             }}
+                            onClick={handleLearnMoreClick}
                         >
                             Learn More
                         </Button>
