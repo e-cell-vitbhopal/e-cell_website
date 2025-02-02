@@ -14,7 +14,7 @@ export default function Post({_id,title,summary,cover,content,createdAt,author})
         <Link to={`post/${_id}`}>
         <div className="post-heading">{title}</div>
         </Link>
-        <p className="info">
+        <p className="bogs_info">
           <time>{createdAt ? format(new Date(createdAt), "MMMM dd, yyyy") : "Invalid Date"}</time>
         </p>
         <p className="summary">{summary}</p>

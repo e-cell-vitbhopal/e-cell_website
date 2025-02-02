@@ -1,12 +1,13 @@
 .blog_page{
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #050f23;
 }
 a{
     cursor: pointer;
 }
 body{
     color: #222;
+    background-color: #050f23;
 }
 .blog_img{
     max-width: 100%;
@@ -19,7 +20,6 @@ main{
 header{
     display:flex;
     justify-content:space-between;
-    /* margin-top: 20px; */
     margin-bottom: 20px;
     align-items: center;
 }
@@ -31,6 +31,7 @@ header a.logo{
     font-weight: bold;
     font-size: 1.5rem;
     align-content: center;
+    color: #9ab5ff;
 }
 header nav{
     display:flex;
@@ -41,7 +42,8 @@ div.post{
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    border: #1F232C solid 0.8px;
+    /* border: #1F232C solid 0.8px; */
+    border: #9ab5ff solid 0.8px;
 }
 div.post div.texts h2{
     margin:0;
@@ -51,7 +53,7 @@ div.post div.texts a{
     text-decoration:none;
     color: inherit;
 }
-div.post p.info{
+div.post p.blogs_info{
     /* margin:24px 0; */
     color: #888;
     font-size:1rem;
@@ -59,7 +61,7 @@ div.post p.info{
     display: flex;
     gap: 10px;
 }
-div.post p.info a.author{
+div.post p.blogs_info a.author{
     color:#333;
 }
 div.post p.summary{
@@ -70,6 +72,7 @@ div.post p.summary{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .post-image {
@@ -100,7 +103,7 @@ div.texts {
 }
 
 .top-post {
-    border: #1F232C solid 0.8px;
+    border: #9ab5ff solid 0.8px;
     margin-bottom: 50px;
     /* height: 100%; */
 }
@@ -122,6 +125,7 @@ input{
     border: 2px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
+    color: black;
 }
 .post_button{
     cursor: pointer;
@@ -156,7 +160,7 @@ div.post-page a{
     text-decoration: underline;
 }
 div.post-page .blog_h1{
-    color: #222;
+    color: #87ceeb;
     text-align: center;
     margin: 10px 0 5px;
 }
@@ -172,6 +176,11 @@ div.post-page div.author{
     margin-bottom: 20px;
     font-size: .7rem;
     font-weight: bold;
+}
+.blog_content {
+    /* width: 100px; */
+    word-wrap:break-word;
+    
 }
 .blog_content img{
     display: block;
