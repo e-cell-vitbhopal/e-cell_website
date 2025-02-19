@@ -1,0 +1,222 @@
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Trocchi&display=swap');
+
+.comingsoon-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #000000);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+/* Title & Subtitle with Glow Effect */
+.comingsoon-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #6738b2, 0 0 20px #6738b2, 0 0 30px #6738b2;
+    animation: glow-animation 1.5s infinite alternate;
+}
+
+.comingsoon-subtitle {
+    font-family:'montserrat',sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px #6738b2, 0 0 10px #6738b2;
+}
+
+/* Glowing Text Animation */
+@keyframes glow-animation {
+  0% {
+      text-shadow: 0 0 12px #7a42c8, 0 0 24px #7a42c8, 0 0 36px #7a42c8;
+  }
+  100% {
+      text-shadow: 0 0 18px #a064d4, 0 0 36px #a064d4, 0 0 54px #a064d4;
+  }
+}
+/* Countdown Completed Section */
+.countdown-completed {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #6738b2, 0 0 20px #9b59b6;
+    margin-top: 20px;
+}
+
+/* Glowing Button */
+.live-button {
+    background: #6738b2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.live-button:hover {
+    background: #4a267d;
+    text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6;
+    transform: scale(1.05);
+}
+/* Countdown Styles */
+.countdown-wrapper {
+    margin-bottom: 40px;
+}
+
+.countdown-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+    
+}
+
+.countdown-box {
+    background: rgba(103, 56, 178, 0.5);
+    backdrop-filter: blur(10px) ;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.countdown-time {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px #6738b2, 0 0 20px #9b59b6;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+}
+
+/* Subscription Form */
+.subscription-container {
+    max-width: 400px;
+    margin: 0 auto 30px;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subscription-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.subscription-button {
+    background: #6738b2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    text-shadow: 0 0 5px #9b59b6, 0 0 10px #9b59b6;
+    transition: all 0.3s ease-in-out;
+}
+
+.subscription-button:hover {
+    background: #4a267d;
+    text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6;
+}
+
+/* Subscription Success */
+.subscription-success {
+    background: rgba(103, 56, 178, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6;
+}
+
+/* Organized By */
+.organized-by {
+    margin-top: 30px;
+}
+
+.ecell-logo {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.countdown-completed {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #6738b2, 0 0 20px #9b59b6;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  
+    .live-button {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+    
+    .comingsoon-container {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .comingsoon-title {
+        font-size: 2.2rem;
+        text-shadow: 0 0 8px #6738b2, 0 0 15px #9b59b6;
+    }
+
+    .comingsoon-subtitle {
+        font-size: 1rem;
+    }
+
+    .countdown-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .countdown-box {
+        padding: 10px;
+    }
+
+    .countdown-time {
+        font-size: 1.5rem;
+    }
+
+    .subscription-container {
+        max-width: 90%;
+    }
+
+    .subscription-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .subscription-input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .subscription-button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .ecell-logo {
+        height: 40px;
+    }
+}

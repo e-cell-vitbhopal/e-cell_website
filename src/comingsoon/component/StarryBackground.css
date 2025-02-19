@@ -1,0 +1,45 @@
+.starry-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  touch-action: none; /* Prevent scrolling on touch devices */
+}
+
+.starry-background.visible {
+  opacity: 1;
+}
+
+.star {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+  pointer-events: none;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  transition: opacity 0.3s ease-out;
+}
+
+.star.trail {
+  animation: none;
+  background: #a887e0;
+  box-shadow: 0 0 6px rgba(165, 113, 255, 0.9);
+  transition: opacity 0.2s ease-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
