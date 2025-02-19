@@ -109,7 +109,7 @@ function ComingSoon() {
       <div className="comingsoon-content">
         <h1 className="comingsoon-title">E-Summit'25</h1>
         <p className="comingsoon-subtitle">
-          The Biggest Entrepreneurship Summit is Coming Soon
+          The Biggest Entrepreneurial Reveal Is Coming Soon
         </p>
 
         <div className="countdown-wrapper">
