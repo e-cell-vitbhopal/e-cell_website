@@ -3,13 +3,14 @@ import Countdown from 'react-countdown';
 import emailjs from '@emailjs/browser';
 import ecellLogo from './assets/ecell white.png';
 import StarryBackground from './comingsoon/component/StarryBackground';
-import { db, collection, addDoc, getDocs } from './firebase';
+import { db, collection, addDoc, getDocs, doc, getDoc, updateDoc } from './firebase';
 import './coming_soon.css';
 
 function ComingSoon() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [subscribers, setSubscribers] = useState([]);
+  const [emailSent, setEmailSent] = useState(false);
 
   const launchDate = new Date('2025-03-01T12:00:00').getTime();
 
@@ -23,7 +24,19 @@ function ComingSoon() {
       }
     };
 
+    const fetchEmailSentStatus = async () => {
+      try {
+        const eventDoc = await getDoc(doc(db, 'events', 'e_summit_2025'));
+        if (eventDoc.exists()) {
+          setEmailSent(eventDoc.data().emailSent);
+        }
+      } catch (error) {
+        console.error('Error fetching email sent status:', error);
+      }
+    };
+
     fetchSubscribers();
+    fetchEmailSentStatus();
   }, []);
 
   const handleSubscribe = async (e) => {
@@ -45,6 +58,8 @@ function ComingSoon() {
   };
 
   const sendNotificationEmails = async () => {
+    if (emailSent) return; // Prevent multiple email sends
+
     try {
       emailjs.init('plht_CCBGYunCZTkB');
 
@@ -61,7 +76,14 @@ function ComingSoon() {
         'plht_CCBGYunCZTkB'
       );
 
-      console.log('Notification email sent successfully with all subscribers!');
+      console.log('Notification email sent successfully!');
+      
+      // Update Firestore to mark email as sent
+      await updateDoc(doc(db, 'events', 'e_summit_2025'), {
+        emailSent: true,
+      });
+
+      setEmailSent(true);
     } catch (error) {
       console.error('Error sending notification email:', error);
     }
@@ -69,7 +91,9 @@ function ComingSoon() {
 
   const CountdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      sendNotificationEmails();
+      if (!emailSent) {
+        sendNotificationEmails();
+      }
       return (
         <div className="countdown-completed">
           <p>E-Summit 2025 is Live!</p>
@@ -79,7 +103,6 @@ function ComingSoon() {
         </div>
       );
     }
-  
 
     return (
       <div className="countdown-container">
