@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Trocchi&display=swap");
+
+.speakerSection {
+  padding: 5rem 5rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 12px;
+  box-shadow: 0 0 15px 5px rgba(103, 56, 178, 0.5);
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.title {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #2c003e, #13002b);
+  margin: 10px auto;
+}
+
+.speakerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.speakerCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.speakerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(103, 56, 178, 0.6), 
+              0 0 50px rgba(103, 56, 178, 0.4), 
+              0 0 80px rgba(103, 56, 178, 0.2);
+  border-color: rgba(103, 56, 178, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.speakerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlayContent {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.speakerCard:hover .overlay {
+  opacity: 1;
+}
+
+.speakerCard:hover .overlayContent {
+  transform: translateY(0);
+}
+
+.speakerName {
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.speakerRole {
+  font-family: "Trocchi", serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #6738b2;
+  transform: scale(1.1);
+}
+
+/* Carousel styles */
+.carouselContainer {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(103, 56, 178, 0);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.carouselButton:hover {
+  background: rgba(103, 56, 178, 1);
+}
+
+.prevButton {
+  left: -30px;
+}
+
+.nextButton {
+  right: -30px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: #6738b2;
+}
+
+/* Transition styles */
+.speakerCard.transitioning {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.speakerCard.next {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.speakerCard.next.transitioning {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.speakerCard.prev {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.speakerCard.prev.transitioning {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  .speakerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+   .speakerSection {
+    border: none;
+    box-shadow: none;
+    padding: 3rem 1rem;
+  }
+  .speakerGrid {
+    display: none;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .speakerSection {
+    padding: 2rem 1rem;
+  }
+
+  .carouselContainer {
+    padding: 0 20px;
+  }
+}

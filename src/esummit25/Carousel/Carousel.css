@@ -1,0 +1,185 @@
+:root {
+  --dynamic-font-size: calc(1rem + 6.5vw);
+  --margin-left-small-screen-size: calc(20vw);
+}
+
+.sponsors-main {
+  height: auto;
+  width: 100%;
+}
+
+.sponsors-heading {
+  text-transform: uppercase;
+  font-size: var(--dynamic-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: calc(10vh);
+}
+
+.carousel {
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.carousel::before,
+.carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right,
+          var(--background-dark),
+          rgba(26, 26, 46, 0));
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left,
+          var(--background-dark),
+          rgba(26, 26, 46, 0));
+}
+
+.group {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  will-change: transform;
+  animation: scrolling 40s linear infinite;
+}
+
+.card-sponsor {
+  color: var(--text-light);
+  border-radius: 24px;
+  box-shadow: 0 4px 30px rgba(138, 43, 226, 0.1);
+  padding: 20px;
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 200px;
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.sponsor-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: brightness(1);
+  transition: all 0.3s ease;
+}
+
+.sponsor-name_main {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-light);
+}
+
+@keyframes scrolling {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollingReverse {
+  0% {
+      transform: translateX(-100%);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.reverse .group {
+  animation: scrollingReverse 40s linear infinite;
+}
+
+.card-sponsor:hover {
+  transform: translateY(-10px);
+  background: var(--card-hover);
+  box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+  border: 2px solid purple;
+}
+
+.card-sponsor:hover .sponsor-logo {
+  transform: scale(1.1);
+}
+
+.carousel:hover .group {
+  animation-play-state: paused;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .carousel {
+      width: 100%;
+      margin: 20px;
+  }
+
+  .card-sponsor {
+      min-height: 150px;
+      width: 150px;
+      padding: 15px;
+  }
+
+  .sponsor-logo {
+      width: 100px;
+      height: 100px;
+  }
+
+  .sponsor-name {
+      font-size: 0.875rem;
+  }
+
+  .carousel::before,
+  .carousel::after {
+      width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+      width: 100%;
+  }
+
+  .card-sponsor {
+      min-height: 120px;
+      width: 120px;
+      padding: 10px;
+  }
+
+  .sponsor-logo {
+      width: 80px;
+      height: 80px;
+  }
+
+  .group {
+      gap: 15px;
+  }
+}

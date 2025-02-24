@@ -23,6 +23,7 @@ import {UserContextProvider} from './blog_components/UserContext';
 import CreatePost from './blog_components/CreatePost';
 import PostPage from './blog_components/PostPage';
 import EditPost from './blog_components/EditPost';
+import Esummit from './esummit'
 import ProtectedRoute from './blog_components/ProtectedRoute';
 import './blog_components/blog.css'
 
@@ -38,6 +39,7 @@ function App() {
             {/* Esummit */}
             <Route path="/e_summit_2024" element={<Summit />} />
             <Route path="/esummit2025" element={<ComingSoon />} />
+            <Route path="/esummit25" element={<Esummit />} />
             <Route path="/parichay" element={<Summit_copy />} />
             <Route path="/e_summit_2024/registration" element={<FormLinks />} />
             <Route path="/e_summit_2024/registration/IshaanSharma" element={<IshaanSharma />} />

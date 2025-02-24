@@ -1,0 +1,224 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+  
+}
+
+.imageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base, .mask {
+  border-top:100px;
+  border-color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 108%;
+  height: 100%;
+  object-fit: contain;
+  will-change: transform;
+  transition: transform 0s linear, opacity 0.8s ease-out;
+}
+
+.mask {
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+.originMarker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.frameTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  transition: height 0s linear, opacity 0.5s ease-out;
+}
+
+.frameBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  transition: height 0s linear, opacity 0.5s ease-out;
+}
+
+.blackBox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  transition: transform 0s ease-out;
+}
+
+.blackBoxTop {
+  composes: blackBox;
+  top: 0;
+  height: 25vh;
+  transform-origin: top;
+  margin-bottom: 10px;
+}
+
+.blackBoxBottom {
+  composes: blackBox;
+  bottom: 0;
+  height: 25vh;
+  transform-origin: bottom;
+  margin-top: 10px;
+}
+
+.ecellText {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform-origin: inherit;
+  font-family: "Montserrat", serif;
+  font-size: clamp(16px, 1.8vw, 18.2px);
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  z-index: 4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0s linear, opacity 0.2s ease-in-out;
+  pointer-events: none;
+  width: 100%;
+  padding: 0 20px;
+  will-change: transform, opacity;
+}
+
+.tagline {
+  position: absolute;
+  left: 50%;
+  top: 67%;
+  transform-origin: inherit;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  z-index: 4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0s linear, opacity 0.2s ease-in-out;
+  pointer-events: none;
+  width: 100%;
+  padding: 0 20px;
+  will-change: transform, opacity;
+}
+
+.registerButton {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform-origin: inherit;
+  padding: 12px 24px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #2c003e, #13002b);
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 4;
+  pointer-events: auto;
+  white-space: nowrap;
+  will-change: transform, opacity;
+}
+
+.registerButton.hidden {
+  transform: translate(-50%, 100%) !important;
+  opacity: 0 !important;
+}
+
+.registerButton:hover {
+  background: linear-gradient(to right, #3c005e, #23004b);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.dummy {
+  height: 200vh;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1000px) {
+  .base, .mask {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .base, .mask {
+    width: 100%;
+  }
+  
+  .blackBoxBottom {
+    composes: blackBox;
+    bottom: 0;
+    height: 35vh;
+    transform-origin: bottom;
+    margin-top: 10px;
+  }
+  
+  .ecellText {
+    width: 90%;
+    font-size: 8px;
+    top: 30%;
+  }
+  
+  .tagline {
+    width: 90%;
+    font-size: 10px;
+    top: 66%;
+  }
+  
+  .registerButton {
+    padding: 8px 20px;
+    font-size: 12px;
+    bottom: 0%;
+  }
+}
