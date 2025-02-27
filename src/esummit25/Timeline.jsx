@@ -1,122 +1,124 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import './Timeline.css';
+// import { Link } from 'react-router-dom';
+// import { FaInfoCircle } from 'react-icons/fa';
 
-const allEvents = {
-  "2024": [
+const allEvents = { "27 March, 2025": [
     {
       id: 1,
-      title: "Startup Summit",
-      date: "March 15, 2024",
-      description: "Annual entrepreneurship summit featuring renowned speakers and networking opportunities.",
+      title: "Inaugral Ceremony",
+      date: "March 27, 2025",
+      description: "The inaugural ceremony marked the event's commencement, followed by a keynote session featuring expert insights, innovations, and discussions on key topics.",
       image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1000",
       registerLink: "https://example.com/register/startup-summit-2024"
     },
     {
       id: 2,
-      title: "Pitch Perfect",
-      date: "April 2, 2024",
-      description: "Startup pitch competition with mentorship sessions and funding opportunities.",
+      title: "Stock Trading",
+      date: "March 27, 2025",
+      description: "Stock Trading is an exciting event in the E-Summit where participants simulate real-time trading, analyze market trends, and make strategic investment decisions. It tests financial acumen, risk management skills, and market understanding.",
       image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000",
       registerLink: "https://example.com/register/pitch-perfect-2024"
     },
-  ],
-  "2025": [
     {
       id: 3,
-      title: "Innovation Workshop",
-      date: "May 10, 2025",
-      description: "Hands-on workshop focusing on product development and market research.",
+      title: "Startup Expo",
+      date: "March 27-28, 2025",
+      description: "The Startup Expo connects startups, entrepreneurs, and investors through panels, workshops, and pitches, fostering innovation, collaboration, and real-world insights.",
+      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000",
+      registerLink: "https://example.com/register/pitch-perfect-2024"
+    },
+    {
+      id: 4,
+      title: "Book Fair & Food Carnival",
+      date: "March 27-29, 2025",
+      description: "Book Fair & Food Carnival at E-Summit is a open event offering a diverse collection of books and a variety of delicious cuisines, creating a perfect blend of knowledge and flavors for all attendees.",
+      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000",
+      registerLink: "https://example.com/register/pitch-perfect-2024"
+    }
+  ],
+  "28 March, 2025": [
+    {
+      id: 5,
+      title: "IPL Auction",
+      date: "March 28-29, 2025",
+      description: "IPL Auction at E-Summit is a strategic bidding event where participants act as team owners, analyzing player stats, managing budgets, and competing to build the best team. It tests decision-making, negotiation, and financial planning skills.",
       image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000",
       registerLink: "https://example.com/register/innovation-workshop-2025"
     },
     {
-      id: 4,
-      title: "Hackathon 2025",
-      date: "June 5-7, 2025",
-      description: "48-hour coding marathon to build innovative solutions for real-world problems.",
+      id: 6,
+      title: "Ecom Carnival",
+      date: "March 28, 2025",
+      description: "E-Com Carnival at E-Summit is a workshop where industry experts guide participants on taking businesses online, covering e-commerce strategies, digital marketing, and scaling techniques to thrive in the online marketplace.",
       image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80&w=1000",
       registerLink: "https://example.com/register/hackathon-2025"
     },
+
   ],
-  "2026": [
+  "29 March, 2025": [
     {
-      id: 5,
-      title: "Tech Conference",
-      date: "February 15, 2026",
-      description: "Global tech conference featuring latest innovations and industry trends.",
+      id: 7,
+      title: "The Board MUN",
+      date: "March 29, 2025",
+      description: "Board MUN is a corporate simulation event where participants represent multinational corporations, strategizing, negotiating, and defending brand interests. It hones business acumen, leadership, and decision-making, preparing future leaders for real-world corporate challenges.",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1000",
       registerLink: "https://example.com/register/tech-conference-2026"
     },
     {
-      id: 6,
-      title: "AI Summit",
-      date: "July 20, 2026",
-      description: "Exploring the future of artificial intelligence and machine learning.",
+      id: 8,
+      title: "Speaker Session",
+      date: "March 29, 2025",
+      description: "Speaker Session at E-Summit features industry experts sharing insights, experiences, and strategies on entrepreneurship, innovation, and business growth, inspiring participants with real-world knowledge and success stories.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000",
       registerLink: "https://example.com/register/ai-summit-2026"
     },
-  ],
-};
+    {
+      id: 9,
+      title: "Study Abroad Session",
+      date: "March 29, 2025",
+      description: "Study Abroad Session at E-Summit provides insights into global education opportunities, guiding students on applications, scholarships, and career prospects for studying in top international universities.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000",
+      registerLink: "https://example.com/register/ai-summit-2026"
+    }
+  ], };
 
-const TimelineEvent = ({ event, index }) => {
+const TimelineEvent = ({ event }) => {
   const ref = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1468);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center center"]
   });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1468);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-  const x = useTransform(
-    scrollYProgress,
-    [0, 0.5],
-    [isMobile ? 200 : (index % 2 === 0 ? 1000 : -1000), isMobile ? 0: (index%2 === 0? 0 : -365.5 )]
-  );
+  const x = useTransform(scrollYProgress, [0, 0.5], [100, 0]);
 
   return (
     <motion.div
       ref={ref}
-      style={{
-        opacity,
-        x
-      }}
-      className={`timeline-event ${index % 2 === 0 ? 'even' : 'odd'}`}
+      style={{ opacity, x }}
+      className="timeline-event"
     >
       <div className="event-content">
         <div className="event-card">
-          <img
-            src={event.image}
-            alt={event.title}
-            className="event-image"
-          />
+          <img src={event.image} alt={event.title} className="event-image" />
           <div className="event-details">
             <div className="event-content-wrapper">
               <h3 className="event-title">{event.title}</h3>
+              {/* <Link to={`/event/${event.id}`} className="info-button">
+                <FaInfoCircle />
+              </Link> */}
               <p className="event-date">{event.date}</p>
               <p className="event-description">{event.description}</p>
             </div>
-            <a href={event.registerLink} target="_blank" rel="noopener noreferrer" className="register-button">
+            <a href={`/event/${event.id}`} target="_blank" rel="noopener noreferrer" className="register-button">
               Register Now
             </a>
           </div>
         </div>
       </div>
-      <div
-        className="timeline-connector"
-        style={{
-           left: isMobile ? "0%" : index % 2 === 0 ? event.dotPositionEven || "50%" : event.dotPositionOdd || "102.2%"
-        }}
-      ></div>
+      <div className="timeline-connector" style={{ left: "0%" }}></div>
     </motion.div>
   );
 };
@@ -153,8 +155,8 @@ const Timeline = () => {
       </div>
     
       <div className="timeline">
-        {getFilteredEvents().map((event, index) => (
-          <TimelineEvent key={event.id} event={event} index={index} />
+        {getFilteredEvents().map((event) => (
+          <TimelineEvent key={event.id} event={event} />
         ))}
       </div>
     </div>

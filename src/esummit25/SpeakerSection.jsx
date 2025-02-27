@@ -1,52 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import styles from './SpeakerSection.module.css';
 import { FaLinkedin, FaTwitter, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
-
+import anon from '../assets/anonymous.png';
 const speakers = [
   {
     id: 1,
-    name: 'Sarah Johnson',
-    role: 'CEO, TechVentures',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=faces',
+    name: 'Revealing Soon',
+    role: 'Speaker Details',
+    image: anon,
     linkedin: 'https://linkedin.com',
   },
   {
     id: 2,
-    name: 'Michael Chen',
-    role: 'Founder, InnovateLabs',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=faces',
+    name: 'Revealing Soon',
+    role: 'Speaker Details',
+    image: anon,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   },
   {
     id: 3,
-    name: 'Emily Rodriguez',
-    role: 'CTO, FutureScale',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=faces',
+    name: 'Revealing Soon',
+    role: 'Speaker Details',
+    image: anon,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   },
   {
     id: 4,
-    name: 'David Kim',
-    role: 'Partner, VentureX',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces',
+    name: 'Revealing Soon',
+    role: 'Speaker Details',
+    image:anon,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   },
   {
     id: 5,
-    name: 'Lisa Patel',
-    role: 'Founder, AI Solutions',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=faces',
+    name: 'Revealing Soon',
+    role: 'Speaker Details',
+    image: anon,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   },
   {
     id: 6,
-    name: 'James Wilson',
-    role: 'Director, StartupHub',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces',
+    name: 'Revealing Soon',
+    role: 'Speaker Details',
+    image: anon,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   }
@@ -158,9 +158,6 @@ const SpeakerSection = () => {
                   <div className={styles.socialLinks}>
                     <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                       <FaLinkedin />
-                    </a>
-                    <a href={speaker.twitter} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                      <FaTwitter />
                     </a>
                   </div>
                 </div>

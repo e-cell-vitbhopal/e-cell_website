@@ -173,7 +173,7 @@ function Hero() {
             transition: 'opacity 0.3s ease-out'
           }}
         >
-          FORGING FUTURE ENTREPRENEURS
+         CHAOS TO CATALYST  
         </div>
         
         <a 

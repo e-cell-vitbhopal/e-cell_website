@@ -51,8 +51,8 @@ export const box2 = [
     {
         id: 1,
         name: 'Avi Jain',
-        role: 'Co-lead',
-        description: 'Finance and Sponsor Team',
+        role: 'Lead',
+        description: 'Finance and Sponsorship Team',
         image: AviJain,
     },
     {
@@ -66,7 +66,7 @@ export const box2 = [
         id: 3,
         name: 'Debadrita Dey',
         role: 'Lead',
-        description: 'Finance and Sponsor Team',
+        description: 'Finance and Sponsorship Team',
         image: DebadritaDey,
     },
 ];

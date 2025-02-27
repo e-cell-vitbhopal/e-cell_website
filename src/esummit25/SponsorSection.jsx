@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Carousel from './Carousel/Carousel';
 import { useInView } from 'react-intersection-observer';
+import'./SponsorSection.css'
 
 const SponsorSection = () => {
   const [eventsVisible, setEventsVisible] = useState(false);
@@ -32,7 +33,7 @@ const SponsorSection = () => {
           visibility: eventsVisible ? 'visible' : 'hidden'
         }}
       >
-        <h2>Sponsors</h2>
+        <h2 className='sponsor-title'>Sponsors</h2>
         <Carousel />
       </section>
     </>

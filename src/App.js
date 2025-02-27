@@ -5,7 +5,7 @@ import Main from './Main';
 import Summit from './Summit';
 import ComingSoon from './coming_soon';
 import Recruitment from './components/Recruitment/Recruitment';
-import Registration from './e_summit_components/Registration/Registration';
+// import Registration from './e_summit_components/Registration/Registration';
 import FormLinks from './e_summit_components/Registration/FormLinks';
 import IshaanSharma from './e_summit_components/Registration/IshaanSharma';
 import ProductDesign from './e_summit_components/Registration/ProductDesign';
@@ -26,7 +26,7 @@ import EditPost from './blog_components/EditPost';
 import Esummit from './esummit'
 import ProtectedRoute from './blog_components/ProtectedRoute';
 import './blog_components/blog.css'
-
+import EventBrochure from './esummit25/EventBrochure'
 function App() {
   return (
     <div>
@@ -37,6 +37,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/recruitment" element={<Recruitment />} /> 
             {/* Esummit */}
+            <Route path="/event/:id" element={<EventBrochure />} />
             <Route path="/e_summit_2024" element={<Summit />} />
             <Route path="/esummit2025" element={<ComingSoon />} />
             <Route path="/esummit25" element={<Esummit />} />

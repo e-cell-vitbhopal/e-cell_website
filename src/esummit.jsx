@@ -10,7 +10,7 @@ import SpeakerSection from './esummit25/SpeakerSection'
 import ScrollIndicator from './esummit25/ScrollIndicator'
 import Footer from './esummit25/Footer'
 import SponsorSection from './esummit25/SponsorSection'
-
+import PatronsSection from './esummit25/PatronsSection'
 
 // Import the image properly
 import imageStar from './assets/image_star.png';
@@ -78,6 +78,7 @@ function Esummit() {
             </div>
           </section>
         </div>
+        <PatronsSection />
         <Footer />
       </div>
     </>

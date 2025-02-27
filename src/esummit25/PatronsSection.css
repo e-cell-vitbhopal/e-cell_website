@@ -1,0 +1,231 @@
+.patrons-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.patrons-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    color: #ffffff;
+}
+
+.patrons-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #2c003e, #13002b);
+    margin: 10px auto;
+}
+
+.pyramid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pyramid-row {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.patron-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 180px;
+    transition: all 0.3s ease;
+}
+
+.patron-card:hover {
+    transform: translateY(-10px);
+}
+
+.patron-image-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #6738b2;
+    box-shadow: 0 0 20px rgba(103, 56, 178, 0.3);
+    transition: all 0.3s ease;
+}
+
+.patron-card:hover .patron-image-container {
+    border-color: #9b5de5;
+    box-shadow: 0 0 30px rgba(155, 93, 229, 0.4);
+}
+
+.patron-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.patron-card:hover .patron-image {
+    transform: scale(1.1);
+}
+
+.patron-info {
+    text-align: center;
+}
+
+.patron-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.patron-designation {
+    font-family: "Trocchi", serif;
+    font-size: 1rem;
+    color: #c3a6ff;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .pyramid-container {
+        gap: 2rem;
+    }
+
+    .pyramid-row {
+        gap: 2rem;
+    }
+
+    .patron-card {
+        width: 160px;
+    }
+
+    .patron-image-container {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 992px) {
+    .patrons-title {
+        font-size: 3rem;
+    }
+
+    .patron-card {
+        width: 140px;
+    }
+
+    .patron-image-container {
+        width: 140px;
+        height: 140px;
+    }
+
+    .patron-name {
+        font-size: 1.1rem;
+    }
+
+    .patron-designation {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .patrons-title {
+        font-size: 2.5rem;
+    }
+
+    .pyramid-container {
+        gap: 1.5rem;
+    }
+
+    .pyramid-row {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .patron-card {
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+
+    .patron-image-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .patron-name {
+        font-size: 1rem;
+    }
+
+    .patron-designation {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .patrons-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .pyramid-container {
+        gap: 1rem;
+    }
+
+    .pyramid-row {
+        gap: 0.5rem;
+    }
+
+    .patron-card {
+        width: 80px;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .patron-image-container {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+    }
+
+    .patron-name {
+        font-size: 0.8rem;
+    }
+
+    .patron-designation {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .patron-card {
+        width: 70px;
+    }
+
+    .patron-image-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .patron-name {
+        font-size: 0.75rem;
+    }
+
+    .patron-designation {
+        font-size: 0.65rem;
+    }
+}

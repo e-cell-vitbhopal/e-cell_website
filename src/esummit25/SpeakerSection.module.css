@@ -1,18 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Trocchi&display=swap");
 
 .speakerSection {
-  padding: 5rem 5rem;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border-radius: 12px;
-  box-shadow: 0 0 15px 5px rgba(103, 56, 178, 0.5);
-  margin-bottom: 0; /* Remove bottom margin */
+  text-align: center;
+  padding: 50px 20px;
+  background: radial-gradient(circle at center, rgba(103, 56, 178, 0.15) 0%, rgba(10, 10, 10, 1) 100%);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width:100vw;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.speakerSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(103, 56, 178, 0.4) 0%, transparent 25%),
+    radial-gradient(circle at 80% 80%, rgba(103, 56, 178, 0.4) 0%, transparent 25%);
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 4rem !important;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   margin-bottom: 3rem;
@@ -20,14 +41,14 @@
   text-transform: uppercase;
 }
 
-.title::after {
+/* .title::after {
   content: "";
   display: block;
   width: 50px;
   height: 3px;
   background: linear-gradient(to right, #2c003e, #13002b);
   margin: 10px auto;
-}
+} */
 
 .speakerGrid {
   display: grid;
@@ -231,16 +252,18 @@
 
 @media (max-width: 640px) {
    .speakerSection {
-    border: none;
+    /* border: none; */
     box-shadow: none;
-    padding: 3rem 1rem;
+    padding: 0rem 0rem;
+    margin-top: 0px;
+    background-color: black;
   }
   .speakerGrid {
     display: none;
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
   
   .speakerSection {

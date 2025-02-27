@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/lovelo');
 .hero {
   height: 100vh;
   width: 100%;
@@ -87,21 +88,9 @@
   transition: transform 0s ease-out;
 }
 
-.blackBoxTop {
-  composes: blackBox;
-  top: 0;
-  height: 25vh;
-  transform-origin: top;
-  margin-bottom: 10px;
-}
 
-.blackBoxBottom {
-  composes: blackBox;
-  bottom: 0;
-  height: 25vh;
-  transform-origin: bottom;
-  margin-top: 10px;
-}
+
+
 
 .ecellText {
   position: absolute;
@@ -126,11 +115,11 @@
 .tagline {
   position: absolute;
   left: 50%;
-  top: 67%;
+  top: 68%;
   transform-origin: inherit;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 30px;
-  font-weight: 800;
+  font-family: 'lovelo', monospace;
+  font-size: 50px;
+  font-weight: 900;
   color: white;
   text-align: center;
   letter-spacing: 1px;
@@ -141,6 +130,8 @@
   width: 100%;
   padding: 0 20px;
   will-change: transform, opacity;
+  letter-spacing: 15px; /* Adjust the value as needed */
+ 
 }
 
 .registerButton {
@@ -196,14 +187,7 @@
     width: 100%;
   }
   
-  .blackBoxBottom {
-    composes: blackBox;
-    bottom: 0;
-    height: 35vh;
-    transform-origin: bottom;
-    margin-top: 10px;
-  }
-  
+
   .ecellText {
     width: 90%;
     font-size: 8px;
@@ -212,8 +196,9 @@
   
   .tagline {
     width: 90%;
-    font-size: 10px;
+    font-size: 8px;
     top: 66%;
+    letter-spacing: 5px;
   }
   
   .registerButton {

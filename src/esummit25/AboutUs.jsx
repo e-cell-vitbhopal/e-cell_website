@@ -2,7 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./AboutUs.css";
-
+import image1 from '../assets/image1.jpeg'
+import image2 from '../assets/image2.jpeg'
 const AboutUs = () => {
   const [ref1, inView1] = useInView({
     threshold: 0.3,
@@ -56,7 +57,7 @@ const AboutUs = () => {
         >
           <div className="image-container">
             <img 
-              src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              src={image1} 
               alt="Campus" 
             />
           </div>
@@ -79,12 +80,12 @@ const AboutUs = () => {
           <p>
             E-Summit aims to help students develop an entrepreneurial mindset
             and we aim to go beyond talking just about mere businesses.{" "}
-            <b>Entrepreneurship</b> is a spirit and that's what we celebrate
+            Entrepreneurship is a spirit and that's what we celebrate
             here.
           </p>
           <div className="image-container">
             <img 
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              src={image2}
               alt="Students" 
             />
           </div>

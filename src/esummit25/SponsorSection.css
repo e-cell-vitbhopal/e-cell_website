@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Trocchi&display=swap");
+.sponsor-title{
+    margin-top: 30px;
+    font-family: 'Montserrat';
+    font-size:4rem !important;
+    font-weight: 900;
+}
+@media (max-width: 768px) {
+    .sponsor-title {
+      font-size: 2rem !important;
+    }
+}

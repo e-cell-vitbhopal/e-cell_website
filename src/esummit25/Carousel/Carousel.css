@@ -140,6 +140,8 @@
   .carousel {
       width: 100%;
       margin: 20px;
+      justify-content: center;
+      display: flex;
   }
 
   .card-sponsor {
@@ -166,6 +168,8 @@
 @media (max-width: 480px) {
   .carousel {
       width: 100%;
+      display: flex;
+      justify-content: center;
   }
 
   .card-sponsor {
