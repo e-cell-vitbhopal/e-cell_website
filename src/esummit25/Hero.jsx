@@ -176,18 +176,26 @@ function Hero() {
          CHAOS TO CATALYST  
         </div>
         
-        <a 
-          href="#register" 
-          className={`${styles.registerButton} ${!showButton ? styles.hidden : ''}`}
-          style={{
-            transform: `translate(-50%, -50%)`,
-            opacity: showButton ? 1 : 0,
-            transformOrigin,
-            transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
-          }}
-        >
-          Register Now
-        </a>
+        <a
+
+  className={`${styles.registerButton} ${!showButton ? styles.hidden : ''}`}
+  style={{
+    transform: `translate(-50%, -50%)`,
+    opacity: showButton ? 1 : 0,
+    transformOrigin,
+    transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+  }}
+  onClick={(e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const section = document.getElementById('events');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Register Now
+</a>
+
       </div>
     </div>
   )

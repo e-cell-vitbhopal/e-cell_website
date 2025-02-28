@@ -51,19 +51,19 @@ const Navbar = () => {
         }}>
           Home
         </li>
-        <li className="nav-item" onClick={() => scrollToSection('events')}>
+        <li className="nav-item" onClick={() => scrollToSection('about')}>
           About Us
         </li>
-        <li className="nav-item" onClick={() => scrollToSection('sponsors')}>
+        <li className="nav-item" onClick={() => scrollToSection('events')}>
           Events
         </li>
         <li className="nav-item" onClick={() => scrollToSection('speakers')}>
           Speakers
         </li>
-        <li className="nav-item" onClick={() => scrollToSection('register')}>
+        <li className="nav-item" onClick={() => scrollToSection('sponsors')}>
           Sponsors
         </li>
-        <li className="nav-item" onClick={() => scrollToSection('contact')}>
+        <li className="nav-item" onClick={() => scrollToSection('patrons')}>
           Our Patrons
         </li>
         <li className="nav-item" onClick={() => scrollToSection('contact')}>

@@ -12,7 +12,7 @@ function ComingSoon() {
   const [subscribers, setSubscribers] = useState([]);
   const [emailSent, setEmailSent] = useState(false);
 
-  const launchDate = new Date('2025-03-01T12:00:00').getTime();
+  const launchDate = new Date('2025-03-04T12:00:00').getTime();
 
   useEffect(() => {
     const fetchSubscribers = async () => {
@@ -97,7 +97,7 @@ function ComingSoon() {
       return (
         <div className="countdown-completed">
           <p>E-Summit 2025 is Live!</p>
-          <a href="https://www.ecellvitbhopal.in/esummit2025" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.ecellvitbhopal.in/esummit25" target="_blank" rel="noopener noreferrer">
             <button className="live-button">Visit Now</button>
           </a>
         </div>

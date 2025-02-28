@@ -52,8 +52,10 @@ function Esummit() {
           <img src={imageStar} alt="Star" />
         </div>
         <div className="content-sections">
-          <AboutUs />
           
+          <section id="about" >
+          <AboutUs />
+          </section>
           <section id="events" className="section">
             <Timeline />
           </section>
@@ -64,21 +66,14 @@ function Esummit() {
           
           <SponsorSection />
 
-          <section id="register" className="section">
-            <h2>Register</h2>
-            <div className="register-content">
-              <p>Registration section coming soon...</p>
-            </div>
-          </section>
+          
 
-          <section id="contact" className="section">
-            <h2>Contact</h2>
-            <div className="contact-content">
-              <p>Contact section coming soon...</p>
-            </div>
-          </section>
+        
         </div>
+        <section id="patrons">
         <PatronsSection />
+          </section>
+        
         <Footer />
       </div>
     </>
