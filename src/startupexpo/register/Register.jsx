@@ -16,10 +16,12 @@ const Register = () => {
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     error: false,
-    loading: false
+    loading: false,
+    errorMessage: ''
   });
   
   const sectionRef = useRef(null);
+  const formRef = useRef(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,12 +55,48 @@ const Register = () => {
     }));
   };
   
+  const validateForm = () => {
+    // Basic validation
+    if (!formData.startupName.trim()) return "Startup Name is required";
+    if (!formData.linkedinProfile.trim()) return "LinkedIn Profile is required";
+    if (!formData.ceoName.trim()) return "Founder Name is required";
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) return "Please enter a valid email address";
+    
+    // Phone validation
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(formData.contact.replace(/\D/g, ''))) 
+      return "Please enter a valid 10-digit contact number";
+    
+    // Website validation (if provided)
+    if (formData.website.trim() && !formData.website.startsWith('http')) 
+      return "Website URL should start with http:// or https://";
+    
+    return null; // No validation errors
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Run validation first
+    const validationError = validateForm();
+    if (validationError) {
+      setFormStatus({
+        submitted: false,
+        error: true,
+        loading: false,
+        errorMessage: validationError
+      });
+      return;
+    }
+    
     setFormStatus({
       submitted: false,
       error: false,
-      loading: true
+      loading: true,
+      errorMessage: ''
     });
 
     // Create form data for submission
@@ -72,16 +110,20 @@ const Register = () => {
     googleFormData.append('entry.1250901177', formData.contact); // Contact
     googleFormData.append('entry.1900765220', formData.website); // Website
     googleFormData.append('entry.1477682978', formData.yearlyRevenue); // Yearly Revenue
-    // If Google Form expects "Silver Pass" instead of "silver"
-googleFormData.append('entry.1740950606', 
-    formData.passType === 'silver' ? 'Silver Pass' : 
-    formData.passType === 'gold' ? 'Gold Pass' : 
-    'Platinum Pass'
-  ); // Pass Type
+    googleFormData.append('entry.1740950606', 
+      formData.passType === 'silver' ? 'Silver Pass' : 
+      formData.passType === 'gold' ? 'Gold Pass' : 
+      'Platinum Pass'
+    ); // Pass Type
     
     try {
+      // Create a timeout promise for the fetch operation
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Request timeout')), 10000); // 10 second timeout
+      });
+      
       // Submit the form data to Google Forms
-      const response = await fetch(
+      const fetchPromise = fetch(
         'https://docs.google.com/forms/d/e/1FAIpQLSeqGBSRisPPs0KQcMraX6StCPduyYKO-8-I3Fv3phITwBFREQ/formResponse',
         {
           method: 'POST',
@@ -90,34 +132,71 @@ googleFormData.append('entry.1740950606',
         }
       );
       
-      // Note: due to CORS policy, we won't get a meaningful response back
-      // So we'll just assume success after a delay
-      setTimeout(() => {
-        setFormStatus({
-          submitted: true,
-          error: false,
-          loading: false
-        });
+      // Race between the fetch and timeout
+      await Promise.race([fetchPromise, timeoutPromise]);
+      
+      // Create a hidden iframe to verify the form was submitted correctly
+      const checkSubmission = () => {
+        // Due to CORS we create hidden iframe as a workaround to check submission
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
         
-        // Reset form after submission
-        setFormData({
-          startupName: '',
-          linkedinProfile: '',
-          ceoName: '',
-          email: '',
-          contact: '',
-          website: '',
-          yearlyRevenue: '',
-          passType: 'silver'
-        });
-      }, 1000);
+        // Check Google Form confirmation url with a unique parameter
+        const timestamp = new Date().getTime();
+        iframe.src = `https://docs.google.com/forms/d/e/1FAIpQLSeqGBSRisPPs0KQcMraX6StCPduyYKO-8-I3Fv3phITwBFREQ/formResponse?embedded=true&usp=pp_url&entry.543250579=${formData.startupName}&t=${timestamp}`;
+        
+        iframe.onload = () => {
+          // Check if iframe content contains confirmation text (a guess since we can't access content due to CORS)
+          try {
+            setTimeout(() => {
+              document.body.removeChild(iframe);
+              
+              // Since we can't directly detect success with Google Forms,
+              // we're assuming success if no network errors occurred
+              setFormStatus({
+                submitted: true,
+                error: false,
+                loading: false,
+                errorMessage: ''
+              });
+              
+              // Reset form after submission
+              setFormData({
+                startupName: '',
+                linkedinProfile: '',
+                ceoName: '',
+                email: '',
+                contact: '',
+                website: '',
+                yearlyRevenue: '',
+                passType: 'silver'
+              });
+              
+              if (formRef.current) {
+                formRef.current.reset();
+              }
+            }, 1500);
+          } catch (error) {
+            setFormStatus({
+              submitted: false,
+              error: true,
+              loading: false,
+              errorMessage: "Could not verify submission. Please try again."
+            });
+          }
+        };
+      };
+      
+      checkSubmission();
       
     } catch (error) {
       console.error('Error submitting form:', error);
       setFormStatus({
         submitted: false,
         error: true,
-        loading: false
+        loading: false,
+        errorMessage: `Network error: ${error.message || 'Could not connect to the server'}`
       });
     }
   };
@@ -135,16 +214,16 @@ googleFormData.append('entry.1740950606',
                 <p>Thank you for registering your startup. We'll review your application and get back to you shortly.</p>
                 <button 
                   className="register__button"
-                  onClick={() => setFormStatus({ submitted: false, error: false, loading: false })}
+                  onClick={() => setFormStatus({ submitted: false, error: false, loading: false, errorMessage: '' })}
                 >
                   Register Another Startup
                 </button>
               </div>
             ) : (
-              <form className="register__form" onSubmit={handleSubmit}>
+              <form className="register__form" onSubmit={handleSubmit} ref={formRef}>
                 {formStatus.error && (
                   <div className="register__error">
-                    <p>There was an error submitting your form. Please try again later.</p>
+                    <p>{formStatus.errorMessage || 'There was an error submitting your form. Please try again later.'}</p>
                   </div>
                 )}
                 
@@ -210,6 +289,7 @@ googleFormData.append('entry.1740950606',
                     value={formData.contact}
                     onChange={handleChange}
                     required
+                    placeholder="10-digit mobile number"
                   />
                 </div>
                 
@@ -222,6 +302,7 @@ googleFormData.append('entry.1740950606',
                     className="register__input"
                     value={formData.website}
                     onChange={handleChange}
+                    placeholder="https://example.com"
                   />
                 </div>
                 

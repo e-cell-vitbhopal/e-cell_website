@@ -1,29 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Criteria.css';
 
-document.addEventListener('DOMContentLoaded', function() {
-  const items = document.querySelectorAll('.criteria__item');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('animate');
-        }, index * 150);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
-  
-  items.forEach(item => {
-    observer.observe(item);
-  });
-});
-
 const Criteria = () => {
+  const listRef = useRef(null);
+
+  useEffect(() => {
+    // This runs after the component is mounted and rendered
+    if (listRef.current) {
+      const items = listRef.current.querySelectorAll('.criteria__item');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('animate');
+            }, index * 150);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      
+      items.forEach(item => {
+        observer.observe(item);
+      });
+
+      // Cleanup observer when component unmounts
+      return () => {
+        items.forEach(item => {
+          observer.unobserve(item);
+        });
+      };
+    }
+  }, []); // Empty dependency array means this runs once after mount
+
   return (
     <section className="criteria">
       <div className="criteria__container">
@@ -31,7 +43,7 @@ const Criteria = () => {
         <div className="criteria__content">
           <div className="criteria__intro">
           </div>
-          <div className="criteria__list">
+          <div className="criteria__list" ref={listRef}>
             <div className="criteria__item">
               <div className="criteria__item-header">
                 <div className="criteria__item-icon">💼</div>
