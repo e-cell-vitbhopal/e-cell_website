@@ -1,0 +1,122 @@
+.criteria {
+  padding: 100px 0;
+  background-color: rgba(10, 10, 25, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.criteria__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.criteria__title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #a887e0;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.criteria__title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 2px;
+}
+
+.criteria__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.criteria__intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.criteria__intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.criteria__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Animation keyframes for the pop-in effect */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  70% {
+    transform: scale(1.05) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.criteria__item {
+  background: rgba(30, 30, 60, 0.6);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #6a11cb;
+  backdrop-filter: blur(5px);
+  
+  /* Initial state before animation */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Class that gets added by JavaScript when the element is visible */
+.criteria__item.animate {
+  animation: popIn 0.6s forwards;
+}
+
+.criteria__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.criteria__item-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.criteria__item-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.criteria__item-title {
+  font-size: 1.5rem;
+  color: #a887e0;
+}
+
+.criteria__item-description {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .criteria__list {
+    grid-template-columns: 1fr;
+  }
+}

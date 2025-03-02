@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Preloader.css';
-
+import SUMMiTMask from '../assets/SUMMiT_mask1.webp'
+import SUMMiT from '../assets/SUMMiT.webp'
 const Preloader = ({ onLoadComplete }) => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [shutterOpen, setShutterOpen] = useState(false);
@@ -8,8 +9,8 @@ const Preloader = ({ onLoadComplete }) => {
   useEffect(() => {
     const loadImages = async () => {
       const imageUrls = [
-        '/src/assets/SUMMiT_mask.webp',
-        '/src/assets/SUMMiT.webp'
+      SUMMiTMask,
+      SUMMiT
       ];
 
       const loadImage = (url) => {

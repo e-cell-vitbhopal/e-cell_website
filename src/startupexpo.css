@@ -1,0 +1,28 @@
+.startup-expo-app {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: #0a0a1a;
+    color: #f0f0f0;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .startup-expo-app *,
+  .startup-expo-app *::before,
+  .startup-expo-app *::after {
+    box-sizing: border-box;
+  }
+  
+  .startup-expo-app section {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .startup-expo-app button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  .startup-expo-app :focus {
+    outline: 2px solid #6a11cb;
+    outline-offset: 2px;
+  }

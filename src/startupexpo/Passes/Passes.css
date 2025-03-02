@@ -1,0 +1,173 @@
+.passes {
+  padding: 100px 0;
+  background-color: rgba(15, 15, 35, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.passes__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.passes__title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #a887e0;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.passes__title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 2px;
+}
+
+.passes__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Add the card reveal animation */
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  70% {
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.passes__card {
+  background: rgba(30, 30, 60, 0.6);
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  border-top: 5px solid;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  
+  /* Initial invisible state for scroll animation */
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Apply animation when class is added by JavaScript */
+.passes__card.animate {
+  animation: cardReveal 0.8s forwards;
+}
+
+.passes__card--featured {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.passes__card--featured.animate {
+  animation: cardReveal 0.8s forwards;
+  animation-delay: 0.2s; /* Delay featured card for emphasis */
+}
+
+.passes__featured-tag {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  background: #2575fc;
+  color: white;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
+}
+
+.passes__card-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.passes__price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.passes__description {
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.passes__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.passes__feature {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  color: #e0e0e0;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animate features when card is animated */
+.passes__card.animate .passes__feature {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: calc(0.8s + var(--index, 0) * 0.1s);
+}
+
+.passes__feature-icon {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.passes__button {
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid;
+}
+
+@media (max-width: 992px) {
+  .passes__card--featured {
+    transform: scale(1);
+  }
+  
+  .passes__card--featured.animate {
+    animation: cardReveal 0.8s forwards;
+  }
+}
+
+@media (max-width: 768px) {
+  .passes__grid {
+    grid-template-columns: 1fr;
+  }
+}

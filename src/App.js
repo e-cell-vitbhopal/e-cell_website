@@ -4,6 +4,7 @@ import './App.css';
 import Main from './Main';
 import Summit from './Summit';
 import ComingSoon from './coming_soon';
+import Startup from './startupexpo';
 import Recruitment from './components/Recruitment/Recruitment';
 // import Registration from './e_summit_components/Registration/Registration';
 import FormLinks from './e_summit_components/Registration/FormLinks';
@@ -40,6 +41,7 @@ function App() {
             <Route path="/event/:id" element={<EventBrochure />} />
             <Route path="/e_summit_2024" element={<Summit />} />
             <Route path="/esummit2025" element={<ComingSoon />} />
+            <Route path="/esummit25/startupexpo" element={<Startup />} />
             <Route path="/esummit25" element={<Esummit />} />
             <Route path="/parichay" element={<Summit_copy />} />
             <Route path="/e_summit_2024/registration" element={<FormLinks />} />

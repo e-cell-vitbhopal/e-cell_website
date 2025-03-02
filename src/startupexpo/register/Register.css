@@ -1,0 +1,153 @@
+.register {
+    padding: 100px 0;
+    background-color: rgba(20, 20, 20, 0);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .register--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .register__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .register__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #a887e0;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .register__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border-radius: 2px;
+  }
+  
+  .register__content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .register__form-container {
+    width: 100%;
+    background:  rgba(30, 30, 60, 0.6);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .register__form-group {
+    margin-bottom: 25px;
+  }
+  
+  .register__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  .register__input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    transition: border-color 0.3s ease;
+  }
+  
+  .register__input:focus {
+    border-color: #9c27b0;
+    outline: none;
+  }
+  
+  .register__radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .register__radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .register__radio {
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #9c27b0;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .register__radio-label {
+    font-size: 1rem;
+    color: #ddd;
+    cursor: pointer;
+  }
+  
+  .register__button {
+    background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .register__button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.3);
+  }
+  
+  .register__success {
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  .register__success-icon {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  .register__success h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ddd;
+  }
+  
+  .register__success p {
+    color: #bbb;
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .register__radio-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

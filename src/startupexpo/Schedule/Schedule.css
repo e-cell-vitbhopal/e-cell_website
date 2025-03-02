@@ -1,0 +1,152 @@
+.startup-expo-schedule {
+  padding: 100px 0;
+  background-color: rgba(15, 15, 35, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.startup-expo-schedule__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.startup-expo-schedule__title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #a887e0;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.startup-expo-schedule__title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 2px;
+}
+
+.startup-expo-schedule__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.startup-expo-schedule__tab {
+  background: none;
+  border: none;
+  padding: 12px 30px;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  color: #a887e0;
+  background-color: rgba(106, 17, 203, 0.2);
+}
+
+.startup-expo-schedule__tab--active {
+  background-color: #6a11cb;
+  color: white;
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+}
+
+.startup-expo-schedule__content {
+  background: rgba(30, 30, 60, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.startup-expo-schedule__item {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  
+  /* Set initial state for scroll animation */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease;
+}
+
+/* Animation for items coming into view */
+.startup-expo-schedule__item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.startup-expo-schedule__item:last-child {
+  border-bottom: none;
+}
+
+.startup-expo-schedule__item:hover {
+  background-color: rgba(106, 17, 203, 0.2);
+}
+
+.startup-expo-schedule__time {
+  min-width: 150px;
+  font-weight: bold;
+  color: #a887e0;
+  padding-right: 20px;
+}
+
+.startup-expo-schedule__details {
+  flex: 1;
+}
+
+.startup-expo-schedule__event {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #f0f0f0;
+}
+
+.startup-expo-schedule__location {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+}
+
+/* Add a subtle animation for the tab switching */
+@keyframes scheduleTabFade {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.startup-expo-schedule__content {
+  position: relative;
+}
+
+/* Entry animation when tab changes */
+.startup-expo-schedule__content.animate-tab-change {
+  animation: scheduleTabFade 0.4s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .startup-expo-schedule__item {
+    flex-direction: column;
+  }
+  
+  .startup-expo-schedule__time {
+    margin-bottom: 10px;
+  }
+  
+  .startup-expo-schedule__tabs {
+    flex-wrap: wrap;
+  }
+  
+  .startup-expo-schedule__tab {
+    margin-bottom: 10px;
+  }
+}
