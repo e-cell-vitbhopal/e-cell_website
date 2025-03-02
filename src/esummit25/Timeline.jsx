@@ -5,13 +5,14 @@ import './Timeline.css';
 // import { FaInfoCircle } from 'react-icons/fa';
 
 const allEvents = { "27 March, 2025": [
+    
     {
       id: 1,
-      title: "Inaugral Ceremony",
-      date: "March 27, 2025",
-      description: "The inaugural ceremony marked the event's commencement, followed by a keynote session featuring expert insights, innovations, and discussions on key topics.",
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1000",
-      registerLink: "https://example.com/register/startup-summit-2024"
+      title: "Startup Expo",
+      date: "March 27-28, 2025",
+      description: "The Startup Expo connects startups, entrepreneurs, and investors through panels, workshops, and pitches, fostering innovation, collaboration, and real-world insights.",
+      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000",
+      registerLink: "https://example.com/register/pitch-perfect-2024"
     },
     {
       id: 2,
@@ -23,11 +24,11 @@ const allEvents = { "27 March, 2025": [
     },
     {
       id: 3,
-      title: "Startup Expo",
-      date: "March 27-28, 2025",
-      description: "The Startup Expo connects startups, entrepreneurs, and investors through panels, workshops, and pitches, fostering innovation, collaboration, and real-world insights.",
-      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000",
-      registerLink: "https://example.com/register/pitch-perfect-2024"
+      title: "Inaugral Ceremony",
+      date: "March 27, 2025",
+      description: "The inaugural ceremony marked the event's commencement, followed by a keynote session featuring expert insights, innovations, and discussions on key topics.",
+      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1000",
+      registerLink: "https://example.com/register/startup-summit-2024"
     },
     {
       id: 4,

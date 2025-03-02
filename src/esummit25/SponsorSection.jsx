@@ -33,7 +33,7 @@ const SponsorSection = () => {
           visibility: eventsVisible ? 'visible' : 'hidden'
         }}
       >
-        <h2 className='sponsor-title'>Sponsors</h2>
+        <h2 className='sponsor-title'>Past Sponsors</h2>
         <Carousel />
       </section>
     </>

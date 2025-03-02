@@ -11,12 +11,14 @@ import Footer from './startupexpo/Footer/Footer';
 import StarryBackground from './startupexpo/StarryBackground/StarryBackground';
 import './startupexpo.css';
 import Register from './startupexpo/register/Register';
+import ScrollIndicator from './esummit25/ScrollIndicator'
 function Startup() {
   return (
     <div className="startup-expo-app">
       <StarryBackground />
       <Navbar />
       <Hero />
+      <ScrollIndicator />
       <About />
       <WhyAttend />
       <Schedule />

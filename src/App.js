@@ -28,6 +28,7 @@ import Esummit from './esummit'
 import ProtectedRoute from './blog_components/ProtectedRoute';
 import './blog_components/blog.css'
 import EventBrochure from './esummit25/EventBrochure'
+import { Navigate } from 'react-router-dom';
 function App() {
   return (
     <div>
@@ -39,9 +40,11 @@ function App() {
             <Route path="/recruitment" element={<Recruitment />} /> 
             {/* Esummit */}
             <Route path="/event/:id" element={<EventBrochure />} />
+
             <Route path="/e_summit_2024" element={<Summit />} />
             <Route path="/esummit2025" element={<ComingSoon />} />
             <Route path="/esummit25/startupexpo" element={<Startup />} />
+            <Route path="/event/1" element={<Navigate to="/esummit25/startupexpo" replace />} />
             <Route path="/esummit25" element={<Esummit />} />
             <Route path="/parichay" element={<Summit_copy />} />
             <Route path="/e_summit_2024/registration" element={<FormLinks />} />
