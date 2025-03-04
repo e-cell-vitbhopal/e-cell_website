@@ -28,11 +28,17 @@ const StarryBackground = ({
     star.className = isTrail ? 'star trail' : 'star'
     star.style.left = `${x}px`
     star.style.top = `${y}px`
-    const size = isTrail ? Math.random() * 2 + 0.5 : Math.random() * 3 + 1
+  
+    // Adjust star size based on screen width
+    const isMobile = window.innerWidth <= 768
+    const size = isTrail 
+      ? (isMobile ? Math.random() * 1.5 + 0.3 : Math.random() * 2 + 0.5)
+      : (isMobile ? Math.random() * 2 + 0.5 : Math.random() * 3 + 1)
+  
     star.style.width = `${size}px`
     star.style.height = `${size}px`
     star.style.setProperty('--twinkle-duration', `${Math.random() * 3 + 2}s`)
-    
+  
     if (isTrail) {
       const angle = Math.random() * Math.PI * 2
       const speed = Math.random() * trailSpeed + 0.5
@@ -40,9 +46,10 @@ const StarryBackground = ({
       star.dataset.velocityY = Math.sin(angle) * speed
       star.style.opacity = '1'
     }
-    
+  
     return star
   }, [trailSpeed])
+  
 
   useEffect(() => {
     if (!isVisible) return

@@ -197,35 +197,37 @@
     }
 
     .patron-image-container {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-width: 2px;
     }
 
     .patron-name {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     .patron-designation {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
 }
 
 @media (max-width: 360px) {
     .patron-card {
-        width: 70px;
+        width: 60px;
     }
-
+    .pyramid-row {
+        gap: 0.2rem;
+    }
     .patron-image-container {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
     .patron-name {
-        font-size: 0.75rem;
+        font-size: 0.5rem;
     }
 
     .patron-designation {
-        font-size: 0.65rem;
+        font-size: 0.4rem;
     }
 }

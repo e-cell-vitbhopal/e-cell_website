@@ -12,7 +12,7 @@ function ComingSoon() {
   const [subscribers, setSubscribers] = useState([]);
   const [emailSent, setEmailSent] = useState(false);
 
-  const launchDate = new Date('2025-03-05T12:00:00').getTime();
+  const launchDate = new Date('2025-03-10T12:00:00').getTime();
 
   useEffect(() => {
     const fetchSubscribers = async () => {

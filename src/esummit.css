@@ -284,7 +284,15 @@
     display: none;
   }
 }
-
+@media (max-width: 368px) {
+  .dummy {
+    height: 400vh;
+  }
+  
+  .dummy img:nth-child(n+5) {
+    display: none;
+  }
+}
 /* Remove gap between sections */
 .section {
   padding: 4rem 2rem;
@@ -299,4 +307,27 @@
 #sponsors {
   margin-top: 0;
   padding-top: 2rem;
+}
+@media (max-height:486px) and (orientation: landscape) {
+  .app-container {
+    display: none;
+  }
+
+  .portrait-warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .portrait-warning {
+    display: none;
+  }
 }
