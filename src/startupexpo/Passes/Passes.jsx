@@ -47,7 +47,7 @@ const Passes = () => {
       id: 3,
       name: 'Platinum Pass',
       features: [
-        '20ft x 10ft stall',
+        '10ft x 10ft stall',
         '2 chairs, 1 table and dustbin',
         'Light and power socket',
         'Mention in Expo Pamphlet',

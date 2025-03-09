@@ -12,6 +12,7 @@ const Schedule = () => {
       { time: '10:30 AM – 02:00 PM', event: 'Startup Expo: The Ultimate Business Carnival ', location: '' },
       { time: '02:00 PM - 03:00 PM', event: 'Networking Lunch', location: '' },
       { time: '03:00 PM - 04:30 PM', event: 'Mini Event:The Ultimate Sales Showdown ', location: '' },
+      {time: '04:30 PM - 06:30 PM', event: 'Hiring session', location:''}
     ],
     2: [
       { time: '10:30 AM - 02:00 PM', event: 'Startup Expo', location: '' },
