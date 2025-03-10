@@ -2,7 +2,7 @@ import React from 'react';
 import "../../styles/events-styles/events.css";
 import Stack from '@mui/material/Stack';
 import CardMobile from './CardMobile';
-import img1 from "../../assets/events-images/1.png";
+import img1 from "../../assets/SUMMiT.png";
 import img2 from "../../assets/events-images/2.png";
 import img3 from "../../assets/events-images/3.png";
 import img4 from "../../assets/events-images/4.png";
@@ -32,10 +32,10 @@ const EventsMobile = () => {
                     }}
                 >
                     <CardMobile
-                        eventName="E-Summit 24"
-                        eventDescription="E-Summit '24 by E-Cell VIT Bhopal was a landmark event celebrating innovation, entrepreneurship, and strategic thinking. Highlights included a legendary speaker session with Vijender Singh Chauhan, a Paper Trading Competition, an IPL Auction challenge, a dynamic Case Study Competition, and a Product Design Competition powered by Notion. The event also hosted venture capitalists, fostering groundbreaking ideas, insightful discussions, and unparalleled networking opportunities, making it a hub for entrepreneurial excellence."
+                        eventName="E-Summit 25"
+                        eventDescription="E-Summit 2025 by E-Cell VIT Bhopal is a premier entrepreneurial event bringing together innovators, investors, and industry leaders for insightful talks, workshops, networking, and pitch competitions. Focused on emerging technologies and startup growth, it offers a platform to learn, connect, and explore funding opportunities. Join us to ignite innovation and shape the future of entrepreneurship!"
                         eventImage={img1}
-                        eventLink="/e_summit_2024"
+                        eventLink="/esummit2025"
                     />
 
                     <CardMobile

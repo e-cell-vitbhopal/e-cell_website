@@ -33,7 +33,7 @@ function Esummit() {
   return (
     <>
     <div className="portrait-warning">
-      Please rotate your device to landscape mode for the best experience.
+      Please rotate your device to Portrait mode for the best experience.
     </div>
       {loading && <Preloader onLoadComplete={() => setLoading(false)} />}
       <div className="app-container" style={{ visibility: loading ? 'hidden' : 'visible' }}>

@@ -1,5 +1,4 @@
 @import url('https://fonts.cdnfonts.com/css/lovelo');
-
 .hero {
   height: 100vh;
   width: 100%;
@@ -11,6 +10,7 @@
   left: 0;
   pointer-events: none;
   z-index: 10;
+  
 }
 
 .imageContainer {
@@ -23,8 +23,8 @@
 }
 
 .base, .mask {
-  border-top: 100px;
-  border-color: white;
+  border-top:100px;
+  border-color:white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -88,19 +88,21 @@
   transition: transform 0s ease-out;
 }
 
+
+
+
+
 .ecellText {
   position: absolute;
   left: 50%;
   top: 30%;
-  transform: translate(-50%, -50%);
   transform-origin: inherit;
-  letter-spacing: 0 !important;
   font-family: "Montserrat", serif;
   font-size: clamp(16px, 1.8vw, 18.2px);
-  font-weight: 400;
+  font-weight: 300;
   color: white;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   z-index: 4;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: transform 0s linear, opacity 0.2s ease-in-out;
@@ -114,7 +116,6 @@
   position: absolute;
   left: 50%;
   top: 68%;
-  transform: translate(-50%, -50%);
   transform-origin: inherit;
   font-family: 'lovelo', monospace;
   font-size: 50px;
@@ -129,14 +130,15 @@
   width: 100%;
   padding: 0 20px;
   will-change: transform, opacity;
-  letter-spacing: 15px;
+  letter-spacing: 15px; /* Adjust the value as needed */
+ 
 }
 
 .registerButton {
   position: absolute;
   left: 50%;
   bottom: 15%;
-  transform: translate(-50%, 0);
+  transform-origin: inherit;
   padding: 12px 24px;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
@@ -174,78 +176,34 @@
   z-index: 2;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .base, .mask {
-    width: 120%;
-  }
-}
-
-@media (max-width: 992px) {
-  .base, .mask {
-    width: 130%;
-  }
-  
-  .ecellText {
-    font-size: clamp(14px, 1.6vw, 16px);
-    top: 32%;
-  }
-  
-  .tagline {
-    font-size: clamp(36px, 4.5vw, 48px);
-    top: 70%;
-    letter-spacing: 10px;
-  }
-  
-  .registerButton {
-    padding: 10px 22px;
-    font-size: 14px;
-    bottom: 12%;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .base, .mask {
-    width: 140%;
+    width: 100%;
   }
   
+
   .ecellText {
-    font-size: clamp(12px, 1.4vw, 14px);
-    top: 34%;
+    width: 90%;
+    font-size: 8px;
+    top: 30%;
   }
   
   .tagline {
-    font-size: clamp(28px, 4vw, 36px);
-    top: 72%;
-    letter-spacing: 8px;
+    width: 90%;
+    font-size: 8px;
+    top: 66%;
+    letter-spacing: 5px;
   }
   
   .registerButton {
     padding: 8px 20px;
     font-size: 12px;
-    bottom: 10%;
-  }
-}
-
-@media (max-width: 576px) {
-  .base, .mask {
-    width: 160%;
-  }
-  
-  .ecellText {
-    font-size: clamp(10px, 1.2vw, 12px);
-    top: 36%;
-  }
-  
-  .tagline {
-    font-size: clamp(22px, 3.5vw, 28px);
-    top: 74%;
-    letter-spacing: 6px;
-  }
-  
-  .registerButton {
-    padding: 6px 18px;
-    font-size: 10px;
-    bottom: 8%;
+    bottom: 0%;
   }
 }

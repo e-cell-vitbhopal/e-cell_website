@@ -5,7 +5,7 @@ import './EventBrochure.css';
 
 
 const eventDetails = {
-  1: {
+  3: {
     title: "Inaugration Ceremony And Kenote Session",
     date: "March 27, 2025",
     time: "9:30 AM - 1:00 PM",
