@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import "../../styles/events-styles/events.css";
+// import "../../styles/events-styles/events.css";
 import CardEvent from "./CardEvent";
 import img1 from "../../assets/SUMMiT.png";
 import img2 from "../../assets/events-images/2.png";

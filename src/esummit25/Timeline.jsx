@@ -95,30 +95,30 @@ const TimelineEvent = ({ event }) => {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
   const x = useTransform(scrollYProgress, [0, 0.5], [100, 0]);
 
-  return (<></>
-    // <motion.div
-    //   ref={ref}
-    //   style={{ opacity, x }}
-    //   className="timeline-event"
-    // >
-    //   <div className="event-content">
-    //     <div className="event-card">
-    //       <img src={event.image} alt={event.title} className="event-image" />
-    //       <div className="event-details">
-    //         <div className="event-content-wrapper">
-    //           <h3 className="event-title">{event.title}</h3>
+  return (
+    <motion.div
+      ref={ref}
+      style={{ opacity, x }}
+      className="timeline-event"
+    >
+      <div className="event-content">
+        <div className="event-card">
+          <img src={event.image} alt={event.title} className="event-image" />
+          <div className="event-details">
+            <div className="event-content-wrapper">
+              <h3 className="event-title">{event.title}</h3>
              
-    //           <p className="event-date">{event.date}</p>
-    //           <p className="event-description">{event.description}</p>
-    //         </div>
-    //         <a href={`/event/${event.id}`} target="_blank" rel="noopener noreferrer" className="register-button">
-    //           Register Now
-    //         </a>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <div className="timeline-connector" style={{ left: "0%" }}></div>
-    // </motion.div>
+              <p className="event-date">{event.date}</p>
+              <p className="event-description">{event.description}</p>
+            </div>
+            <a href={`/event/${event.id}`} target="_blank" rel="noopener noreferrer" className="register-button">
+              Register Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="timeline-connector" style={{ left: "0%" }}></div>
+    </motion.div>
   );
 };
 
@@ -132,35 +132,36 @@ const Timeline = () => {
     return allEvents[selectedYear] || [];
   };
 
-  return (<><div className="timeline-name">EVENTS</div>
-  <div className="timeline-desc">Will Be Updated Soon</div>
-  </>
-    // <div className="timeline-container">
-    //   <div className="timeline-name">EVENTS</div>
-    //   <div className="timeline-filters">
-    //     <button
-    //       onClick={() => setSelectedYear("all")}
-    //       className={`filter-button ${selectedYear === "all" ? 'active' : ''}`}
-    //     >
-    //       All Events
-    //     </button>
-    //     {Object.keys(allEvents).map((year) => (
-    //       <button
-    //         key={year}
-    //         onClick={() => setSelectedYear(year)}
-    //         className={`filter-button ${selectedYear === year ? 'active' : ''}`}
-    //       >
-    //         {year}
-    //       </button>
-    //     ))}
-    //   </div>
+  return (<>
+  
+  {/* <div className="timeline-desc">Will Be Updated Soon</div> */}
+  
+    <div className="timeline-container">
+      <div className="timeline-name">EVENTS</div>
+      <div className="timeline-filters">
+        <button
+          onClick={() => setSelectedYear("all")}
+          className={`filter-button ${selectedYear === "all" ? 'active' : ''}`}
+        >
+          All Events
+        </button>
+        {Object.keys(allEvents).map((year) => (
+          <button
+            key={year}
+            onClick={() => setSelectedYear(year)}
+            className={`filter-button ${selectedYear === year ? 'active' : ''}`}
+          >
+            {year}
+          </button>
+        ))}
+      </div>
     
-    //   <div className="timeline">
-    //     {getFilteredEvents().map((event) => (
-    //       <TimelineEvent key={event.id} event={event} />
-    //     ))}
-    //   </div>
-    // </div>
+      <div className="timeline">
+        {getFilteredEvents().map((event) => (
+          <TimelineEvent key={event.id} event={event} />
+        ))}
+      </div>
+    </div></>
   );
 };
 

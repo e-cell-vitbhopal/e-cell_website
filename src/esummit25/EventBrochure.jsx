@@ -25,7 +25,7 @@ const eventDetails = {
     registration: {
       fee: "₹149",
       deadline: "March 10, 2024",
-      link: "#register"
+      link: "https://forms.gle/KAH78RSRxhTY9X869"
     },
     contact: {
       email: "esummit@ecellvitbhopal.in",
@@ -56,7 +56,7 @@ const eventDetails = {
     registration: {
       fee: "Solo: ₹149 Duo: ₹249 Trio: ₹299 ",
       deadline: "March 27, 2025",
-      link: "https://forms.gle/dczHabcC6G9qtRxY8"
+      link: "https://forms.gle/KAH78RSRxhTY9X869"
     },
     contact: {
       email: "esummit@ecellvitbhopal.in",
@@ -117,7 +117,7 @@ const eventDetails = {
     registration: {
       fee: "₹350",
       deadline: "March 26, 2025",
-      link: "https://forms.gle/hh74Q4yFB9FRXG7Y8"
+      link: "https://forms.gle/KAH78RSRxhTY9X869"
     },
     contact: {
       email: "esummit@ecellvitbhopal.in",
@@ -149,7 +149,7 @@ const eventDetails = {
     registration: {
       fee: "₹229",
       deadline: "March 28, 2025",
-      link: "https://forms.gle/pWnKL3eXTNTBdsMF9"
+      link: "https://forms.gle/KAH78RSRxhTY9X869"
     },
     contact: {
       email: "esummit@ecellvitbhopal.in",
@@ -188,7 +188,7 @@ const eventDetails = {
     registration: {
       fee: "Participation: ₹199 Audience: ₹79 (audience gets exclusive voting power)",
       deadline: "March 29, 2025",
-      link: "https://forms.gle/VnnWj3tfrzZBTw8x8"
+      link: "https://forms.gle/KAH78RSRxhTY9X869"
     },
     contact: {
       email: "esummit@ecellvitbhopal.in",
@@ -221,7 +221,7 @@ const eventDetails = {
     registration: {
       fee: "Participation: ₹200",
       deadline: "March 29, 2025",
-      link: "https://forms.gle/VnnWj3tfrzZBTw8x8"
+      link: "https://forms.gle/KAH78RSRxhTY9X869"
     },
     contact: {
       email: "esummit@ecellvitbhopal.in",

@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --dynamic-font-size: calc(1rem + 6.5vw);
     --margin-left-small-screen-size: calc(2vw);
 }
@@ -7,7 +7,7 @@
 .wrapper {
     overflow-x: hidden;
     position: relative;
-    /* margin: 0 200px; */
+    margin: 0 200px;
     padding: 0 400px;
 }
 
@@ -134,7 +134,7 @@ body {
 }
 
 
-/* Variable Proximity */
+Variable Proximity
 .sr-only {
     position: absolute;
     width: 1px;
@@ -145,4 +145,4 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-}
+} */

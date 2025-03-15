@@ -1,0 +1,229 @@
+.initiatives-section {
+  padding: 5rem 0;
+  background-color: #0a0a0a00;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.initiatives-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.initiatives-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.initiatives-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #8B5CF6, #EC4899, #8B5CF6);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowingTextGradient 3s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes flowingTextGradient {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.initiatives-description {
+  font-size: 1.125rem;
+  color: #a0aec0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always show 3 columns */
+  gap: 2rem;
+  margin-top: 3rem;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  padding-bottom: 1rem; /* Add padding for scrollbar */
+}
+
+.initiative-card {
+  background: rgba(71, 71, 71, 0.315);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  min-width: 250px; /* Ensure minimum width for mobile */
+  margin-top: 10px;
+}
+
+.initiative-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+}
+
+.initiative-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8B5CF6, #EC4899);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.initiative-card:hover::before {
+  transform: scaleX(1);
+}
+
+.initiative-icon {
+  background: linear-gradient(135deg, #8B5CF6, #EC4899);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.initiative-icon svg {
+  color: white;
+}
+
+.initiative-content {
+  margin-left: 0;
+}
+
+.initiative-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.initiative-card-description {
+  color: #a0aec0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .initiatives-section {
+    padding: 3rem 0;
+  }
+
+  .initiatives-title {
+    font-size: 2rem;
+  }
+
+  .initiatives-description {
+    font-size: 1rem;
+  }
+
+  /* Keep grid-template-columns as 3 columns but enable horizontal scrolling */
+  .initiatives-grid {
+    grid-template-columns: repeat(3, 280px); /* Fixed width for each card on mobile */
+    justify-content: start; /* Align to the start of the container */
+    grid-auto-flow: column; /* Ensure horizontal flow */
+    gap: 1rem; /* Reduce gap on mobile */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  /* Style scrollbar for Webkit browsers */
+  .initiatives-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .initiatives-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  .initiatives-grid::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.5);
+    border-radius: 4px;
+  }
+
+  .initiative-card {
+    scroll-snap-align: start; /* Snap each card when scrolling */
+    padding: 1.5rem; /* Slightly reduce padding on mobile */
+  }
+}
+
+/* Add visual indicator for scrolling on mobile */
+@media (max-width: 768px) {
+  
+  .initiatives-grid {
+    grid-template-columns: repeat(3, 100px); /* Match card width */
+    gap: 2; /* Remove gap completely */
+    justify-content: center; /* Center the cards */
+    padding: 0; /* Remove padding */
+  }
+  
+  .initiative-card {
+    margin-top: 10px;
+    min-width: 110px;
+    max-width: 100px;
+    padding: 1.25rem; /* Smaller padding */
+    height: 140px; /* Fixed height */
+     /* Remove any margin */
+    flex-direction: column;
+  }
+  
+  /* Your existing code */
+  .initiatives-container::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    bottom: 50%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, transparent, rgba(10, 10, 10, 0.8) 70%);
+    border-radius: 50%;
+    animation: pulseRight 2s infinite;
+    pointer-events: none;
+    z-index: 4;
+  }
+  
+  .initiative-card-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: white;
+  }
+  
+  .initiative-card-description {
+    display: none;
+  }
+  
+  @keyframes pulseRight {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

@@ -3,8 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Main from './Main';
 import Summit from './Summit';
+import ScrollToTop from "./scrolltotop"; // Import it
 // import ComingSoon from './coming_soon';
 import Startup from './startupexpo';
+import Newecell from './newecell';
 import Recruitment from './components/Recruitment/Recruitment';
 // import Registration from './e_summit_components/Registration/Registration';
 import FormLinks from './e_summit_components/Registration/FormLinks';
@@ -35,7 +37,9 @@ function App() {
       {/* <Main /> */}
       <BrowserRouter>
         <UserContextProvider>
+        <ScrollToTop/>
           <Routes>
+            
             <Route path="/" element={<Main />} />
             <Route path="/recruitment" element={<Recruitment />} /> 
             {/* Esummit */}
@@ -48,6 +52,7 @@ function App() {
             <Route path="/esummit25/startupexpo" element={<Navigate to="/esummit2025/startupexpo" replace />} />
             <Route path="/esummit25" element={<Navigate to="/esummit2025" replace />} />
             <Route path="/esummit2025" element={<Esummit />} />
+            <Route path="/new" element={<Newecell />} />
             <Route path="/parichay" element={<Summit_copy />} />
             <Route path="/e_summit_2024/registration" element={<FormLinks />} />
             <Route path="/e_summit_2024/registration/IshaanSharma" element={<IshaanSharma />} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../styles/events-styles/events.css";
+// import "../../styles/events-styles/events.css";
 import Stack from '@mui/material/Stack';
 import CardMobile from './CardMobile';
 import img1 from "../../assets/SUMMiT.png";

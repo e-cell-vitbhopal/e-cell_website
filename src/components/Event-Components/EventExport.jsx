@@ -1,7 +1,7 @@
 import Events from './Events';
 import EventsMobile from './EventsMobile';
 import { useMediaQuery, CssBaseline, GlobalStyles } from "@mui/material";
-import "../../styles/events-styles/events.css"
+// import "../../styles/events-styles/events.css"
 import { useRef } from 'react';
 import VariableProximity from './VariableProximity';
 

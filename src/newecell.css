@@ -1,0 +1,25 @@
+.newecell-app-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    color: white;
+    /* overflow-x: hidden; */
+    padding-top: 70px;
+    position: relative;
+    z-index: 2;
+}
+  
+.newecell-app-content {
+    position: relative;
+    z-index: 3;
+}
+  
+.newecell-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+  
+.newecell-main section {
+    scroll-margin-top: 70px;
+}

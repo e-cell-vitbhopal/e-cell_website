@@ -1,0 +1,181 @@
+.speakers-section {
+  padding: 5rem 0;
+  background-color: transparent;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.speakers-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #8B5CF6, #EC4899, #8B5CF6);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowingTextGradient 3s linear infinite;
+}
+
+@keyframes flowingTextGradient {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.speakers-carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.speaker-slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+  background: transparent;
+}
+
+.speaker-image-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 3px solid transparent;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), 
+                    linear-gradient(45deg, #8B5CF6, #EC4899);
+
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.speaker-image-container:hover {
+  transform: scale(1.05);
+}
+
+.speaker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.1) contrast(1.1);
+  display: block;
+  border-radius: 50%;
+}
+
+.speaker-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-align: center;
+}
+
+.speaker-role {
+  font-size: 1rem;
+  color: #a0aec0;
+  text-align: center;
+}
+
+/* Navigation Arrows */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(139, 92, 246, 0.2) !important;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #8B5CF6 !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: rgba(139, 92, 246, 0.4) !important;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+/* Dots */
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li button:before {
+  color: #8B5CF6 !important;
+  opacity: 0.3;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #8B5CF6 !important;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .speakers-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .speakers-carousel {
+    padding: 0 1rem;
+  }
+
+  .speaker-image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .speaker-name {
+    font-size: 1.2rem;
+  }
+
+  .speaker-role {
+    font-size: 0.9rem;
+  }
+
+  .slick-prev {
+    left: -10px;
+  }
+
+  .slick-next {
+    right: -10px;
+  }
+}
+.linkedin-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.linkedin-icon {
+  font-size: 2rem;
+  color: #0a66c2;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.2);
+  color: #004182;
+}

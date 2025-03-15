@@ -9,7 +9,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import "../../styles/events-styles/events.css";
+// import "../../styles/events-styles/events.css";
 import { useNavigate } from 'react-router-dom';
 
 const CardMobile = (props) => {

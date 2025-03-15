@@ -1,0 +1,241 @@
+.orbit-sponsors-container {
+  position: relative;
+  width: 100%;
+  min-height: 140vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  flex-direction: column;
+}
+
+.orbit-section-title {
+  margin-top: -270px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10rem;
+  background: linear-gradient(45deg, #8B5CF6, #EC4899, #8B5CF6);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowingTextGradient 3s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+@keyframes flowingTextGradient {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.orbit-sponsors-content {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit-sponsors-center-text {
+  position: absolute;
+  font-family: 'montserrat', monospace;
+  font-weight: 900!important;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.orbit-sponsors-ring {
+  position: absolute;
+  border: 2px solid rgba(139, 92, 246, 0.6);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.9);
+}
+
+.orbit-sponsors-path-1 { width: 300px; height: 300px; }
+.orbit-sponsors-path-2 { width: 450px; height: 450px; }
+.orbit-sponsors-path-3 { width: 600px; height: 600px; }
+.orbit-sponsors-path-4 { width: 750px; height: 750px; }
+
+.orbit-sponsors-logo {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, #8B5CF6, #EC4899) 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  cursor: pointer;
+}
+
+/* Center logo specific styles */
+.orbit-sponsors-logo:first-child {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 3px solid transparent;
+    border-image:  linear-gradient(90deg, #8B5CF6, #EC4899) 1;
+}
+
+.orbit-sponsors-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+  border: 2px solid #8B5CF6;
+}
+
+.orbit-sponsors-content.paused .orbit-sponsors-logo {
+  animation-play-state: paused !important;
+}
+
+.card-text {
+  color: white;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  z-index: 3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.orbit-sponsors-logo:hover .card-text {
+  transform: scale(1.1);
+}
+
+@keyframes orbit-sponsors-orbit1 {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes orbit-sponsors-orbit2 {
+  from { transform: rotate(0deg) translateX(225px) rotate(0deg); }
+  to { transform: rotate(-360deg) translateX(225px) rotate(360deg); }
+}
+
+@keyframes orbit-sponsors-orbit3 {
+  from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+
+@keyframes orbit-sponsors-orbit4 {
+  from { transform: rotate(0deg) translateX(375px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(375px) rotate(-360deg); }
+}
+
+@media (max-width: 760px) {
+  .orbit-section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .orbit-sponsors-content {
+    width: 600px;
+    height: 600px;
+  }
+
+  .orbit-sponsors-path-1 { width: 200px; height: 200px; }
+  .orbit-sponsors-path-2 { width: 300px; height: 300px; }
+  .orbit-sponsors-path-3 { width: 400px; height: 400px; }
+  .orbit-sponsors-path-4 { width: 500px; height: 500px; }
+
+  .orbit-sponsors-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  @keyframes orbit-sponsors-orbit1 {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-sponsors-orbit2 {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(150px) rotate(360deg); }
+  }
+  
+  @keyframes orbit-sponsors-orbit3 {
+    from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-sponsors-orbit4 {
+    from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(250px) rotate(360deg); }
+  }
+}
+
+@media (max-width: 460px) {
+  .orbit-sponsors-container {
+
+    min-height: 75vh;
+    margin-bottom: -100px;
+   
+  }
+  .orbit-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .orbit-sponsors-content {
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbit-sponsors-path-1 { width: 60px; height: 60px; }
+  .orbit-sponsors-path-2 { width: 120px; height: 120px; }
+  .orbit-sponsors-path-3 { width: 160px; height: 160px; }
+  .orbit-sponsors-path-4 { width: 200px; height: 200px; }
+
+  .orbit-sponsors-logo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .card-text {
+    font-size: 0.7rem;
+  }
+
+  @keyframes orbit-sponsors-orbit1 {
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-sponsors-orbit2 {
+    from { transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(75px) rotate(360deg); }
+  }
+
+  @keyframes orbit-sponsors-orbit3 {
+    from { transform: rotate(0deg) translateX(95px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(95px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-sponsors-orbit4 {
+    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(120px) rotate(360deg); }
+  }
+}

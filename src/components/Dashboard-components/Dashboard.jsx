@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../styles/dashboard-styles/dashboard.css"
+// import "../../styles/dashboard-styles/dashboard.css"
 import { TransformText } from './TransformText'
 import WelcomeText from './WelcomeText'
 import Lottie from 'lottie-react';

@@ -1,0 +1,169 @@
+.ecell-contact-section {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 3;
+  margin-top: 2rem;
+}
+
+.ecell-contact-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #8B5CF6, #EC4899, #8B5CF6);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ecell-flowingTextGradient 3s linear infinite;
+}
+
+@keyframes ecell-flowingTextGradient {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ecell-contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.ecell-contact-info {
+  color: white;
+}
+
+.ecell-contact-info-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.ecell-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ecell-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #a0aec0;
+  transition: color 0.3s ease;
+}
+
+.ecell-contact-item:hover {
+  color: #8B5CF6;
+}
+
+.ecell-contact-item svg {
+  color: #8B5CF6;
+}
+
+.ecell-contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.ecell-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.ecell-form-label {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.ecell-form-input,
+.ecell-form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 0.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.ecell-form-input:focus,
+.ecell-form-textarea:focus {
+  outline: none;
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.ecell-form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.ecell-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(90deg, #8B5CF6, #EC4899);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.ecell-submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ecell-social-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.ecell-social-link {
+  color: #a0aec0;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ecell-social-link:hover {
+  color: #fff;
+  background: #8B5CF6;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .ecell-contact-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .ecell-contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .ecell-contact-info-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ecell-contact-form {
+    padding: 1.5rem;
+  }
+}

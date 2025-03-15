@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
-import "../../styles/events-styles/events.css"
+// import "../../styles/events-styles/events.css"
 import Box from '@mui/material/Box';
 import { useNavigate } from 'react-router-dom';
 

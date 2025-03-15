@@ -20,23 +20,23 @@ body {
     /* background-color: #fff; */
 }
 
-.grid {
+/* .grid {
     padding: 12px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(12, min-content);
     gap: 2px;
 
-}
+} */
 
-.grid-item {
-    /* border: 2px solid #fff; */
+/* .grid-item {
+    border: 2px solid #fff;
     text-align: center;
     padding: 1rem;
-    /* border: 2px solid orange; */
+    border: 2px solid orange;
     border-radius: 4px;
-    /* background-color: #0F1221; */
-}
+    background-color: #0F1221;
+} */
 
 #tranform-text {
     grid-row: span 1;

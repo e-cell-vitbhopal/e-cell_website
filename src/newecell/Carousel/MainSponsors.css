@@ -1,0 +1,212 @@
+.unique-carousel {
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 70vw;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.unique-sponsors-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #8B5CF6, #EC4899, #8B5CF6);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: unique-flowingTextGradient 3s linear infinite;
+}
+
+@keyframes unique-flowingTextGradient {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.unique-carousel::before,
+.unique-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.unique-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+}
+
+.unique-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #000, rgba(0, 0, 0, 0));
+}
+
+.unique-group {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  will-change: transform;
+  animation: unique-scrolling 40s linear infinite;
+}
+
+.unique-card {
+  color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 4px 30px rgba(138, 43, 226, 0.1);
+  padding: 20px;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 250px;
+  width: 200px;
+  background: rgba(71, 71, 71, 0);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.unique-sponsor-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.unique-sponsor-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: brightness(1);
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.unique-sponsor-name {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(45deg, #8B5CF6, #EC4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+.unique-card:hover {
+  transform: translateY(-10px);
+  background: rgba(71, 71, 71, 0.5);
+  box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+  border: 2px solid purple;
+}
+
+.unique-card:hover .unique-sponsor-logo {
+  transform: scale(1.1);
+}
+
+@keyframes unique-scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes unique-scrollingReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.unique-reverse .unique-group {
+  animation: unique-scrollingReverse 40s linear infinite;
+}
+
+.unique-carousel:hover .unique-group {
+  animation-play-state: paused;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .unique-sponsors-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .unique-carousel {
+    max-width: 100vw;
+  }
+  .unique-card {
+    min-height: 200px;
+    width: 150px;
+    padding: 15px;
+  }
+
+  .unique-sponsor-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .unique-sponsor-name {
+    font-size: 0.875rem;
+  }
+
+  .unique-carousel::before,
+  .unique-carousel::after {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .unique-sponsors-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .unique-carousel {
+    max-width: 100vw;
+  }
+  .unique-card {
+    min-height: 160px;
+    width: 120px;
+    padding: 10px;
+  }
+
+  .unique-sponsor-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .unique-group {
+    gap: 15px;
+  }
+}
