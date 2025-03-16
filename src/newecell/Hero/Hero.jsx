@@ -6,6 +6,7 @@ const Hero = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
 
   useEffect(() => {
+    
     const handleScroll = () => {
       // Calculate opacity based on scroll position
       const scrollY = window.scrollY;
@@ -48,7 +49,7 @@ const Hero = () => {
           Welcome to the Entrepreneurial Cell of VIT Bhopal, a dynamic hub dedicated to nurturing and empowering the next generation of entrepreneurs across India. The future of your idea begins here, at the Entrepreneurial Cell of VIT Bhopal - where we don't just promote entrepreneurs, we build success stories.
         </p>
         <div className={styles.ctaContainer}>
-          <a href="#" className='btn'>Join Us!</a>
+          <a href="#newecell-main-events" className='btn' >Join Us!</a>
         </div>
       </div>
     </section>

@@ -154,11 +154,11 @@
   }
 
   .slick-prev {
-    left: -10px;
+    left: -0px;
   }
 
   .slick-next {
-    right: -10px;
+    right: -0px;
   }
 }
 .linkedin-link {

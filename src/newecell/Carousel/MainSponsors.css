@@ -188,8 +188,9 @@
 
 @media (max-width: 480px) {
   .unique-sponsors-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 2.0rem;
+    margin-bottom: 2rem;
+    margin-top: -80px;
   }
 
   .unique-carousel {

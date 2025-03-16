@@ -171,7 +171,9 @@
 
 /* Add visual indicator for scrolling on mobile */
 @media (max-width: 768px) {
-  
+  .initiatives-section{
+    margin-top: -20px;
+  }
   .initiatives-grid {
     grid-template-columns: repeat(3, 100px); /* Match card width */
     gap: 2; /* Remove gap completely */

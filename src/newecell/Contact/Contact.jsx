@@ -44,7 +44,7 @@ const Contact = () => {
       <h2 className="ecell-contact-title">Contact Us</h2>
       <div className="ecell-contact-container">
         <div className="ecell-contact-info">
-          <h3 className="ecell-contact-info-title">Get in Touch</h3>
+
           <div className="ecell-contact-details">
             <div className="ecell-contact-item">
               <MapPin size={24} />
