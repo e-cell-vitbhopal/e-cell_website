@@ -1,0 +1,100 @@
+.pass-section {
+  background-color: transparent;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  gap: 2rem;
+
+}
+
+.passes-main-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  color: #ffffff;
+}
+
+.pass-container {
+  background-color: #242442;
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pass-title {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.pass-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pass-price {
+  text-align: center;
+  color: #fff;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.period {
+  color: #a5a5a5;
+  margin-left: 4px;
+}
+
+.pass-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+.pass-features li {
+  padding: 0.75rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pass-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #9d4edd;
+}
+
+.pass-button {
+  background-color: #9d4edd;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pass-button:hover {
+  background-color: #7b2cbf;
+}

@@ -291,7 +291,7 @@ const EventBrochure = () => {
         <section className="event-section">
           <h2>Registration Details</h2>
           <div className="registration-details">
-            <p><strong>Fee:</strong> {event.registration.fee}</p>
+            {/* <p><strong>Fee:</strong> {event.registration.fee}</p> */}
             <p><strong>Deadline:</strong> {event.registration.deadline}</p>
             <a href={event.registration.link} className="register-button">
               Register Now

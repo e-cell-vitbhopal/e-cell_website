@@ -187,7 +187,7 @@ function Hero() {
   }}
   onClick={(e) => {
     e.preventDefault(); // Prevent default anchor behavior
-    const section = document.getElementById('events');
+    const section = document.getElementById('Pass');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }

@@ -11,7 +11,7 @@ import ScrollIndicator from './esummit25/ScrollIndicator'
 import Footer from './esummit25/Footer'
 import SponsorSection from './esummit25/SponsorSection'
 import PatronsSection from './esummit25/PatronsSection'
-
+import PassSection from './esummit25/PassSection'
 // Import the image properly
 import imageStar from './assets/image_star.png';
 
@@ -69,7 +69,9 @@ function Esummit() {
           
           <SponsorSection />
 
-          
+          <section id="Pass" className="section">
+            <PassSection />
+          </section>
 
         
         </div>

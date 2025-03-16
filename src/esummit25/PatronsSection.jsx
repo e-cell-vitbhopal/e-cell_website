@@ -15,31 +15,31 @@ import dfc from '../assets/patrons/margatharajan.jpeg'
 const patrons = {
   top: [
     {
-      name: 'Dr. G Viswanathan',
+      name: 'Dr. G. Viswanathan',
       designation: 'Chancellor',
       image: chancellor
     }
   ],
   secondRow: [
     {
-      name: 'Dr. Shankar Viswananthan',
+      name: 'Mr. Sankar Viswananthan',
       designation: 'Vice Chancellor',
       image: vc
     },
     {
-      name: 'Dr. Kadhambari Viswanathan ',
+      name: 'Ms. Kadhambari S. Viswanathan ',
       designation: 'Assistant Vice President',
       image: avp
     }
   ],
   thirdRow: [
     {
-      name: 'Dr. T.B. Sridharan',
+      name: 'Prof. T.B. Sridharan',
       designation: 'Pro Vice Chancellor',
       image: pvc
     },
     {
-      name: 'Dr K.K. Nair',
+      name: 'Mr. K.K. Nair',
       designation: 'Acting Registrar',
       image: ar
     },
@@ -51,7 +51,7 @@ const patrons = {
   ],
   bottomRow: [
     {
-      name: 'Dr. Chandan Kumar Behra',
+      name: 'Dr. Chandan Kumar Behera',
       designation: 'Assistant DSW (Technical)',
       image: adsw1
     },
