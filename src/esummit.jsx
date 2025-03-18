@@ -12,6 +12,7 @@ import Footer from './esummit25/Footer'
 import SponsorSection from './esummit25/SponsorSection'
 import PatronsSection from './esummit25/PatronsSection'
 import PassSection from './esummit25/PassSection'
+import Investors from './esummit25/OrbitSponsors'
 // Import the image properly
 import imageStar from './assets/image_star.png';
 
@@ -75,6 +76,7 @@ function Esummit() {
 
         
         </div>
+        <Investors/>
         <section id="patrons">
         <PatronsSection />
           </section>

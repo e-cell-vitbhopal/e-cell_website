@@ -80,7 +80,7 @@
 }
 
 .imageContainer {
-  width: 100%;
+  width: 250px;
   height: 250px;
   position: relative;
   overflow: hidden;

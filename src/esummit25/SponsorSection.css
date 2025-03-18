@@ -4,6 +4,7 @@
     font-family: 'Montserrat';
     font-size:4rem !important;
     font-weight: 900;
+    text-align: center;
 }
 @media (max-width: 768px) {
     .sponsor-title {

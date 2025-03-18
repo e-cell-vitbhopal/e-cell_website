@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import styles from './SpeakerSection.module.css';
 import { FaLinkedin, FaTwitter, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import anon from '../assets/anonymous.png';
+import Abhishek from '../assets/speakers-images/Abhishek_kar.png'
 const speakers = [
   {
     id: 1,
-    name: 'Revealing Soon',
-    role: 'Speaker Details',
-    image: anon,
-    linkedin: 'https://linkedin.com',
+    name: 'Abhishek Kar',
+    role: ' 9TedX | 150+ speeches | Angel Investor | 103 Awards | Author | Youtuber ',
+    image: Abhishek,
+    linkedin: 'https://www.linkedin.com/in/abhishek-kar-/',
   },
   {
     id: 2,

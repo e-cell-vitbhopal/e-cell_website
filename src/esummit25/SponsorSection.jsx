@@ -1,15 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Carousel from './Carousel/Carousel';
 import { useInView } from 'react-intersection-observer';
-import'./SponsorSection.css'
+import './SponsorSection.css';
 
 const SponsorSection = () => {
   const [eventsVisible, setEventsVisible] = useState(false);
-  const [sponsorsRef, sponsorsInView] = useInView({
+
+  const { ref: sponsorsRef, inView: sponsorsInView } = useInView({
     threshold: 0.1
   });
-  const [eventsRef, eventsInView] = useInView({
+
+  const { ref: eventsRef, inView: eventsInView } = useInView({
     threshold: 0.1,
+    triggerOnce: true, 
     onChange: (inView) => {
       if (inView) {
         setEventsVisible(true);
@@ -19,10 +22,8 @@ const SponsorSection = () => {
 
   return (
     <>
-      {/* Events section observer */}
-      <div ref={eventsRef} style={{ position: 'absolute', top: '0', height: '1px', width: '100%' }} />
-      
-      {/* Sponsors section */}
+      <div ref={eventsRef} style={{ position: 'absolute', top: '0', height: '50px', width: '100%' }} />
+
       <section 
         id="sponsors" 
         className="section" 
@@ -30,7 +31,7 @@ const SponsorSection = () => {
         style={{
           opacity: eventsVisible && sponsorsInView ? 1 : 0,
           transition: 'opacity 0.5s ease-in-out',
-          visibility: eventsVisible ? 'visible' : 'hidden'
+          display: eventsVisible ? 'block' : 'none'
         }}
       >
         <h2 className='sponsor-title'>Past Sponsors</h2>

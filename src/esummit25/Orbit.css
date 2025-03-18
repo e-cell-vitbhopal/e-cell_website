@@ -1,0 +1,177 @@
+@keyframes investors-orbit1 {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to { transform: rotate(-360deg) translateX(150px) rotate(360deg); }
+}
+
+@keyframes investors-orbit2 {
+  from { transform: rotate(0deg) translateX(225px) rotate(0deg); }
+  to { transform: rotate(-360deg) translateX(225px) rotate(360deg); }
+}
+
+@keyframes investors-orbit3 {
+  from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+  to { transform: rotate(-360deg) translateX(300px) rotate(360deg); }
+}
+
+@keyframes investors-orbit4 {
+  from { transform: rotate(0deg) translateX(375px) rotate(0deg); }
+  to { transform: rotate(-360deg) translateX(375px) rotate(360deg); }
+}
+
+.investors-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.investors-content {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.investors-center-text {
+  position: absolute;
+  font-family: 'montserrat', monospace;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  z-index: 2;
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.investors-ring {
+  position: absolute;
+  border: 2px solid rgba(139, 92, 246, 0.6);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.9);
+}
+
+.investors-path-1 { width: 300px; height: 300px; }
+.investors-path-2 { width: 450px; height: 450px; }
+.investors-path-3 { width: 600px; height: 600px; }
+.investors-path-4 { width: 750px; height: 750px; }
+
+.investors-logo {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  background: rgba(255, 253, 253, 1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 10%;
+  /* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
+}
+
+.investors-logo:hover {
+  transform: scale(1.15) translateY(-5px);
+  border-color: #8B5CF6;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+}
+
+.investors-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.investors-logo:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 760px) {
+  .investors-content {
+    width: 600px;
+    height: 600px;
+  }
+
+  .investors-path-1 { width: 200px; height: 200px; }
+  .investors-path-2 { width: 300px; height: 300px; }
+  .investors-path-3 { width: 400px; height: 400px; }
+  .investors-path-4 { width: 500px; height: 500px; }
+
+  .investors-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  @keyframes investors-orbit1 {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(100px) rotate(360deg); }
+  }
+
+  @keyframes investors-orbit2 {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(150px) rotate(360deg); }
+  }
+
+  @keyframes investors-orbit3 {
+    from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(200px) rotate(360deg); }
+  }
+
+  @keyframes investors-orbit4 {
+    from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(250px) rotate(360deg); }
+  }
+}
+
+@media (max-width: 460px) {
+  .investors-content {
+    width: 400px;
+    height: 400px;
+  }
+
+  .investors-path-1 { width: 150px; height: 150px; }
+  .investors-path-2 { width: 200px; height: 200px; }
+  .investors-path-3 { width: 250px; height: 250px; }
+  .investors-path-4 { width: 300px; height: 300px; }
+
+  .investors-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  @keyframes investors-orbit1 {
+    from { transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(75px) rotate(360deg); }
+  }
+
+  @keyframes investors-orbit2 {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(100px) rotate(360deg); }
+  }
+
+  @keyframes investors-orbit3 {
+    from { transform: rotate(0deg) translateX(125px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(125px) rotate(360deg); }
+  }
+
+  @keyframes investors-orbit4 {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(-360deg) translateX(150px) rotate(360deg); }
+  }
+}
