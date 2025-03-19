@@ -21,7 +21,7 @@ function PassSection() {
           </ul>
           <button 
   className="pass-button" 
-  onClick={() => window.open("https://forms.gle/KAH78RSRxhTY9X869", "_blank")}
+  onClick={() => window.open("https://forms.gle/fNFuTTqLoYYU1zgF6", "_blank")}
 >
   Register Now
 </button>
