@@ -49,6 +49,14 @@ const allEvents = { "27 March, 2025": [
       registerLink: "https://example.com/register/innovation-workshop-2025"
     },
     {
+      id: 7,
+      title: "Innovators Connect",
+      date: "March 28, 2025",
+      description: "Innovators Connect is a dynamic platform that brings together entrepreneurs, creatives, and industry leaders to collaborate, share ideas, and drive innovation.",
+      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1000",
+      registerLink: "https://example.com/register/innovation-workshop-2025"
+    },
+    {
       id: 6,
       title: "Ecom Carnival",
       date: "March 28, 2025",
@@ -60,7 +68,7 @@ const allEvents = { "27 March, 2025": [
   ],
   "29 March, 2025": [
     {
-      id: 7,
+      id: 8,
       title: "The Board MUN",
       date: "March 29, 2025",
       description: "Board MUN is a corporate simulation event where participants represent multinational corporations, strategizing, negotiating, and defending brand interests. It hones business acumen, leadership, and decision-making, preparing future leaders for real-world corporate challenges.",
@@ -68,7 +76,7 @@ const allEvents = { "27 March, 2025": [
       registerLink: "https://example.com/register/tech-conference-2026"
     },
     {
-      id: 8,
+      id: 9,
       title: "Speaker Session",
       date: "March 29, 2025",
       description: "Speaker Session at E-Summit features industry experts sharing insights, experiences, and strategies on entrepreneurship, innovation, and business growth, inspiring participants with real-world knowledge and success stories.",
@@ -76,13 +84,21 @@ const allEvents = { "27 March, 2025": [
       registerLink: "https://example.com/register/ai-summit-2026"
     },
     {
-      id: 9,
+      id: 10,
       title: "Study Abroad Session",
       date: "March 29, 2025",
       description: "Study Abroad Session at E-Summit provides insights into global education opportunities, guiding students on applications, scholarships, and career prospects for studying in top international universities.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000",
       registerLink: "https://example.com/register/ai-summit-2026"
     }
+    // {
+    //   id: 11,
+    //   title: "Corporate Tales",
+    //   date: "March 29, 2025",
+    //   description: "Corporate Tales is an engaging session at E-Summit 2025 that brings forward real-world corporate success stories, leadership lessons, and interactive discussions.",
+    //   image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000",
+    //   registerLink: "https://example.com/register/ai-summit-2026"
+    // }
   ], };
 
 const TimelineEvent = ({ event }) => {
