@@ -3,6 +3,9 @@ import styles from './SpeakerSection.module.css';
 import { FaLinkedin, FaTwitter, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import anon from '../assets/anonymous.png';
 import Abhishek from '../assets/speakers-images/Abhishek_kar.png'
+import genzway from '../assets/speakers-images/genzway.png'
+import anshul from '../assets/speakers-images/anshulagrawal.png'
+import abha from '../assets/speakers-images/abharishi.jpg'
 const speakers = [
   {
     id: 1,
@@ -13,44 +16,44 @@ const speakers = [
   },
   {
     id: 2,
-    name: 'Revealing Soon',
+    name: 'Gen Z Way',
     role: 'Speaker Details',
-    image: anon,
+    image: genzway,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   },
   {
     id: 3,
-    name: 'Revealing Soon',
+    name: 'Anshul Agrawal',
     role: 'Speaker Details',
-    image: anon,
+    image: anshul,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   },
   {
     id: 4,
-    name: 'Revealing Soon',
+    name: 'Abha Rishi',
     role: 'Speaker Details',
-    image:anon,
+    image:abha,
     linkedin: 'https://linkedin.com',
     twitter: 'https://twitter.com'
   },
-  {
-    id: 5,
-    name: 'Revealing Soon',
-    role: 'Speaker Details',
-    image: anon,
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://twitter.com'
-  },
-  {
-    id: 6,
-    name: 'Revealing Soon',
-    role: 'Speaker Details',
-    image: anon,
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://twitter.com'
-  }
+  // {
+  //   id: 5,
+  //   name: 'Revealing Soon',
+  //   role: 'Speaker Details',
+  //   image: anon,
+  //   linkedin: 'https://linkedin.com',
+  //   twitter: 'https://twitter.com'
+  // },
+  // {
+  //   id: 6,
+  //   name: 'Revealing Soon',
+  //   role: 'Speaker Details',
+  //   image: anon,
+  //   linkedin: 'https://linkedin.com',
+  //   twitter: 'https://twitter.com'
+  // }
 ];
 
 const SpeakerSection = () => {

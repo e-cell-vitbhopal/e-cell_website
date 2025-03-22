@@ -117,9 +117,9 @@
   background: rgba(255, 255, 255, 0.05);
 }
 
-.event-image {
-  width: 300px;
-  height: 280px;
+.event-imagex {
+  width: 50%;
+  height: 50%;
   flex-direction: row;
   object-fit: cover;
   margin-left: 0px;
@@ -156,7 +156,7 @@
 }
 
 .event-description {
-  font-family: 'Trocchi', serif;
+  /* font-family: 'Calibri',serif; */
   color: #f0f0f0;
   line-height: 1.6;
   font-size: 1.1rem;
@@ -345,8 +345,12 @@
     padding: 1rem;
   }
 
-  .event-image {
-    display: none;
+  .event-imagex {
+    display: block;  /* Ensures the image behaves like a block-level element */
+    margin: 0 auto;  /* Horizontally centers the image */
+    width: 70%;     /* Makes sure the image takes up 100% width of its container */
+    height: auto;    /* Preserves the aspect ratio */
+    object-fit: contain;  /* Ensures the image fits within its bounds without distortion */
   }
 
   .event-details {

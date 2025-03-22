@@ -22,6 +22,7 @@ import SagarSingh from '../../assets/teams-images/Sagar Singh 23bai10299.jpg';
 import fc from '../../assets/teams-images/Mr_Margatrajan.jpg'
 import fc2 from '../../assets/teams-images/Bhakti Parashar.png'
 import Mehul from '../../assets/teams-images/Mehul.jpeg'
+import ikshu from '../../assets/teams-images/ikshu.png'
 export const boardMembers = [
   {
     name: "Ayush",
@@ -162,6 +163,16 @@ export const teamData = [
         name: "Mehul Kumar Patel",
         role: "Member",
         image: Mehul ,
+        social: {
+          instagram: "https://instagram.com/username",
+          linkedin: "https://linkedin.com/in/username",
+          twitter: "https://twitter.com/username"
+        }
+      },
+      {
+        name: "Ikshu Patni",
+        role: "Co-lead",
+        image: ikshu ,
         social: {
           instagram: "https://instagram.com/username",
           linkedin: "https://linkedin.com/in/username",

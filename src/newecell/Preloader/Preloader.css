@@ -47,8 +47,11 @@
   height: 150px;
   z-index: 2;
   opacity: 0;
+  transform: translateX(-300px);
   animation: fadeInSlideLeft 2.5s ease forwards;
   display: none;
+  margin-left: -20px;
+  
 }
 
 .preloader-image.second {
@@ -87,7 +90,7 @@
   }
   100% {
     opacity: 1;
-    transform: translateX(-65px);
+    transform: translateX(-70px);
   }
 }
 

@@ -12,10 +12,10 @@ import Speakers from "./newecell/Speakers/Speakers";
 import Contact from "./newecell/Contact/Contact";
 import "./newecell.css";
 import NewNav from "./newecell/Navbar/Navbar";
-
 function Main() {
   return (
     <div className="newecell-app-container">
+      <div className="center-dot"></div> {/* Dot at the center */}
       <div className="newecell-app-content">
         <Preloader />
         <NewNav />
@@ -46,5 +46,6 @@ function Main() {
     </div>
   );
 }
+
 
 export default Main;

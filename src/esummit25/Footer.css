@@ -35,7 +35,7 @@
 }
 
 .footer-text {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', monospace;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
   max-width: 400px;
@@ -111,7 +111,7 @@
 }
 
 .copyright {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', monospace;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
 }

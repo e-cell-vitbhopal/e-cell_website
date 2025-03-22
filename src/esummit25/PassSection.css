@@ -20,18 +20,28 @@
 }
 
 .pass-container {
-  background-color: #242442;
+  background: rgba(36, 36, 66, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(2px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   border-radius: 16px;
   padding: 2.5rem;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(157, 78, 221, 0.6); /* Purple glow */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+/* Optional: Add a hover effect for a more dynamic glow */
+.pass-container:hover {
+  box-shadow: 0 0 30px rgba(157, 78, 221, 0.9);
+}
+
+
 .pass-title {
+  font-family: 'Montserrat';
   color: #fff;
-  font-size: 2rem;
+  font-size: 2rem!important;
   margin: 0 0 0.5rem 0;
   text-align: center;
 }
@@ -43,6 +53,7 @@
 }
 
 .pass-price {
+  font-family: "Montserrat";
   text-align: center;
   color: #fff;
 }
@@ -64,6 +75,7 @@
 }
 
 .pass-features {
+ 
   list-style: none;
   padding: 0;
   margin: 0;
@@ -71,6 +83,7 @@
 }
 
 .pass-features li {
+  font-family: 'Montserrat';
   padding: 0.75rem 0;
   position: relative;
   padding-left: 1.5rem;
@@ -84,6 +97,7 @@
 }
 
 .pass-button {
+  font-family: "Roboto Mono";
   background-color: #9d4edd;
   color: white;
   border: none;
@@ -106,7 +120,7 @@
   
  }
  .pass-title{
-  font-size: 2rem!important;
+  font-size: 1.5rem!important;
   
  }
 }

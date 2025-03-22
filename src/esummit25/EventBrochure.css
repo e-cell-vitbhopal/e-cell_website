@@ -68,8 +68,8 @@
   }
   
   .event-description {
-    font-family: "Trocchi", serif;
-    font-size: 1.1rem;
+    font-family: "Montserrat", serif;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #f0f0f0;
   }
@@ -80,7 +80,7 @@
   }
   
   .highlights-list li {
-    font-family: "Trocchi", serif;
+    font-family: "Montserrat", serif;
     font-size: 1.1rem;
     margin-bottom: 15px;
     padding-left: 25px;
