@@ -67,8 +67,10 @@ function Esummit() {
           <section id="speakers" className="section">
             <SpeakerSection />
           </section>
-          
+          <section id="sponsors" >
           <SponsorSection />
+          </section>
+          
 
           <section id="Pass" className="section">
             <PassSection />

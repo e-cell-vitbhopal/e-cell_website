@@ -62,7 +62,7 @@ const Contact = () => {
             <a href="https://www.linkedin.com/company/e-cell-vit-bhopal/mycompany/" target="_blank" rel="noopener noreferrer" className="ecell-social-link">
               <Linkedin size={20} />
             </a>
-            <a href="https://x.com/ecell_vitb" target="_blank" rel="noopener noreferrer" className="ecell-social-link">
+            <a href="https://x.com/ecellvitbhopal/" target="_blank" rel="noopener noreferrer" className="ecell-social-link">
               <Twitter size={20} />
             </a>
           </div>
