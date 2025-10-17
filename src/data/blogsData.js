@@ -9,7 +9,7 @@ const blogsData = [
     title: "Info Edge: The Silent Investor Fuling India’s Digital Giants",
     excerpt: "Meet Info Edge, the quiet mastermind behind some of India’s most successful startups like Zomato and Policybazaar.",
     author: "E-Cell Team",
-    date: "2024-10-15",
+    date: "2025-09-13",
     category: "Investment",
     image: blogImages.blog1,
     content: `
@@ -62,7 +62,7 @@ const blogsData = [
     title: "From Clicks to Bricks: How Platforms Are Revolutionizing Offline Retail",
     excerpt: "Digital-first brands are moving into offline retail, and new platforms are making the transition seamless, practical, and affordable.",
     author: "E-Cell Team",
-    date: "2024-09-28",
+    date: "2025-09-20",
     category: "Retail",
     image: blogImages.blog2,
     content: `
@@ -101,7 +101,7 @@ const blogsData = [
     title: "IndiGo Airlines: Domination, Drama, and Debt",
     excerpt: "Once the undisputed monarch of Indian skies, IndiGo is now grappling with significant turbulence, including a ₹987 crore net loss.",
     author: "E-Cell Team",
-    date: "2024-09-10",
+    date: "2025-09-27",
     category: "Business",
     image: blogImages.blog3,
     content: `
@@ -153,7 +153,7 @@ const blogsData = [
     title: "The Backbone No One Talks About: How Venture Debt Is Funding Your Favourite Startups",
     excerpt: "Meet venture debt lenders, the financial ninjas helping founders scale without massive dilution or selling the family silver.",
     author: "E-Cell Team",
-    date: "2024-08-22",
+    date: "2025-10-04",
     category: "Finance",
     image: blogImages.blog4,
     content: `
@@ -214,7 +214,7 @@ const blogsData = [
     title: "From Garage to Warehouse: The 'Makerspaces' Turning Side Hustles Into Real Businesses",
     excerpt: "Discover the new breed of industrial 'makerspaces' that act as a startup’s entire operations team, handling everything from production to packaging.",
     author: "E-Cell Team",
-    date: "2024-08-05",
+    date: "2025-10-11",
     category: "Product",
     image: blogImages.blog5,
     content: `
@@ -253,7 +253,7 @@ const blogsData = [
     title: "Legal Drama? Not Today. The Startups Insulating Founders From Lawsuits",
     excerpt: "A new wave of legal-tech startups is turning legal protection from a luxury into an accessible subscription service for all founders.",
     author: "E-Cell Team",
-    date: "2024-07-18",
+    date: "2025-10-18",
     category: "Legal-Tech",
     image: blogImages.blog6,
     content: `
