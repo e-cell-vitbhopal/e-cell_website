@@ -31,6 +31,8 @@ import ProtectedRoute from './blog_components/ProtectedRoute';
 import './blog_components/blog.css'
 import EventBrochure from './esummit25/EventBrochure'
 import { Navigate } from 'react-router-dom';
+import Blog from './newecell/Blogs/Blog';
+import BlogDetailPage from './newecell/Blogs/BlogDetailPage';
 function App() {
   return (
     <div>
@@ -63,6 +65,9 @@ function App() {
             <Route path="/e_summit_2024/registration/FireSideChat" element={<FireSideChat />} />
             <Route path="/e_summit_2024/registration/CaseStudyCompetition" element={<CaseStudyCompetition />} />
             <Route path="/e_summit_2024/registration/PaperTrading" element={<PaperTrading />} />
+            {/* New Blogs */}
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetailPage />} />
             {/* Blogs */}
             <Route path="/blogs" element={<Layout />}>
               <Route index element={<IndexPage />} />

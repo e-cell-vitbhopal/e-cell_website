@@ -68,6 +68,9 @@ const NewNav = () => {
           <a href="#speakers" className="nav-link" onClick={() => scrollToSection('newecell-speakers-section')}>
             Speakers
           </a>
+          <Link to="/blog" className="nav-link" onClick={handleLinkClick}>
+            Blogs
+          </Link>
           <a href="#contact" className="nav-link contact-btn" onClick={() => scrollToSection('newecell-contact-section')}>
             Contact
           </a>

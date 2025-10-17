@@ -38,7 +38,7 @@ const Footer = () => {
           Empowering tomorrow's entrepreneurs through innovation, education, and networking.
         </p>
 
-        <div className="ecell-footer-links">
+        {/* <div className="ecell-footer-links">
           <a href="#" className="ecell-footer-link" onClick={scrollToTop}>
             Home
           </a>
@@ -57,7 +57,7 @@ const Footer = () => {
           <Link to="/blog" className="ecell-footer-link">
             Blogs
           </Link>
-        </div>
+        </div> */}
 
         {/* <div className="ecell-social-links">
           <a href="https://www.instagram.com/ecell_vit.bhopal/" target="_blank" rel="noopener noreferrer">

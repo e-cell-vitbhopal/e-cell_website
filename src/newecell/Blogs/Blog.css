@@ -1,0 +1,13 @@
+.blog-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  padding-top: 70px;
+  position: relative;
+}
+
+.blog-page-main {
+  position: relative;
+  z-index: 3;
+}
