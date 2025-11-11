@@ -1,0 +1,303 @@
+.recruitment-section {
+  padding: 5rem 0;
+  background-color: transparent;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.recruitment-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.recruitment-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.recruitment-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #8B5CF6, #EC4899, #8B5CF6);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowingTextGradient 3s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes flowingTextGradient {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.recruitment-description {
+  font-size: 1.125rem;
+  color: #a0aec0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.recruitment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.recruitment-card {
+  background: rgba(71, 71, 71, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 3;
+}
+
+.recruitment-card.coming-soon {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.recruitment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recruitment-card:hover::before {
+  transform: scaleX(1);
+}
+
+.recruitment-card-background {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.recruitment-card:not(.coming-soon):hover .recruitment-card-background {
+  opacity: 0.15;
+}
+
+.recruitment-card:not(.coming-soon):hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.recruitment-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.recruitment-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--icon-color, #6b7280); /* use solid color instead of gradient; fallback to gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.recruitment-card:not(.coming-soon):hover .recruitment-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.recruitment-icon {
+  color: white;
+}
+
+.recruitment-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  line-height: 1.3;
+}
+
+.recruitment-card-description {
+  color: #a0aec0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.recruitment-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.apply-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.apply-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--button-color, rgba(255,255,255,0.08)); /* solid color background on hover */
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+  opacity: 0;
+  z-index: -1;
+}
+
+.recruitment-card:not(.coming-soon):hover .apply-button::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.recruitment-card:not(.coming-soon):hover .apply-button {
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.recruitment-card:not(.coming-soon):hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #a0aec0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .recruitment-section {
+    padding: 3rem 0;
+  }
+
+  .recruitment-title {
+    font-size: 2rem;
+  }
+
+  .recruitment-description {
+    font-size: 1rem;
+  }
+
+  .recruitment-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .recruitment-card {
+    padding: 1.5rem;
+  }
+
+  .recruitment-card-title {
+    font-size: 1.25rem;
+  }
+
+  .recruitment-card-description {
+    font-size: 0.9rem;
+  }
+
+  .recruitment-icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .recruitment-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .apply-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .recruitment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recruitment-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animation for cards appearing */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recruitment-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.recruitment-card:nth-child(1) { animation-delay: 0.1s; }
+.recruitment-card:nth-child(2) { animation-delay: 0.2s; }
+.recruitment-card:nth-child(3) { animation-delay: 0.3s; }
+.recruitment-card:nth-child(4) { animation-delay: 0.4s; }
+.recruitment-card:nth-child(5) { animation-delay: 0.5s; }
+.recruitment-card:nth-child(6) { animation-delay: 0.6s; }
+.recruitment-card:nth-child(7) { animation-delay: 0.7s; }
+.recruitment-card:nth-child(8) { animation-delay: 0.8s; }
+.recruitment-card:nth-child(9) { animation-delay: 0.9s; }

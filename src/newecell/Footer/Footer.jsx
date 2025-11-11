@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Instagram, Linkedin, Twitter } from 'lucide-react';
 import './Footer.css';
 import logo from '../../assets/ecell_logo.png';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -18,15 +20,21 @@ const Footer = () => {
           behavior: 'smooth'
         });
       }, 100);
+    } else {
+      // If section doesn't exist (we're on a different page), navigate to home first
+      navigate('/', { state: { scrollTo: sectionId } });
     }
   };
 
   const scrollToTop = (e) => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    navigate('/');
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
   };
 
   return (

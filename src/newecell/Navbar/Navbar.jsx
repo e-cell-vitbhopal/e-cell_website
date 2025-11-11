@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './NewNavbar.css';
 import logo from '../../assets/ecell_logo.png';
 
 const NewNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,15 +31,21 @@ const NewNav = () => {
           behavior: 'smooth'
         });
       }, 100);
+    } else {
+      // If section doesn't exist (we're on a different page), navigate to home first
+      navigate('/', { state: { scrollTo: sectionId } });
     }
   };
 
   const scrollToTop = (e) => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    navigate('/');
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
     handleLinkClick();
   };
 

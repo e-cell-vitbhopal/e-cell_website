@@ -7,7 +7,7 @@ import ScrollToTop from "./scrolltotop"; // Import it
 // import ComingSoon from './coming_soon';
 import Startup from './startupexpo';
 import Newecell from './newecell';
-import Recruitment from './components/Recruitment/Recruitment';
+import RecruitmentPage from './RecruitmentPage';
 // import Registration from './e_summit_components/Registration/Registration';
 import FormLinks from './e_summit_components/Registration/FormLinks';
 import IshaanSharma from './e_summit_components/Registration/IshaanSharma';
@@ -43,7 +43,7 @@ function App() {
           <Routes>
             
             <Route path="/" element={<Main />} />
-            <Route path="/recruitment" element={<Recruitment />} /> 
+            <Route path="/recruitment" element={<RecruitmentPage />} /> 
             {/* Esummit */}
             <Route path="/event/:id" element={<EventBrochure />} />
 

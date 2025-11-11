@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Hero.module.css';
 import './Button.css';
 const Hero = () => {
   const [opacity, setOpacity] = useState(1);
   const [isTextVisible, setIsTextVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     
@@ -49,7 +51,7 @@ const Hero = () => {
           Welcome to the Entrepreneurial Cell of VIT Bhopal, a dynamic hub dedicated to nurturing and empowering the next generation of entrepreneurs across India. The future of your idea begins here, at the Entrepreneurial Cell of VIT Bhopal - where we don't just promote entrepreneurs, we build success stories.
         </p>
         <div className={styles.ctaContainer}>
-          <a href="#newecell-main-events" className='btn' >Join Us!</a>
+          <button onClick={() => navigate('/recruitment')} className='btn' >Join Us!</button>
         </div>
       </div>
     </section>
