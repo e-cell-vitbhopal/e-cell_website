@@ -1,18 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { supabase } from '../../config/supabaseClient'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../contexts/AuthContext'
 import '../../styles/pitchpulse.css'
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [loading, setLoading] = useState(false)
+    const [authLoading, setAuthLoading] = useState(false)
     const [error, setError] = useState(null)
     const navigate = useNavigate()
+    const { user, role } = useAuth()
+
+    useEffect(() => {
+        if (user && role === 'admin') {
+            navigate('/pitchpulse/admin/dashboard')
+        }
+    }, [user, role, navigate])
 
     const handleLogin = async (e) => {
         e.preventDefault()
-        setLoading(true)
+        setAuthLoading(true)
         setError(null)
         try {
             const { data, error } = await supabase.auth.signInWithPassword({
@@ -24,7 +32,7 @@ const AdminLogin = () => {
         } catch (error) {
             setError(error.message)
         } finally {
-            setLoading(false)
+            setAuthLoading(false)
         }
     }
 
@@ -64,11 +72,11 @@ const AdminLogin = () => {
                     </div>
                     <button
                         type="submit"
-                        disabled={loading}
+                        disabled={authLoading}
                         className="pp-btn pp-btn-primary"
                         style={{ width: '100%', justifyContent: 'center', marginTop: '1rem' }}
                     >
-                        {loading ? 'Authenticating...' : 'Sign In'}
+                        {authLoading ? 'Authenticating...' : 'Sign In'}
                     </button>
                 </form>
             </div>

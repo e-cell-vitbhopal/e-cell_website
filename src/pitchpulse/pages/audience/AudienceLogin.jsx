@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { FcGoogle } from 'react-icons/fc'
 import { useAuth } from '../../contexts/AuthContext'
 import '../../styles/pitchpulse.css'
 
 const AudienceLogin = () => {
-    const { loginWithGoogle, loading } = useAuth()
+    const { loginWithGoogle, loading, user, role } = useAuth()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (!loading && user) {
+            if (role === 'admin') {
+                navigate('/pitchpulse/admin/dashboard')
+            } else {
+                navigate('/pitchpulse/event/active')
+            }
+        }
+    }, [user, role, loading, navigate])
 
     return (
         <div className="pp-audience-container pp-mobile-login">

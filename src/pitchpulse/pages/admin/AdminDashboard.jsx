@@ -12,7 +12,7 @@ const AdminDashboard = () => {
     const [showCreateModal, setShowCreateModal] = useState(false)
     const [newEvent, setNewEvent] = useState({ name: '', description: '', event_date: '' })
     const navigate = useNavigate()
-    const { user } = useAuth()
+    const { user, logout } = useAuth()
 
     useEffect(() => {
         fetchEvents()
@@ -66,12 +66,20 @@ const AdminDashboard = () => {
                         <h1 className="pp-title">Admin Dashboard</h1>
                         <p className="pp-subtitle">Manage your startup events and pitches</p>
                     </div>
-                    <button
-                        onClick={() => setShowCreateModal(true)}
-                        className="pp-btn pp-btn-primary"
-                    >
-                        <FaPlus /> Create Event
-                    </button>
+                    <div style={{ display: 'flex', gap: '1rem' }}>
+                        <button
+                            onClick={logout}
+                            className="pp-btn pp-btn-secondary"
+                        >
+                            Sign Out
+                        </button>
+                        <button
+                            onClick={() => setShowCreateModal(true)}
+                            className="pp-btn pp-btn-primary"
+                        >
+                            <FaPlus /> Create Event
+                        </button>
+                    </div>
                 </div>
 
                 {/* Events Grid */}
@@ -93,8 +101,8 @@ const AdminDashboard = () => {
                             >
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
                                     <span className={`pp-badge ${event.status === 'active' ? 'pp-badge-active' :
-                                            event.status === 'completed' ? 'pp-badge-completed' :
-                                                'pp-badge-draft'
+                                        event.status === 'completed' ? 'pp-badge-completed' :
+                                            'pp-badge-draft'
                                         }`}>
                                         {event.status.toUpperCase()}
                                     </span>

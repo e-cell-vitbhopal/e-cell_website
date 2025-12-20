@@ -23,7 +23,7 @@ const AuthCallback = () => {
     }, [user, role, loading, navigate])
 
     return (
-        <div className="pp-audience-container flex items-center justify-center">
+        <div className="pp-audience-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
             <div className="pp-mobile-waiting">
                 {/* Security/Verification Pulse Animation */}
                 <div className="pp-mobile-waiting-pulse">
