@@ -22,7 +22,7 @@ import Summit_copy from './Summit - Copy';
 import Layout from './blog_components/Layout';
 import IndexPage from './blog_components/IndexPage';
 import LoginPage from './blog_components/LoginPage';
-import {UserContextProvider} from './blog_components/UserContext';
+import { UserContextProvider } from './blog_components/UserContext';
 import CreatePost from './blog_components/CreatePost';
 import PostPage from './blog_components/PostPage';
 import EditPost from './blog_components/EditPost';
@@ -33,17 +33,18 @@ import EventBrochure from './esummit25/EventBrochure'
 import { Navigate } from 'react-router-dom';
 import Blog from './newecell/Blogs/Blog';
 import BlogDetailPage from './newecell/Blogs/BlogDetailPage';
+import PitchPulseRoutes from './pitchpulse';
 function App() {
   return (
     <div>
       {/* <Main /> */}
       <BrowserRouter>
         <UserContextProvider>
-        <ScrollToTop/>
+          <ScrollToTop />
           <Routes>
-            
+
             <Route path="/" element={<Main />} />
-            <Route path="/recruitment" element={<RecruitmentPage />} /> 
+            <Route path="/recruitment" element={<RecruitmentPage />} />
             {/* Esummit */}
             <Route path="/event/:id" element={<EventBrochure />} />
 
@@ -72,10 +73,11 @@ function App() {
             <Route path="/blogs" element={<Layout />}>
               <Route index element={<IndexPage />} />
               <Route path="login-admin" element={<LoginPage />} />
-              <Route path="create" element={<ProtectedRoute><CreatePost /></ProtectedRoute> } />
+              <Route path="create" element={<ProtectedRoute><CreatePost /></ProtectedRoute>} />
               <Route path="post/:id" element={<PostPage />} />
               <Route path="edit/:id" element={<EditPost />} />
             </Route>
+            <Route path="/pitchpulse/*" element={<PitchPulseRoutes />} />
           </Routes>
         </UserContextProvider>
       </BrowserRouter>
