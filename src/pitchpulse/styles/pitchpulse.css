@@ -1633,7 +1633,7 @@
 
 .pp-mobile-header-logo {
     font-family: var(--pp-font-display);
-    font-size: 1.125rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: var(--pp-accent-gold);
 }
@@ -1789,8 +1789,8 @@
 .pp-mobile-startup-logo img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: var(--pp-space-3);
+    object-fit: cover;
+    padding: 0;
 }
 
 .pp-mobile-startup-name {

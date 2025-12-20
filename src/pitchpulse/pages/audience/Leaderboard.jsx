@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { supabase } from '../../config/supabaseClient'
 import { FaTrophy, FaMedal, FaStar, FaUsers } from 'react-icons/fa'
+import { playFanfare } from '../../utils/sound'
 import '../../styles/pitchpulse.css'
 
 const Leaderboard = ({ eventId, eventName }) => {
@@ -54,6 +55,13 @@ const Leaderboard = ({ eventId, eventName }) => {
 
             startupRatings.sort((a, b) => b.averageRating - a.averageRating)
             setRankings(startupRatings)
+            if (startupRatings.length > 0) {
+                try {
+                    playFanfare()
+                } catch (e) {
+                    console.warn("Audio play failed (user interaction needed first)", e)
+                }
+            }
         } catch (error) {
             console.error('Error fetching rankings:', error)
         } finally {

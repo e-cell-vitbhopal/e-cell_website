@@ -74,11 +74,25 @@ export const AuthProvider = ({ children }) => {
     }
 
     const logout = async () => {
-        await supabase.auth.signOut()
-        setUser(null)
-        setRole(null)
-        // Redirect to login page
-        window.location.href = '/pitchpulse'
+        try {
+            setLoading(true)
+            await supabase.auth.signOut()
+
+            // Aggressively clear local storage to prevent persistence issues
+            localStorage.clear() // Clear all for this domain to be safe
+            // Or specifically:
+            // Object.keys(localStorage).forEach(key => {
+            //     if (key.startsWith('sb-')) localStorage.removeItem(key)
+            // })
+
+            setUser(null)
+            setRole(null)
+        } catch (error) {
+            console.error("Logout failed", error)
+        } finally {
+            setLoading(false)
+            window.location.replace('/pitchpulse')
+        }
     }
 
     return (

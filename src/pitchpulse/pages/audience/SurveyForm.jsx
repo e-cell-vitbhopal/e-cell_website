@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { supabase } from '../../config/supabaseClient'
 import { FaCheckCircle, FaPaperPlane } from 'react-icons/fa'
+import { playTap, playSuccess } from '../../utils/sound'
 import '../../styles/pitchpulse.css'
 
 const SurveyForm = ({ startup, userId, userEmail }) => {
@@ -48,10 +49,9 @@ const SurveyForm = ({ startup, userId, userEmail }) => {
             ...prev,
             [questionId]: rating.toString()
         }))
-        // Haptic feedback
-        if (navigator.vibrate) {
-            navigator.vibrate(10)
-        }
+        // Haptic feedback & Sound
+        if (navigator.vibrate) navigator.vibrate(10)
+        playTap()
     }
 
     const handleTextChange = (questionId, text) => {
@@ -66,9 +66,7 @@ const SurveyForm = ({ startup, userId, userEmail }) => {
         setSubmitting(true)
 
         // Haptic feedback
-        if (navigator.vibrate) {
-            navigator.vibrate(50)
-        }
+        if (navigator.vibrate) navigator.vibrate(50)
 
         try {
             const realQuestions = questions.filter(q => !q.id.startsWith('default_'))
@@ -96,6 +94,7 @@ const SurveyForm = ({ startup, userId, userEmail }) => {
             }
 
             setSubmitted(true)
+            playSuccess()
         } catch (error) {
             console.error('Error submitting survey:', error)
             setSubmitted(true)

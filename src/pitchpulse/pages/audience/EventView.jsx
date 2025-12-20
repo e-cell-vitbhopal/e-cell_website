@@ -6,6 +6,8 @@ import SurveyForm from './SurveyForm'
 import RatingForm from './RatingForm'
 import Leaderboard from './Leaderboard'
 import { FaSignOutAlt, FaRocket, FaMicrophone, FaLightbulb } from 'react-icons/fa'
+import { playPhaseChange, initAudio } from '../../utils/sound'
+import ecellLogo from '../../../assets/ecell_logo.png'
 import '../../styles/pitchpulse.css'
 
 // Tips to show during pitching phase
@@ -30,6 +32,21 @@ const EventView = () => {
             setTipIndex(prev => (prev + 1) % PITCH_TIPS.length)
         }, 5000)
         return () => clearInterval(interval)
+    }, [])
+
+    // Attempt to unlock audio context on first interaction (for returning users)
+    useEffect(() => {
+        const unlockAudio = () => {
+            initAudio()
+            window.removeEventListener('click', unlockAudio)
+            window.removeEventListener('touchstart', unlockAudio)
+        }
+        window.addEventListener('click', unlockAudio)
+        window.addEventListener('touchstart', unlockAudio)
+        return () => {
+            window.removeEventListener('click', unlockAudio)
+            window.removeEventListener('touchstart', unlockAudio)
+        }
     }, [])
 
     // Fetch active startup for an event
@@ -113,9 +130,8 @@ const EventView = () => {
                         const newData = payload.new
                         if (['pitching', 'questions', 'rating'].includes(newData.phase)) {
                             setCurrentStartup(newData)
-                            if (navigator.vibrate) {
-                                navigator.vibrate([50, 50, 50])
-                            }
+                            if (navigator.vibrate) navigator.vibrate([50, 50, 50])
+                            playPhaseChange()
                         } else if (currentStartup?.id === newData.id) {
                             findActiveStartupForEvent(event.id)
                         }
@@ -193,6 +209,7 @@ const EventView = () => {
                 {/* Mobile Header */}
                 <div className="pp-mobile-header">
                     <div className="pp-mobile-header-brand">
+                        <img src={ecellLogo} alt="E-Cell" style={{ height: '52px', width: 'auto', marginRight: '8px' }} />
                         <span className="pp-mobile-header-logo">PitchPulse</span>
                     </div>
                     <button onClick={logout} className="pp-btn-mobile pp-btn-mobile-ghost">
@@ -211,8 +228,9 @@ const EventView = () => {
             {/* Mobile Header */}
             <div className="pp-mobile-header">
                 <div className="pp-mobile-header-brand">
+                    <img src={ecellLogo} alt="E-Cell" style={{ height: '32px', width: 'auto', marginRight: '8px' }} />
                     <span className="pp-mobile-header-logo">PitchPulse</span>
-                    <span className="pp-mobile-header-event">{event.name}</span>
+
                 </div>
                 <button onClick={logout} className="pp-btn-mobile pp-btn-mobile-ghost">
                     <FaSignOutAlt size={20} />
