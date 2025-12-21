@@ -85,6 +85,22 @@
 /* ============================================
    MOBILE-FIRST AUDIENCE CONTAINER
    ============================================ */
+
+/* Reset any parent padding/margin when audience container is present */
+body:has(.pp-audience-container),
+html:has(.pp-audience-container) {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Target any wrapper divs between root and container */
+#root:has(.pp-audience-container)>div,
+#root>div:has(.pp-audience-container),
+div:has(> .pp-audience-container) {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 .pp-audience-container {
     min-height: 100vh;
     min-height: 100dvh;
@@ -2018,8 +2034,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: var(--pp-space-12) var(--pp-space-6);
-    min-height: 60vh;
+    padding: var(--pp-space-8) var(--pp-space-6);
+    min-height: 40vh;
 }
 
 .pp-mobile-success-icon {
@@ -2526,4 +2542,456 @@
 
 .pp-mobile-leaderboard-item:nth-child(n+6) {
     animation-delay: 350ms;
+}
+
+/* ============================================
+   DESKTOP ENHANCEMENTS (1024px+)
+   Preserves all mobile functionality
+   ============================================ */
+
+/* Desktop Variables */
+@media (min-width: 1024px) {
+    :root {
+        --pp-desktop-max-width: 900px;
+        --pp-desktop-content-width: 640px;
+    }
+}
+
+/* ---- AUDIENCE CONTAINER (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-audience-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ---- MOBILE HEADER (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-header {
+        width: 100%;
+        max-width: var(--pp-desktop-max-width);
+        padding: var(--pp-space-4) 0;
+        margin-bottom: var(--pp-space-4);
+    }
+
+    .pp-mobile-header-logo {
+        font-size: 2rem;
+    }
+}
+
+/* ---- LOGIN PAGE (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-login {
+        padding: var(--pp-space-12);
+    }
+
+    .pp-mobile-login-logo {
+        font-size: 3.5rem;
+    }
+
+    .pp-mobile-login-tagline {
+        font-size: 1.125rem;
+        margin-bottom: var(--pp-space-16);
+    }
+
+    .pp-mobile-login-card {
+        max-width: 400px;
+        padding: var(--pp-space-10);
+        background: var(--pp-bg-elevated);
+        border: 1px solid var(--pp-border);
+        border-radius: var(--pp-radius-xl);
+    }
+
+    .pp-mobile-login-google {
+        min-height: 60px;
+        font-size: 1.125rem;
+    }
+
+    .pp-mobile-login-footer {
+        bottom: var(--pp-space-10);
+    }
+}
+
+/* ---- STARTUP CARD (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-startup-card {
+        max-width: var(--pp-desktop-content-width);
+        margin: 0 auto;
+        padding: var(--pp-space-8);
+        background: var(--pp-bg-elevated);
+        border: 1px solid var(--pp-border);
+        border-radius: var(--pp-radius-xl);
+    }
+
+    .pp-mobile-startup-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .pp-mobile-startup-name {
+        font-size: 2rem;
+    }
+
+    .pp-mobile-startup-description {
+        max-width: 480px;
+        font-size: 1rem;
+    }
+}
+
+/* ---- PHASE BADGE (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-phase-badge {
+        flex-direction: row;
+        gap: var(--pp-space-4);
+        max-width: var(--pp-desktop-content-width);
+        margin: var(--pp-space-8) auto;
+        padding: var(--pp-space-6) var(--pp-space-8);
+    }
+
+    .pp-mobile-phase-icon {
+        font-size: 2.5rem;
+    }
+
+    .pp-mobile-phase-label {
+        font-size: 1.5rem;
+    }
+}
+
+/* ---- RATING FORM (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-rating-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: var(--pp-space-10);
+        background: var(--pp-bg-elevated);
+        border: 1px solid var(--pp-border);
+        border-radius: var(--pp-radius-xl);
+        box-shadow: var(--pp-shadow-lg);
+    }
+
+    .pp-mobile-rating-title {
+        font-size: 1.75rem;
+        margin-bottom: var(--pp-space-6);
+    }
+
+    .pp-mobile-rating-display {
+        margin-bottom: var(--pp-space-10);
+    }
+
+    .pp-mobile-rating-value {
+        font-size: 6rem;
+    }
+
+    .pp-mobile-rating-value-max {
+        font-size: 2rem;
+    }
+
+    .pp-mobile-rating-label {
+        font-size: 1.25rem;
+        margin-top: var(--pp-space-3);
+    }
+
+    .pp-mobile-slider-wrapper {
+        max-width: 550px;
+        margin: 0 auto;
+        padding: var(--pp-space-6) 0;
+    }
+
+    .pp-mobile-slider {
+        height: 20px;
+    }
+
+    .pp-mobile-slider::-webkit-slider-thumb {
+        width: 52px;
+        height: 52px;
+    }
+
+    .pp-mobile-slider::-moz-range-thumb {
+        width: 52px;
+        height: 52px;
+    }
+
+    .pp-mobile-slider-labels {
+        font-size: 0.875rem;
+        padding-top: var(--pp-space-4);
+    }
+
+    /* Inline submit button instead of fixed */
+    .pp-mobile-bottom-action {
+        position: static;
+        max-width: 700px;
+        margin: var(--pp-space-8) auto 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+
+    .pp-btn-mobile-block {
+        max-width: 450px;
+        margin: 0 auto;
+        display: flex;
+        min-height: 56px;
+        font-size: 1.125rem;
+    }
+}
+
+/* ---- SURVEY FORM (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-survey-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-bottom: var(--pp-space-8);
+    }
+
+    /* Grid applied to form element for proper 2-column layout */
+    .pp-survey-questions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--pp-space-6);
+    }
+
+    .pp-mobile-survey-question {
+        padding: var(--pp-space-6);
+        margin-bottom: 0;
+    }
+
+    /* Text questions span full width */
+    .pp-mobile-survey-question:has(.pp-mobile-textarea) {
+        grid-column: 1 / -1;
+    }
+
+    .pp-mobile-survey-question-label {
+        font-size: 1.0625rem;
+    }
+
+    .pp-mobile-survey-rating-grid {
+        gap: var(--pp-space-2);
+    }
+
+    .pp-mobile-survey-rating-btn {
+        font-size: 1rem;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .pp-mobile-textarea {
+        min-height: 140px;
+    }
+}
+
+/* ---- DESKTOP STAR RATING ---- */
+.pp-desktop-star-rating {
+    display: flex;
+    justify-content: center;
+    gap: var(--pp-space-2);
+    padding: var(--pp-space-6) 0;
+}
+
+.pp-desktop-star-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--pp-space-2);
+    font-size: 2.5rem;
+    color: var(--pp-text-muted);
+    transition: transform var(--pp-transition-fast), color var(--pp-transition-fast);
+}
+
+.pp-desktop-star-btn:hover {
+    transform: scale(1.15);
+}
+
+.pp-desktop-star-filled {
+    color: var(--pp-accent-gold);
+}
+
+.pp-desktop-star-btn:hover,
+.pp-desktop-star-btn:hover~.pp-desktop-star-btn {
+    color: var(--pp-text-muted);
+}
+
+/* Hover effect - all stars up to hovered one light up */
+.pp-desktop-star-rating:hover .pp-desktop-star-btn {
+    color: var(--pp-text-muted);
+}
+
+.pp-desktop-star-rating .pp-desktop-star-btn:hover,
+.pp-desktop-star-rating .pp-desktop-star-btn:hover~.pp-desktop-star-btn:not(:hover) {
+    color: var(--pp-text-muted);
+}
+
+/* Fix: Stars before hovered one should be filled */
+.pp-desktop-star-rating:has(.pp-desktop-star-btn:hover) .pp-desktop-star-btn:not(:hover) {
+    color: var(--pp-text-muted);
+}
+
+/* Selected stars glow animation */
+.pp-desktop-star-filled {
+    color: var(--pp-accent-gold);
+    filter: drop-shadow(0 0 4px rgba(247, 201, 72, 0.4));
+}
+
+@media (min-width: 1440px) {
+    .pp-desktop-star-btn {
+        font-size: 3rem;
+        padding: var(--pp-space-3);
+    }
+}
+
+/* ---- WAITING SCREEN (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-waiting {
+        min-height: 70vh;
+    }
+
+    .pp-mobile-waiting-pulse {
+        width: 150px;
+        height: 150px;
+        margin-bottom: var(--pp-space-10);
+    }
+
+    .pp-mobile-waiting-icon {
+        font-size: 3.5rem;
+    }
+
+    .pp-mobile-waiting-title {
+        font-size: 2.5rem;
+    }
+
+    .pp-mobile-waiting-event {
+        font-size: 1.25rem;
+    }
+
+    .pp-mobile-waiting-status {
+        font-size: 1.125rem;
+    }
+}
+
+/* ---- LEADERBOARD (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-leaderboard {
+        max-width: var(--pp-desktop-max-width);
+        margin: 0 auto;
+    }
+
+    .pp-mobile-leaderboard-header {
+        padding: var(--pp-space-8) 0;
+    }
+
+    .pp-mobile-leaderboard-trophy {
+        font-size: 4rem;
+    }
+
+    .pp-mobile-leaderboard-title {
+        font-size: 2.25rem;
+    }
+
+    /* Enhanced Podium */
+    .pp-mobile-podium {
+        gap: var(--pp-space-4);
+        margin-bottom: var(--pp-space-10);
+    }
+
+    .pp-mobile-podium-item {
+        max-width: 160px;
+        padding: var(--pp-space-6) var(--pp-space-4);
+    }
+
+    .pp-mobile-podium-item-1 {
+        min-height: 200px;
+    }
+
+    .pp-mobile-podium-item-2 {
+        min-height: 160px;
+    }
+
+    .pp-mobile-podium-item-3 {
+        min-height: 130px;
+    }
+
+    .pp-mobile-podium-medal {
+        font-size: 2.5rem;
+    }
+
+    .pp-mobile-podium-name {
+        font-size: 1rem;
+    }
+
+    .pp-mobile-podium-score {
+        font-size: 1.5rem;
+    }
+
+    /* Enhanced List */
+    .pp-mobile-leaderboard-list {
+        gap: var(--pp-space-4);
+    }
+
+    .pp-mobile-leaderboard-item {
+        padding: var(--pp-space-5);
+    }
+
+    .pp-mobile-leaderboard-rank {
+        width: 48px;
+        font-size: 1.25rem;
+    }
+
+    .pp-mobile-leaderboard-name {
+        font-size: 1.125rem;
+    }
+
+    .pp-mobile-leaderboard-score {
+        font-size: 1.5rem;
+    }
+}
+
+/* ---- TIPS CARD (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-tips-card {
+        max-width: var(--pp-desktop-content-width);
+        margin: var(--pp-space-8) auto 0;
+    }
+}
+
+/* ---- SUCCESS STATE (Desktop) ---- */
+@media (min-width: 1024px) {
+    .pp-mobile-success {
+        min-height: 35vh;
+        padding: var(--pp-space-10);
+    }
+
+    .pp-mobile-success-icon {
+        font-size: 5rem;
+    }
+
+    .pp-mobile-success-title {
+        font-size: 2rem;
+    }
+
+    .pp-mobile-success-score-value {
+        font-size: 4rem;
+    }
+}
+
+/* ============================================
+   LARGE DESKTOP ENHANCEMENTS (1440px+)
+   ============================================ */
+@media (min-width: 1440px) {
+    :root {
+        --pp-desktop-max-width: 1000px;
+        --pp-desktop-content-width: 720px;
+
+    }
+
+    .pp-mobile-login-card {
+        max-width: 440px;
+    }
+
+    .pp-mobile-rating-value {
+        font-size: 6rem;
+    }
+
+    .pp-mobile-podium-item {
+        max-width: 180px;
+    }
 }

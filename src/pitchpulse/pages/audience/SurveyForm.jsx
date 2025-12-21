@@ -127,7 +127,7 @@ const SurveyForm = ({ startup, userId, userEmail }) => {
     return (
         <>
             <div className="pp-mobile-survey-container">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="pp-survey-questions-grid">
                     {questions.map((question, index) => (
                         <div key={question.id} className="pp-mobile-survey-question">
                             <label className="pp-mobile-survey-question-label">

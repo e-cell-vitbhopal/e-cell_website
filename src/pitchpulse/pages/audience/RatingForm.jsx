@@ -1,19 +1,28 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { supabase } from '../../config/supabaseClient'
 import { useAuth } from '../../contexts/AuthContext'
-import { FaStar, FaCheckCircle } from 'react-icons/fa'
+import { FaStar, FaCheckCircle, FaRegStar } from 'react-icons/fa'
 import '../../styles/pitchpulse.css'
 
 const RatingForm = ({ startup, onRatingSubmitted }) => {
     const { user } = useAuth()
     const [selectedRating, setSelectedRating] = useState(5)
+    const [hoverRating, setHoverRating] = useState(0)
     const [loading, setLoading] = useState(false)
     const [submitted, setSubmitted] = useState(false)
     const [existingRating, setExistingRating] = useState(null)
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024)
 
     useEffect(() => {
         checkExistingRating()
     }, [startup?.id, user?.id])
+
+    // Listen for window resize to toggle between desktop/mobile UI
+    useEffect(() => {
+        const handleResize = () => setIsDesktop(window.innerWidth >= 1024)
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
     const checkExistingRating = async () => {
         if (!startup?.id || !user?.id) return
@@ -84,6 +93,13 @@ const RatingForm = ({ startup, onRatingSubmitted }) => {
         }
     }
 
+    const handleStarClick = (rating) => {
+        setSelectedRating(rating)
+        if (navigator.vibrate) {
+            navigator.vibrate(10)
+        }
+    }
+
     // Submitted state
     if (submitted) {
         return (
@@ -101,6 +117,8 @@ const RatingForm = ({ startup, onRatingSubmitted }) => {
         )
     }
 
+    const displayRating = hoverRating || selectedRating
+
     return (
         <>
             <div className="pp-mobile-rating-container">
@@ -111,28 +129,46 @@ const RatingForm = ({ startup, onRatingSubmitted }) => {
                 {/* Large rating display */}
                 <div className="pp-mobile-rating-display">
                     <div>
-                        <span className="pp-mobile-rating-value">{selectedRating}</span>
+                        <span className="pp-mobile-rating-value">{displayRating}</span>
                         <span className="pp-mobile-rating-value-max">/10</span>
                     </div>
-                    <p className="pp-mobile-rating-label">{getRatingLabel(selectedRating)}</p>
+                    <p className="pp-mobile-rating-label">{getRatingLabel(displayRating)}</p>
                 </div>
 
-                {/* Slider */}
-                <div className="pp-mobile-slider-wrapper">
-                    <input
-                        type="range"
-                        min="1"
-                        max="10"
-                        value={selectedRating}
-                        onChange={handleSliderChange}
-                        className="pp-mobile-slider"
-                    />
-                    <div className="pp-mobile-slider-labels">
-                        <span>1 - Poor</span>
-                        <span>5</span>
-                        <span>10 - Amazing</span>
+                {/* Desktop: Star Rating */}
+                {isDesktop ? (
+                    <div className="pp-desktop-star-rating">
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((star) => (
+                            <button
+                                key={star}
+                                type="button"
+                                className={`pp-desktop-star-btn ${star <= displayRating ? 'pp-desktop-star-filled' : ''}`}
+                                onClick={() => handleStarClick(star)}
+                                onMouseEnter={() => setHoverRating(star)}
+                                onMouseLeave={() => setHoverRating(0)}
+                            >
+                                {star <= displayRating ? <FaStar /> : <FaRegStar />}
+                            </button>
+                        ))}
                     </div>
-                </div>
+                ) : (
+                    /* Mobile: Slider */
+                    <div className="pp-mobile-slider-wrapper">
+                        <input
+                            type="range"
+                            min="1"
+                            max="10"
+                            value={selectedRating}
+                            onChange={handleSliderChange}
+                            className="pp-mobile-slider"
+                        />
+                        <div className="pp-mobile-slider-labels">
+                            <span>1 - Poor</span>
+                            <span>5</span>
+                            <span>10 - Amazing</span>
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Fixed bottom submit button */}

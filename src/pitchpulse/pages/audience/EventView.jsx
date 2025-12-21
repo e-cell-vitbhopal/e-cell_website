@@ -250,7 +250,10 @@ const EventView = () => {
                             )}
                         </div>
                         <h2 className="pp-mobile-startup-name">{currentStartup.name}</h2>
-                        <p className="pp-mobile-startup-description">{currentStartup.description}</p>
+                        {/* Only show description during pitching phase */}
+                        {currentStartup.phase === 'pitching' && (
+                            <p className="pp-mobile-startup-description">{currentStartup.description}</p>
+                        )}
                     </div>
 
                     {/* Phase Badge */}

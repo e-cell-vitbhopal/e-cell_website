@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FcGoogle } from 'react-icons/fc'
 import { useAuth } from '../../contexts/AuthContext'
@@ -9,11 +9,37 @@ import '../../styles/pitchpulse.css'
 const AudienceLogin = () => {
     const { loginWithGoogle, loading, user, role } = useAuth()
     const navigate = useNavigate()
+    const [localLoading, setLocalLoading] = useState(false)
 
     const handleLoginClick = async () => {
         initAudio() // Unlock audio context on user interaction
-        await loginWithGoogle()
+        setLocalLoading(true)
+
+        // Set a timeout to reset loading state if OAuth takes too long
+        const timeout = setTimeout(() => {
+            setLocalLoading(false)
+        }, 30000) // 30 second timeout
+
+        try {
+            const result = await loginWithGoogle()
+            if (result?.error) {
+                console.error('Login error:', result.error)
+                setLocalLoading(false)
+            }
+        } catch (error) {
+            console.error('Login failed:', error)
+            setLocalLoading(false)
+        } finally {
+            clearTimeout(timeout)
+        }
     }
+
+    // Reset local loading when auth loading changes
+    useEffect(() => {
+        if (!loading) {
+            setLocalLoading(false)
+        }
+    }, [loading])
 
     useEffect(() => {
         if (!loading && user) {
@@ -24,6 +50,9 @@ const AudienceLogin = () => {
             }
         }
     }, [user, role, loading, navigate])
+
+    const isLoading = loading || localLoading
+
     return (
         <div className="pp-audience-container pp-mobile-login">
             {/* Logo & Tagline */}
@@ -37,11 +66,11 @@ const AudienceLogin = () => {
             <div className="pp-mobile-login-card">
                 <button
                     onClick={handleLoginClick}
-                    disabled={loading}
+                    disabled={isLoading}
                     className="pp-mobile-login-google"
                 >
                     <FcGoogle size={24} />
-                    {loading ? 'Connecting...' : 'Continue with VIT Email'}
+                    {isLoading ? 'Connecting...' : 'Continue with VIT Email'}
                 </button>
 
                 <p className="pp-mobile-login-hint">
