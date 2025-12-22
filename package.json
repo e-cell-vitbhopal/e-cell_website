@@ -25,6 +25,7 @@
     "firebase": "^11.3.1",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.5",
+    "html2canvas": "^1.4.1",
     "i": "^0.3.7",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.469.0",

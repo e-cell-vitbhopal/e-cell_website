@@ -1,8 +1,9 @@
 import React from 'react'
-import { FaTrash, FaClipboardList, FaEdit, FaRocket, FaClock, FaPlayCircle, FaQuestionCircle, FaStar, FaArchive } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { FaTrash, FaClipboardList, FaEdit, FaRocket, FaClock, FaPlayCircle, FaQuestionCircle, FaStar, FaArchive, FaDownload, FaChartBar } from 'react-icons/fa'
 import '../styles/pitchpulse.css'
 
-const StartupCard = ({ startup, onDelete, onEdit, onEditDetails, onPhaseChange, isCurrent }) => {
+const StartupCard = ({ startup, onDelete, onEdit, onEditDetails, onPhaseChange, isCurrent, eventStatus, onDownloadData }) => {
 
     const getPhaseIcon = (phase) => {
         switch (phase) {
@@ -70,6 +71,16 @@ const StartupCard = ({ startup, onDelete, onEdit, onEditDetails, onPhaseChange, 
                     <button onClick={() => onEdit(startup)} className="pp-btn-icon" title="Survey Questions" style={{ color: '#A855F7' }}>
                         <FaClipboardList size={16} />
                     </button>
+                    {eventStatus === 'completed' && (
+                        <Link to={`/pitchpulse/admin/startup/${startup.id}/results`} className="pp-btn-icon" title="View Results" style={{ color: '#F59E0B' }}>
+                            <FaChartBar size={16} />
+                        </Link>
+                    )}
+                    {eventStatus === 'completed' && onDownloadData && (
+                        <button onClick={() => onDownloadData(startup)} className="pp-btn-icon" title="Download Data" style={{ color: '#10B981' }}>
+                            <FaDownload size={16} />
+                        </button>
+                    )}
                     <button onClick={() => onDelete(startup.id)} className="pp-btn-icon" title="Delete" style={{ color: '#EF4444' }}>
                         <FaTrash size={16} />
                     </button>

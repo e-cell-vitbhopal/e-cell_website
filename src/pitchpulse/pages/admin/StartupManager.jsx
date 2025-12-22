@@ -202,6 +202,76 @@ const StartupManager = () => {
         }
     }
 
+    const handleExportStartupData = async (startup) => {
+        try {
+            // Fetch ratings for this startup
+            const { data: ratingsData } = await supabase
+                .from('startup_ratings')
+                .select('user_email, rating, created_at')
+                .eq('startup_id', startup.id)
+
+            // Fetch survey questions for this startup
+            const { data: questionsData } = await supabase
+                .from('survey_questions')
+                .select('*')
+                .eq('startup_id', startup.id)
+                .order('display_order', { ascending: true })
+
+            // Fetch survey responses for this startup's questions
+            const questionIds = questionsData?.map(q => q.id) || []
+            let responsesData = []
+            if (questionIds.length > 0) {
+                const { data } = await supabase
+                    .from('survey_responses')
+                    .select('question_id, user_email, response_value, created_at')
+                    .in('question_id', questionIds)
+                responsesData = data || []
+            }
+
+            // Calculate startup stats
+            const avgRating = ratingsData?.length > 0
+                ? (ratingsData.reduce((sum, r) => sum + r.rating, 0) / ratingsData.length).toFixed(2)
+                : 0
+            const totalVotes = ratingsData?.length || 0
+
+            // Create CSV content
+            let csv = ''
+
+            // Startup Summary
+            csv += 'STARTUP SUMMARY\n'
+            csv += 'Name,Description,Average Rating,Total Votes\n'
+            csv += `"${startup.name}","${startup.description || ''}",${avgRating},${totalVotes}\n`
+            csv += '\n\n'
+
+            // All Ratings
+            csv += 'RATINGS\n'
+            csv += 'User Email,Rating,Submitted At\n'
+            ratingsData?.forEach(r => {
+                csv += `${r.user_email},${r.rating},${r.created_at}\n`
+            })
+            csv += '\n\n'
+
+            // Survey Responses
+            csv += 'SURVEY RESPONSES\n'
+            csv += 'Question,User Email,Response,Submitted At\n'
+            responsesData?.forEach(r => {
+                const question = questionsData?.find(q => q.id === r.question_id)
+                csv += `"${question?.question_text || ''}",${r.user_email},"${r.response_value}",${r.created_at}\n`
+            })
+
+            // Download CSV
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
+            const link = document.createElement('a')
+            link.href = URL.createObjectURL(blob)
+            const sanitizedName = startup.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()
+            link.download = `${sanitizedName}_data_${new Date().toISOString().split('T')[0]}.csv`
+            link.click()
+        } catch (error) {
+            console.error('Error exporting startup data:', error)
+            alert('Error exporting startup data: ' + error.message)
+        }
+    }
+
     if (loading) return <div className="pp-container">Loading...</div>
 
     return (
@@ -289,6 +359,8 @@ const StartupManager = () => {
                                 onEditDetails={(s) => setEditStartup({ ...s })}
                                 onPhaseChange={handlePhaseChange}
                                 isCurrent={currentStartup?.id === startup.id}
+                                eventStatus={event?.status}
+                                onDownloadData={handleExportStartupData}
                             />
                         ))}
                         {startups.length === 0 && (
